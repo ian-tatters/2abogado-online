@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cuestionario para otorgar un poder notarial. — Asesoría y Servicio Notarial</title>
-<meta name="description" content="Un poder permite que otra persona actúe en su nombre: cobrar, administrar, vender, firmar. Díganos para qué lo necesita y a quién se lo otorga; nosotr">
+<title>Cuestionario de protocolización de acta de asamblea. — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Para dar forma notarial a los acuerdos que ya tomó su sociedad: cambios de administración, poderes, aumentos de capital, reformas de estatutos. Adjunt">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,175 +19,182 @@
     <nav class="nav-links">
       <a href="/tramites/" class="mono">Trámites</a>
       <a href="/#contacto" class="mono">Contacto</a>
-      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20poder%20notarial" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20protocolizaci%C3%B3n" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
     </nav>
   </div>
 </header>
-<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/" class="on"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a></div></nav>
+<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/" class="on"><span class="n">05</span>Protocolización</a></div></nav>
 <div class="head">
   <div class="wrap">
     <div class="rule-row mono">
-      <span>Trámite 04 · Poderes</span>
+      <span>Trámite 05 · Corporativo</span>
       <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
     </div>
-    <h1>Cuestionario para otorgar un <em>poder</em> notarial.</h1>
-    <p class="lede">Un poder permite que otra persona actúe en su nombre: cobrar, administrar, vender, firmar. Díganos para qué lo necesita y a quién se lo otorga; nosotros elegimos las cláusulas correctas para que el apoderado no tenga problemas al usarlo.</p>
-    <div class="meta-row mono"><span>Toma unos 8 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+    <h1>Cuestionario de <em>protocolización</em> de acta de asamblea.</h1>
+    <p class="lede">Para dar forma notarial a los acuerdos que ya tomó su sociedad: cambios de administración, poderes, aumentos de capital, reformas de estatutos. Adjunte el acta firmada y los datos de la sociedad; nosotros armamos la escritura y gestionamos su inscripción en el Registro Público de Comercio.</p>
+    <div class="meta-row mono"><span>Toma unos 10 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+    <div class="note" style="margin-top:22px">
+      <p style="margin:0 0 12px"><b>Antes de empezar:</b> este trámite casi siempre requiere revisión directa con el despacho. La papelería varía mucho según lo que se acordó en la asamblea y según la sociedad (información de beneficiario controlador, libros corporativos, poderes vigentes, entre otros), así que ningún cuestionario en línea la cubre por completo. Le recomendamos enviar este cuestionario y, además, escribirnos por WhatsApp para revisar su caso.</p>
+      <a class="btn" href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20protocolizaci%C3%B3n" target="_blank" rel="noopener">Escribir por WhatsApp &rarr;</a>
+    </div>
   </div>
 </div>
-<form id="f" name="poder" method="POST" action="/gracias/?t=poder"
+<form id="f" name="protocolizacion" method="POST" action="/gracias/?t=protocolizacion"
       enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
-  <input type="hidden" name="form-name" value="poder">
-  <input type="hidden" name="subject" value="Cuestionario de poder — %{submissionId}">
+  <input type="hidden" name="form-name" value="protocolizacion">
+  <input type="hidden" name="subject" value="Cuestionario de protocolización — %{submissionId}">
   <input type="hidden" name="datos_json" id="datos_json">
   <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
   <div class="wrap">
   <fieldset>
-    <legend class="leg"><span class="num">01</span> <h2>Quién otorga el poder</h2></legend>
-    <p class="hint">El poderdante es quien da el poder. Si lo otorga una empresa, marque "persona moral" y anote los datos del representante que firmará.</p>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="poderdante_tipo" value="Persona física" required checked><span><b>Lo otorgo yo, a título personal</b></span></label>
-      <label class="opt"><input type="radio" name="poderdante_tipo" value="Persona moral"><span><b>Lo otorga una empresa</b><small>Se necesita el acta constitutiva y el poder de quien firma.</small></span></label>
-    </div>
-    <div data-show-if="poderdante_tipo:Persona moral">
+    <legend class="leg"><span class="num">01</span> <h2>La sociedad</h2></legend>
+    <p class="hint">Los datos exactos los tomamos del acta constitutiva; anote lo que tenga a la mano. El folio mercantil electrónico aparece en la boleta de inscripción del Registro Público de Comercio.</p>
     <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="empresa_denominacion" placeholder="Ej. Comercializadora del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC de la empresa</span><input type="text" name="empresa_rfc" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="empresa_folio" placeholder="N-2024… o número de folio"></label>
-      <label class="full"><span class="lab">Domicilio fiscal</span><input type="text" name="empresa_domicilio"></label>
-      <label><span class="lab">Cargo de quien firma</span><input type="text" name="empresa_representante_cargo" placeholder="Administrador único, apoderado…"></label>
-      <label><span class="lab">Escritura donde constan sus facultades</span><input type="text" name="empresa_escritura" placeholder="Número, notaría y fecha"></label>
-    </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas <i class="req">*</i></span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="empresa_acta" accept="image/*,application/pdf" required></div>
-      <div class="file"><span class="lab">Poder del representante legal <i class="req">*</i></span><small>Instrumento con el que comparece</small>
-        <input type="file" name="empresa_poder_rep" accept="image/*,application/pdf" required></div>
-    </div>
-    </div>
-    <div class="sub"><span class="lab">Datos de quien firma (poderdante o representante)</span></div>
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="poderdante_nombre" required autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="poderdante_fecha_nacimiento" required></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="poderdante_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="poderdante_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="poderdante_ocupacion"></label>
-      <label><span class="lab">Estado civil <i class="req">*</i></span><select name="poderdante_estado_civil" required><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="poderdante_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="poderdante_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="poderdante_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="poderdante_telefono" required autocomplete="tel"></label>
-      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="poderdante_email" required autocomplete="email"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="poderdante_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label class="full"><span class="lab">Denominación completa <i class="req">*</i></span><input type="text" name="sociedad_denominacion" required placeholder="Ej. Comercializadora del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="sociedad_rfc" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="sociedad_folio" placeholder="N-2024… o número de folio"></label>
+      <label class="full"><span class="lab">Domicilio social</span><input type="text" name="sociedad_domicilio"></label>
+      <label class="full"><span class="lab">Acta constitutiva</span><input type="text" name="sociedad_constitutiva" placeholder="Escritura número, notaría y fecha"></label>
+      <label><span class="lab">Capital social actual (MXN)</span><input type="number" name="sociedad_capital" min="0" step="1"></label>
+      <label><span class="lab">¿Llevan libro de actas y de registro de accionistas / socios?</span><select name="sociedad_libros"><option value="">Seleccione…</option><option>Sí, al día</option><option>Sí, pero no al día</option><option>No</option><option>No lo sé</option></select></label>
     </div>
 
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">02</span> <h2>Tipo de poder</h2></legend>
-    <p class="hint">Marque el tipo que necesita. Si no está seguro, describa abajo para qué lo va a usar y nosotros elegimos las cláusulas correctas.</p>
+    <legend class="leg"><span class="num">02</span> <h2>Qué se protocoliza</h2></legend>
+    <p class="hint">Protocolizar es incorporar al protocolo del notario un documento ya existente para darle fecha cierta y, en su caso, inscribirlo en el Registro Público de Comercio.</p>
     <div class="opts">
-      <label class="opt"><input type="radio" name="tipo_poder" value="Pleitos y cobranzas" required><span><b>General para pleitos y cobranzas</b><small>Representarlo ante juzgados, autoridades y particulares; cobrar, demandar, contestar demandas.</small></span></label>
-      <label class="opt"><input type="radio" name="tipo_poder" value="Actos de administración"><span><b>General para actos de administración</b><small>Administrar bienes y negocios: rentar, cobrar rentas, contratar, pagar, tramitar.</small></span></label>
-      <label class="opt"><input type="radio" name="tipo_poder" value="Actos de dominio"><span><b>General para actos de dominio</b><small>Vender, donar, hipotecar o gravar sus bienes. Es el más amplio; conviene limitarlo.</small></span></label>
-      <label class="opt"><input type="radio" name="tipo_poder" value="General amplísimo"><span><b>Poder general amplísimo (los tres anteriores)</b><small>Pleitos y cobranzas, administración y dominio, con facultad para títulos de crédito.</small></span></label>
-      <label class="opt"><input type="radio" name="tipo_poder" value="Cambiario" id="tp_cambiario"><span><b>Cambiario</b><small>Solo para suscribir, avalar y endosar títulos de crédito (cheques, pagarés, letras de cambio).</small></span></label>
-      <label class="opt"><input type="radio" name="tipo_poder" value="Todas las anteriores" id="tp_todas"><span><b>Todas las anteriores</b><small>Pleitos y cobranzas, administración, dominio y cambiario, en un solo poder.</small></span></label>
-      <label class="opt"><input type="radio" name="tipo_poder" value="Especial"><span><b>Poder especial</b><small>Para un acto o un bien concreto: vender una casa determinada, tramitar una pensión, recoger documentos.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Asamblea ordinaria" required><span><b>Acta de asamblea ordinaria</b><small>Aprobación de cuentas, nombramiento de administradores, poderes, reparto de utilidades.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Asamblea extraordinaria"><span><b>Acta de asamblea extraordinaria</b><small>Aumento o disminución de capital, reforma de estatutos, cambio de denominación, fusión, disolución.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Sesión de consejo"><span><b>Acta de sesión de consejo de administración</b><small>Acuerdos del consejo: poderes, nombramientos de gerentes.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Resoluciones unánimes"><span><b>Resoluciones unánimes fuera de asamblea</b><small>Adoptadas por escrito por la totalidad de socios o accionistas.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Otro documento"><span><b>Otro documento</b><small>Contrato privado, documento extranjero apostillado, etc. Descríbalo en observaciones.</small></span></label>
     </div>
-    <div class="grid" style="margin-top:22px">
-      <label class="full"><span class="lab">Para qué necesita el poder</span><textarea name="finalidad" placeholder="Ej. que mi hermano venda mi casa de la colonia Cumbres mientras vivo en Estados Unidos"></textarea></label>
-    </div>
-    <div class="sub"><span class="lab">Facultades adicionales</span></div>
-    <label class="check" style="margin-top:12px"><input type="checkbox" name="fac_titulos" value="Sí"><span>Suscribir, avalar y endosar títulos de crédito (cheques, pagarés).</span></label>
-    <label class="check"><input type="checkbox" name="fac_bancario" value="Sí"><span>Abrir, manejar y cancelar cuentas bancarias.</span></label>
-    <label class="check"><input type="checkbox" name="fac_sustituir" value="Sí"><span>Sustituir o delegar el poder a otra persona.</span></label>
-    <label class="check"><input type="checkbox" name="fac_laboral" value="Sí"><span>Representación en materia laboral (solo empresas).</span></label>
-    <label class="check"><input type="checkbox" name="fac_fiscal" value="Sí"><span>Trámites ante el SAT, IMSS y otras autoridades fiscales.</span></label>
-
-  </fieldset>
-
-  <fieldset>
-    <legend class="leg"><span class="num">03</span> <h2>Apoderado(s)</h2></legend>
-    <p class="hint">El apoderado es quien recibirá el poder. Si nombra a más de uno, indique si pueden actuar cada uno por separado o si deben firmar juntos.</p>
-    <div class="repeat slot" data-group="apoderado" data-i="1">
-      <div class="rep-head"><span class="mono">Apoderado 01</span></div>
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="apoderado1_nombre" required autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="apoderado1_fecha_nacimiento" required></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="apoderado1_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="apoderado1_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="apoderado1_ocupacion"></label>
-      <label><span class="lab">CURP</span><input type="text" name="apoderado1_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="apoderado1_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="apoderado1_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-      <label><span class="lab">Relación con usted</span><input type="text" name="apoderado1_relacion" placeholder="Hijo, cónyuge, abogado, gerente…"></label>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="apoderado" data-i="2" hidden>
-      <div class="rep-head"><span class="mono">Apoderado 02</span><button type="button" class="linkbtn" data-remove="apoderado">Quitar</button></div>
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="apoderado2_nombre" autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="apoderado2_fecha_nacimiento"></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="apoderado2_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="apoderado2_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="apoderado2_ocupacion"></label>
-      <label><span class="lab">CURP</span><input type="text" name="apoderado2_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="apoderado2_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="apoderado2_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-      <label><span class="lab">Relación con usted</span><input type="text" name="apoderado2_relacion" placeholder="Hijo, cónyuge, abogado, gerente…"></label>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="apoderado" data-i="3" hidden>
-      <div class="rep-head"><span class="mono">Apoderado 03</span><button type="button" class="linkbtn" data-remove="apoderado">Quitar</button></div>
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="apoderado3_nombre" autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="apoderado3_fecha_nacimiento"></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="apoderado3_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="apoderado3_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="apoderado3_ocupacion"></label>
-      <label><span class="lab">CURP</span><input type="text" name="apoderado3_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="apoderado3_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="apoderado3_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-      <label><span class="lab">Relación con usted</span><input type="text" name="apoderado3_relacion" placeholder="Hijo, cónyuge, abogado, gerente…"></label>
-    </div>
-    </div>
-    <button type="button" class="linkbtn addbtn" data-add="apoderado">+ Agregar otro apoderado</button>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="apoderados_modo" value="Separadamente"><span><b>Cada apoderado puede actuar por separado</b></span></label>
-      <label class="opt"><input type="radio" name="apoderados_modo" value="Conjuntamente"><span><b>Deben actuar juntos</b><small>Todas las firmas son necesarias para cada acto.</small></span></label>
+    <div class="sub"><span class="lab">Datos de la asamblea o sesión</span></div>
+    <div class="grid" style="margin-top:14px">
+      <label><span class="lab">Fecha de la asamblea <i class="req">*</i></span><input type="date" name="asamblea_fecha" required></label>
+      <label><span class="lab">Lugar donde se celebró</span><input type="text" name="asamblea_lugar" placeholder="Ciudad"></label>
+      <label><span class="lab">¿Cómo se reunieron?</span><select name="asamblea_convocatoria"><option value="">Seleccione…</option><option>Totalitaria (100 % del capital presente, sin convocatoria)</option><option>Con convocatoria publicada</option><option>No lo sé</option></select></label>
+      <label><span class="lab">Porcentaje del capital representado</span><input type="number" name="asamblea_capital_presente" placeholder="100" min="0" max="100" step="0.01"></label>
+      <label><span class="lab">Presidente de la asamblea</span><input type="text" name="asamblea_presidente"></label>
+      <label><span class="lab">Secretario de la asamblea</span><input type="text" name="asamblea_secretario"></label>
+      <label class="full"><span class="lab">Escrutador(es)</span><input type="text" name="asamblea_escrutador"></label>
     </div>
 
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">04</span> <h2>Vigencia</h2></legend>
-    <p class="hint">Un poder es revocable ante notario en cualquier momento. Indique cuánto tiempo debe durar.</p>
+    <legend class="leg"><span class="num">03</span> <h2>Acuerdos tomados</h2></legend>
+    <p class="hint">Marque todo lo que se aprobó. Con esto sabemos qué debe inscribirse en el Registro Público de Comercio y qué avisos hay que presentar.</p>
+    <label class="check" style="margin-top:12px"><input type="checkbox" name="ac_admin" value="Sí"><span>Nombramiento, ratificación o revocación de administrador único o consejo de administración.</span></label>
+    <label class="check"><input type="checkbox" name="ac_poderes" value="Sí"><span>Otorgamiento o revocación de poderes.</span></label>
+    <label class="check"><input type="checkbox" name="ac_capital_aumento" value="Sí"><span>Aumento de capital social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_capital_disminucion" value="Sí"><span>Disminución de capital social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_estatutos" value="Sí"><span>Reforma de estatutos sociales.</span></label>
+    <label class="check"><input type="checkbox" name="ac_denominacion" value="Sí"><span>Cambio de denominación o razón social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_domicilio" value="Sí"><span>Cambio de domicilio social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_objeto" value="Sí"><span>Modificación del objeto social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_acciones" value="Sí"><span>Venta o cesión de acciones o partes sociales entre socios o a terceros.</span></label>
+    <label class="check"><input type="checkbox" name="ac_comisario" value="Sí"><span>Nombramiento o revocación de comisario.</span></label>
+    <label class="check"><input type="checkbox" name="ac_fusion" value="Sí"><span>Transformación, fusión o escisión.</span></label>
+    <label class="check"><input type="checkbox" name="ac_disolucion" value="Sí"><span>Disolución y liquidación.</span></label>
+    <label class="check"><input type="checkbox" name="ac_otro" value="Sí"><span>Otro acuerdo (descríbalo abajo).</span></label>
+    <div data-show-if="ac_poderes:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Poderes otorgados o revocados</span><textarea name="poderes_detalle" placeholder="A quién, con qué facultades (pleitos y cobranzas, administración, dominio, títulos de crédito), y si se revoca alguno anterior"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_admin:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nuevo administrador o consejo</span><textarea name="admin_detalle" placeholder="Nombres y cargos; quién sale y quién entra"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_capital_aumento:checked">
+    <div class="grid" style="margin-top:16px">
+      <label><span class="lab">Monto del aumento (MXN)</span><input type="number" name="aumento_monto" min="0" step="1"></label>
+      <label><span class="lab">Parte del capital</span><select name="aumento_parte"><option value="">Seleccione…</option><option>Variable</option><option>Fija (requiere reforma de estatutos)</option></select></label>
+      <label class="full"><span class="lab">Quién suscribe y cómo paga</span><textarea name="aumento_detalle" placeholder="Socio, monto y forma de pago (efectivo, capitalización de pasivos, especie)"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_capital_disminucion:checked">
+    <div class="grid" style="margin-top:16px">
+      <label><span class="lab">Monto de la disminución (MXN)</span><input type="number" name="disminucion_monto" min="0" step="1"></label>
+      <label class="full"><span class="lab">Motivo y a quién se reembolsa</span><textarea name="disminucion_detalle"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_estatutos:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Cláusulas que se reforman</span><textarea name="estatutos_detalle" placeholder="Ej. cláusula de administración, cláusula de duración, artículo 12…"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_denominacion:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nueva denominación</span><input type="text" name="nueva_denominacion"></label>
+      <label class="full"><span class="lab">¿Ya tiene autorización de la Secretaría de Economía?</span><select name="nueva_denominacion_autorizacion"><option value="">Seleccione…</option><option>No, tramítenla ustedes</option><option>Sí, la adjunto</option></select></label>
+    </div>
+    </div>
+    <div data-show-if="ac_otro:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Descripción del acuerdo</span><textarea name="otro_detalle"></textarea></label>
+    </div>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">04</span> <h2>Delegado especial</h2></legend>
+    <p class="hint">La persona designada en el acta para comparecer ante el notario y firmar la protocolización. Normalmente es el administrador, el secretario de la asamblea o el abogado de la empresa.</p>
     <div class="grid">
-      <label><span class="lab">Vigencia <i class="req">*</i></span><select name="vigencia" required><option value="">Seleccione…</option><option>Indefinida (hasta que lo revoque)</option><option>Hasta una fecha determinada</option><option>Hasta que concluya el acto para el que se otorga</option></select></label>
-      <label><span class="lab">Fecha límite (si aplica)</span><input type="date" name="vigencia_fecha"></label>
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="delegado_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="delegado_fecha_nacimiento" required></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="delegado_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="delegado_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="delegado_ocupacion"></label>
+      <label><span class="lab">CURP</span><input type="text" name="delegado_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="delegado_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="delegado_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="delegado_email" required autocomplete="email"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="delegado_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Cargo en la sociedad</span><input type="text" name="delegado_cargo" placeholder="Delegado especial, administrador, secretario…"></label>
     </div>
 
   </fieldset>
 
   <fieldset>
     <legend class="leg"><span class="num">05</span> <h2>Documentos</h2></legend>
-    <p class="hint">Fotografía legible o PDF. Si no tiene alguno a la mano, envíelo después por WhatsApp. Las fotos se comprimen automáticamente antes de enviarse.</p>
+    <p class="hint">El acta firmada es indispensable. Si no tiene lista de asistencia o libro de registro, dígalo en observaciones: podemos preparar esos documentos con la protocolización. Los archivos grandes puede mandarlos por WhatsApp o correo.</p>
+    <div class="note">
+      <p style="margin:0 0 10px"><b>Documentos que normalmente se piden para protocolizar un acta de asamblea en Nuevo León</b> (no todos aplican a cada caso; los confirmamos con usted):</p>
+      <ul style="margin:0;padding-left:20px;line-height:1.7">
+        <li>Acta de asamblea firmada por el presidente y el secretario</li>
+        <li>Lista de asistencia</li>
+        <li>Acta constitutiva y reformas anteriores</li>
+        <li>Poder o nombramiento de quien firma</li>
+        <li>Identificación oficial del delegado especial</li>
+        <li>Constancia de situación fiscal de la sociedad</li>
+        <li>Libro de registro de accionistas o de socios</li>
+        <li>Publicación en el sistema de la Secretaría de Economía, cuando aplique</li>
+        <li>Información de beneficiario controlador</li>
+      </ul>
+    </div>
     <div class="files">
-      <div class="file"><span class="lab">Identificación del poderdante <i class="req">*</i></span><small>INE o pasaporte, frente</small>
-        <input type="file" name="ine_poderdante" accept="image/*,application/pdf" required></div>
-      <div class="file"><span class="lab">Identificación del poderdante — reverso</span><small>Solo si es INE</small>
-        <input type="file" name="ine_poderdante_reverso" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Identificación del apoderado</span><small>INE o pasaporte</small>
-        <input type="file" name="ine_apoderado" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">CURP del poderdante</span><small>Impresión del documento</small>
-        <input type="file" name="curp_poderdante" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Constancia de situación fiscal</span><small>Del poderdante o de la empresa</small>
+      <div class="file"><span class="lab">Acta de asamblea firmada <i class="req">*</i></span><small>Firmada por presidente y secretario</small>
+        <input type="file" name="acta_firmada" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">Lista de asistencia firmada</span><small>Con el porcentaje de cada socio</small>
+        <input type="file" name="lista_asistencia" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Convocatoria y publicación</span><small>Solo si no fue totalitaria</small>
+        <input type="file" name="convocatoria" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta constitutiva de la sociedad</span><small>Y últimas reformas de estatutos</small>
+        <input type="file" name="acta_constitutiva" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poderes o nombramientos vigentes</span><small>Del administrador o delegado</small>
+        <input type="file" name="poderes_vigentes" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Identificación del delegado especial</span><small>INE o pasaporte</small>
+        <input type="file" name="ine_delegado" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal de la sociedad</span><small>Descargable del SAT</small>
         <input type="file" name="constancia_fiscal" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Comprobante de domicilio</span><small>No mayor a tres meses</small>
-        <input type="file" name="comprobante_domicilio" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Escritura del inmueble</span><small>Solo si el poder es para venderlo o gravarlo</small>
-        <input type="file" name="escritura_inmueble" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Libro de registro de accionistas / socios</span><small>Página relevante, si aplica</small>
+        <input type="file" name="libro_registro" accept="image/*,application/pdf"></div>
     </div>
     <div class="meter" id="meter">
       <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
@@ -199,7 +206,7 @@
 
   <fieldset>
     <legend class="leg"><span class="num">06</span> <h2>Sus datos</h2></legend>
-    <p class="hint">Los datos de quien otorga el poder ya quedaron arriba. Aquí solo necesitamos cómo contactar a la persona que llena este formulario.</p>
+    <p class="hint">La persona con la que nos comunicaremos durante el trámite. Solo necesitamos su nombre y un teléfono; lo demás lo podemos tomar de sus documentos.</p>
     <div class="opts">
       <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked>
         <span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
@@ -217,8 +224,9 @@
       <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="contacto_nombre" required autocomplete="name"></label>
       <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="contacto_telefono" required autocomplete="tel"></label>
       <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="contacto_email" required autocomplete="email"></label>
+      <label><span class="lab">Su papel</span><select name="contacto_rol"><option value="">Seleccione…</option><option>Administrador(a) / representante</option><option>Socio(a) o accionista</option><option>Contador(a) / asesor</option><option>Abogado(a) de la empresa</option><option>Otro</option></select></label>
     </div>
-    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto del poder para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto de la escritura para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
     <div class="grid" data-show-if="captura_modo:manual" style="margin-top:16px">
       <label><span class="lab">CURP</span><input type="text" name="contacto_curp" maxlength="18" style="text-transform:uppercase"></label>
       <label><span class="lab">RFC</span><input type="text" name="contacto_rfc" maxlength="13" style="text-transform:uppercase"></label>
@@ -231,7 +239,7 @@
 
   <fieldset>
     <legend class="leg"><span class="num">07</span> <h2>Observaciones</h2></legend>
-    <p class="hint">Cualquier detalle: si el poderdante vive fuera de Monterrey, si tiene alguna dificultad para firmar o leer, si el poder sustituye a otro anterior que quiera revocar.</p>
+    <p class="hint">Fecha en que necesitan la escritura, si hay urgencia para inscribir en el Registro Público de Comercio, si el acta aún no está redactada (podemos redactarla), o cualquier duda.</p>
     <div class="grid">
       <label class="full"><span class="lab">Notas para el abogado</span><textarea name="observaciones"></textarea></label>
     </div>
@@ -240,7 +248,7 @@
 
   <div class="submit-zone">
     <h3>Antes de enviar</h3>
-    <p>Este cuestionario no otorga ningún poder. Sirve para preparar el proyecto que el poderdante firmará ante el notario; hasta ese momento nadie puede actuar en su nombre. El apoderado no necesita estar presente en la firma.</p>
+    <p>Este cuestionario no protocoliza nada por sí mismo. Sirve para revisar el acta, preparar el proyecto de escritura y cotizar la inscripción en el Registro Público de Comercio. Le enviamos la cotización desglosada antes de cualquier cargo.</p>
     <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
       <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
     <div class="errbox" id="errbox"></div>
@@ -257,10 +265,10 @@
 </footer>
 <script>
 window.CFG = {
-  formulario: 'poder',
+  formulario: 'protocolizacion',
   validate: function(errs, api){
-    if(api.val('poderdante_tipo') === 'Persona moral' && !api.val('empresa_denominacion')) errs.push('La denominación de la empresa que otorga el poder');
-    if(api.val('vigencia') === 'Hasta una fecha determinada' && !api.val('vigencia_fecha')) errs.push('La fecha límite del poder');
+    var alguno = ['ac_admin','ac_poderes','ac_capital_aumento','ac_capital_disminucion','ac_estatutos','ac_denominacion','ac_domicilio','ac_objeto','ac_acciones','ac_comisario','ac_fusion','ac_disolucion','ac_otro'].some(function(k){ return api.val(k); });
+    if(!alguno) errs.push('Marcar al menos un acuerdo tomado en la asamblea');
 
     var tel = document.querySelector('[name="contacto_telefono"]');
     if(tel && tel.value && tel.value.replace(/\D/g, '').length < 10){
@@ -273,21 +281,5 @@ window.CFG = {
 <script src="/assets/expediente.js" defer></script>
 <script src="/assets/form.js"></script>
 <script src="/assets/datos.js" defer></script>
-<script>
-/* Al elegir "Todas las anteriores" se marcan también las facultades adicionales, para que
-   el poderdante no tenga que repetirlas una por una. Puede desmarcarlas si no las quiere. */
-(function(){
-  "use strict";
-  var f = document.getElementById('f');
-  if(!f) return;
-  f.addEventListener('change', function(e){
-    if(e.target.name !== 'tipo_poder' || e.target.value !== 'Todas las anteriores') return;
-    ['fac_titulos','fac_bancario','fac_sustituir','fac_fiscal'].forEach(function(n){
-      var el = f.elements[n];
-      if(el) el.checked = true;
-    });
-  });
-})();
-</script>
 </body>
 </html>

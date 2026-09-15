@@ -3,145 +3,888 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trámites en línea — Asesoría y Servicio Notarial</title>
-<meta name="description" content="Elija el trámite notarial que necesita y conteste el cuestionario en línea. Testamento, constitución de sociedad, compraventa, poderes y protocolización de actas. Monterrey, N.L.">
+<title>Cuestionario de testamento — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Cuestionario en línea para preparar su testamento público abierto. Asesoría y Servicio Notarial, Monterrey, Nuevo León.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/form.css">
 <style>
-  .menu{padding:56px 0 90px}
-  .menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:38px}
-  .menu-head h1{max-width:18ch}
-  .menu-head p{margin-top:20px;max-width:56ch;color:var(--ink-soft);font-size:1.04rem}
-  .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:760px){.mgrid{grid-template-columns:1fr}}
-  .mcard{display:flex;flex-direction:column;text-decoration:none;background:var(--paper);border:1px solid var(--line);padding:30px 28px 26px;min-height:300px;transition:.2s}
-  .mcard:hover{border-color:var(--ink);transform:translateY(-2px)}
-  .mc-head{display:flex;justify-content:space-between;gap:12px;color:var(--ink-faint);margin-bottom:auto}
-  .mcard h2{font-size:1.75rem;margin:30px 0 12px;font-weight:400}
-  .mcard p{color:var(--ink-soft);font-size:.96rem}
-  .mc-foot{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap}
-  .tags{color:var(--ink-faint);font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;line-height:1.9}
-  .card-link{font-style:italic;border-bottom:1px solid var(--line);padding-bottom:3px;transition:.2s;white-space:nowrap}
-  .mcard:hover .card-link{border-color:var(--ink)}
-  .badge{font-family:var(--mono);font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
-  .other{background:var(--ink);color:#fff;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:300px}
-  .other h3{font-size:1.3rem;font-weight:400;margin-bottom:8px}
-  .other p{color:rgba(255,255,255,.66);font-size:.95rem;max-width:56ch}
-  .other .btn{margin:0;border-color:#fff;background:#fff;color:var(--ink);padding:12px 22px;align-self:flex-start}
-  .other .btn:hover{background:#efece6}
+  :root{
+    --ink:#2d3142; --ink-soft:#5b6076; --ink-faint:#8e93a6;
+    --paper:#ffffff; --paper-warm:#f6f5f2; --line:#e3e1dc;
+    --line-dark:rgba(255,255,255,.16); --accent:#8a6a3b;
+    --danger:#a4342b; --ok:#3f6b4a;
+    --max:880px;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper-warm);color:var(--ink);
+    font-family:var(--serif);font-size:17px;line-height:1.55;font-weight:350;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  h1,h2,h3{font-weight:500;letter-spacing:-.01em;margin:0}
+  h1{font-size:clamp(2rem,4.6vw,3.1rem);line-height:1.08}
+  h2{font-size:1.5rem;line-height:1.2}
+  h3{font-size:1.02rem;line-height:1.3}
+  p{margin:0}
+  em{font-style:italic}
+  .mono{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:400}
+
+  header.nav{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff}
+  .nav-in{max-width:var(--max);margin:0 auto;padding:0 28px;height:56px;display:flex;align-items:center;gap:24px}
+  .brand{font-size:1.18rem;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+  .brand span{font-style:italic;opacity:.72}
+  .nav-links{display:flex;gap:22px;margin-left:auto;align-items:center}
+  .nav-links a{text-decoration:none;color:rgba(255,255,255,.78);transition:color .2s}
+  .nav-links a:hover{color:#fff}
+
+  .head{background:var(--paper);border-bottom:1px solid var(--line);padding:60px 0 46px}
+  .rule-row{display:flex;justify-content:space-between;gap:20px;color:var(--ink-faint);border-bottom:1px solid var(--line);padding-bottom:12px}
+  .head h1{margin:34px 0 0;max-width:20ch}
+  .head .lede{margin-top:22px;max-width:58ch;color:var(--ink-soft);font-size:1.04rem}
+  .meta-row{display:flex;flex-wrap:wrap;gap:26px;margin-top:30px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink-faint)}
+
+  form{padding:52px 0 90px}
+  fieldset{border:1px solid var(--line);background:var(--paper);padding:32px 30px;margin:0 0 22px}
+  legend{padding:0 10px;margin-left:-10px}
+  .leg{display:flex;align-items:baseline;gap:14px}
+  .leg .num{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--ink-faint)}
+  .hint{color:var(--ink-soft);font-size:.95rem;margin-top:10px;max-width:62ch}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;margin-top:26px}
+  .grid .full{grid-column:1/-1}
+  @media(max-width:680px){.grid{grid-template-columns:1fr}fieldset{padding:26px 20px}}
+
+  label{display:block}
+  .lab{display:block;font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px}
+  .lab .req{color:var(--danger);font-family:var(--serif);font-size:.9rem;letter-spacing:0}
+  input[type=text],input[type=email],input[type=tel],input[type=date],input[type=number],select,textarea{
+    width:100%;font-family:var(--serif);font-size:1rem;color:var(--ink);background:var(--paper);
+    border:1px solid var(--line);border-radius:0;padding:11px 13px;transition:border-color .18s}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink)}
+  input.bad,select.bad{border-color:var(--danger);background:#fdf7f6}
+  textarea{min-height:96px;resize:vertical;line-height:1.5}
+  select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink-faint) 50%),linear-gradient(135deg,var(--ink-faint) 50%,transparent 50%);
+    background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:38px}
+
+  .check{display:flex;gap:11px;align-items:flex-start;margin-top:14px;cursor:pointer}
+  .check input{margin-top:5px;flex:none;width:16px;height:16px;accent-color:var(--ink)}
+  .check span{font-size:.97rem;color:var(--ink-soft)}
+
+  .repeat{border-top:1px solid var(--line);padding-top:22px;margin-top:22px}
+  .repeat:first-of-type{border-top:none;padding-top:0}
+  .rep-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+  .rep-head .mono{color:var(--ink-faint)}
+  .linkbtn{background:none;border:none;padding:0;font-family:var(--mono);font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--ink-soft);cursor:pointer;border-bottom:1px solid var(--line);transition:.2s}
+  .linkbtn:hover{color:var(--ink);border-color:var(--ink)}
+  .addbtn{margin-top:22px}
+
+  .sumbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:24px;padding:13px 16px;background:var(--paper-warm);border:1px solid var(--line)}
+  .sumbar b{font-weight:500}
+  .sumbar.ok{border-color:var(--ok);color:var(--ok)}
+  .sumbar.bad{border-color:var(--danger);color:var(--danger)}
+
+  .files{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;margin-top:26px}
+  @media(max-width:680px){.files{grid-template-columns:1fr}}
+  .file{border:1px dashed var(--line);padding:16px 16px 14px;background:var(--paper-warm)}
+  .file .lab{margin-bottom:4px}
+  .file small{display:block;color:var(--ink-faint);font-size:.85rem;margin-bottom:11px}
+  input[type=file]{width:100%;font-family:var(--mono);font-size:.72rem;color:var(--ink-soft)}
+  input[type=file]::file-selector-button{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:8px 12px;margin-right:12px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer}
+  input[type=file]::file-selector-button:hover{background:var(--ink);color:#fff}
+  .fsize{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;color:var(--ink-faint);margin-top:8px;display:block}
+
+  .meter{margin-top:24px;border:1px solid var(--line);padding:16px}
+  .meter-top{display:flex;justify-content:space-between;gap:14px;color:var(--ink-faint)}
+  .meter-bar{height:5px;background:var(--line);margin-top:11px;overflow:hidden}
+  .meter-fill{height:100%;width:0;background:var(--ink);transition:width .3s,background .3s}
+  .meter.warn .meter-fill{background:var(--danger)}
+  .meter p{font-size:.88rem;color:var(--ink-soft);margin-top:11px}
+
+  .submit-zone{background:var(--ink);color:#fff;padding:38px 32px;margin-top:26px}
+  .submit-zone h3{color:#fff;margin-bottom:12px}
+  .submit-zone p{color:rgba(255,255,255,.7);font-size:.95rem;max-width:58ch}
+  .submit-zone .check span{color:rgba(255,255,255,.75)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;text-decoration:none;font-family:var(--serif);
+    font-size:1rem;border:1px solid #fff;background:#fff;color:var(--ink);cursor:pointer;transition:.2s;margin-top:24px}
+  .btn:hover{background:#efece6}
+  .btn[disabled]{opacity:.55;cursor:progress}
+  .errbox{margin-top:20px;border:1px solid var(--danger);background:#fdf7f6;color:var(--danger);padding:14px 16px;font-size:.95rem;display:none}
+  .errbox.on{display:block}
+  .errbox ul{margin:8px 0 0;padding-left:20px}
+  .hp{position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden}
+
+  footer{background:#222534;color:rgba(255,255,255,.5);padding:26px 0}
+  .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
 </style>
 </head>
 <body>
+
 <header class="nav">
   <div class="nav-in">
     <a class="brand" href="/">Asesoría <span>&amp; Servicio Notarial</span></a>
     <nav class="nav-links">
-      <a href="/tramites/" class="mono">Trámites</a>
+      <a href="/#servicios" class="mono">Servicios</a>
       <a href="/#contacto" class="mono">Contacto</a>
-      <a href="https://wa.me/528183968590?text=El%20tr%C3%A1mite%20que%20busco%20realizar%20es%20el%20%3A__________" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20testamento" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
     </nav>
   </div>
 </header>
-<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a><a href="/donacion/"><span class="n">06</span>Donación</a><a href="/sucesion/"><span class="n">07</span>Sucesión</a><a href="/cancelacion-hipoteca/"><span class="n">08</span>Cancelación de hipoteca</a><a href="/fe-de-hechos/"><span class="n">09</span>Fe de hechos</a><a href="/ratificacion/"><span class="n">10</span>Ratificación</a><a href="/capitulaciones/"><span class="n">11</span>Capitulaciones</a></div></nav>
-<main class="menu">
+
+<div class="head">
   <div class="wrap">
     <div class="rule-row mono">
-      <span>Trámites en línea</span>
+      <span>Trámite 01 · Sucesiones</span>
       <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
     </div>
-    <div class="menu-head" style="margin-top:34px">
-      <div>
-        <h1>¿Qué trámite <em>necesita</em>?</h1>
-        <p>Elija uno y conteste el cuestionario desde su casa. Con sus respuestas y sus documentos redactamos el proyecto de escritura antes de la cita; usted solo lo revisa y lo firma ante notario. Cada trámite se cotiza antes de empezar.</p>
-      </div>
-      <span class="mono" style="color:var(--ink-faint)">11 trámites</span>
-    </div>
-    <div class="mgrid">
-      <a class="mcard" href="/testamento/">
-        <div class="mc-head mono"><span>01 · Testamento</span><span class="badge">En línea · 10 minutos</span></div>
-        <h2>Hacer mi <em>testamento</em></h2>
-        <p>Herederos, porcentajes, legados, albacea y tutor. Se otorga en una sola cita y queda bajo resguardo del protocolo.</p>
-        <div class="mc-foot"><span class="tags">Herederos · Legados · Albacea · Tutor</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/constitutiva/">
-        <div class="mc-head mono"><span>02 · Constituir mi empresa</span><span class="badge">En línea · 15 minutos</span></div>
-        <h2>Constituir mi <em>empresa</em></h2>
-        <p>S.A. de C.V., S. de R.L. de C.V. o S.C. Denominación, socios, capital, administración y poderes desde el primer día.</p>
-        <div class="mc-foot"><span class="tags">Denominación · Socios · Capital · Administración</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/compraventa/">
-        <div class="mc-head mono"><span>03 · Compraventa</span><span class="badge">En línea · 12 minutos</span></div>
-        <h2>Realizar una <em>compraventa</em></h2>
-        <p>Casa, departamento, terreno o local. Estudio de título, cálculo de ISAI e inscripción en el Registro Público.</p>
-        <div class="mc-foot"><span class="tags">Vendedor · Comprador · Inmueble · Precio</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/poder/">
-        <div class="mc-head mono"><span>04 · Poderes</span><span class="badge">En línea · 8 minutos</span></div>
-        <h2>Otorgar un <em>poder</em></h2>
-        <p>Pleitos y cobranzas, actos de administración, actos de dominio o poder especial. Para México o para usarse en el extranjero.</p>
-        <div class="mc-foot"><span class="tags">Poderdante · Apoderado · Facultades · Vigencia</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/protocolizacion/">
-        <div class="mc-head mono"><span>05 · Protocolización</span><span class="badge">En línea · 10 minutos</span></div>
-        <h2>Protocolizar un <em>acta</em></h2>
-        <p>Asambleas de accionistas o socios, sesiones de consejo y resoluciones unánimes, con inscripción en el Registro Público de Comercio.</p>
-        <div class="mc-foot"><span class="tags">Sociedad · Asamblea · Acuerdos · Delegado</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/donacion/">
-        <div class="mc-head mono"><span>06 · Donación</span><span class="badge">En línea · 10 minutos</span></div>
-        <h2>Realizar una <em>donación</em></h2>
-        <p>Donaciones en vida entre particulares, con la valuación del bien y el cálculo de impuestos correspondiente.</p>
-        <div class="mc-foot"><span class="tags">Donante · Donatario · Bien · Valor</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/sucesion/">
-        <div class="mc-head mono"><span>07 · Sucesión</span><span class="badge">En línea · 15 minutos</span></div>
-        <h2>Tramitar la <em>sucesión</em></h2>
-        <p>Sucesión testamentaria o intestamentaria y adjudicación de bienes hereditarios ante notario.</p>
-        <div class="mc-foot"><span class="tags">Herederos · Bienes · Adjudicación · Herencia</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/cancelacion-hipoteca/">
-        <div class="mc-head mono"><span>08 · Cancelación de hipoteca</span><span class="badge">En línea · 8 minutos</span></div>
-        <h2>Cancelar una <em>hipoteca</em></h2>
-        <p>Libere la garantía hipotecaria y cancele el gravamen en el Registro Público.</p>
-        <div class="mc-foot"><span class="tags">Acreedor · Deudor · Garantía · Registro</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/fe-de-hechos/">
-        <div class="mc-head mono"><span>09 · Fe de hechos</span><span class="badge">En línea · 8 minutos</span></div>
-        <h2>Solicitar <em>fe de hechos</em></h2>
-        <p>Constancia notarial de hechos que le constan, con cotejo de documentos.</p>
-        <div class="mc-foot"><span class="tags">Hechos · Testigos · Constancia · Notario</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/ratificacion/">
-        <div class="mc-head mono"><span>10 · Ratificación</span><span class="badge">En línea · 8 minutos</span></div>
-        <h2>Ratificar un <em>documento</em></h2>
-        <p>Ratifique ante notario la firma y el contenido de un documento privado.</p>
-        <div class="mc-foot"><span class="tags">Firmantes · Documento · Firma · Contenido</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-      <a class="mcard" href="/capitulaciones/">
-        <div class="mc-head mono"><span>11 · Capitulaciones</span><span class="badge">En línea · 10 minutos</span></div>
-        <h2>Firmar mis <em>capitulaciones</em></h2>
-        <p>Régimen de separación de bienes antes o durante el matrimonio.</p>
-        <div class="mc-foot"><span class="tags">Cónyuges · Régimen · Bienes · Matrimonio</span><span class="card-link">Contestar cuestionario &rarr;</span></div>
-      </a>
-    <div class="other">
-      <div>
-        <h3>¿Otro trámite o no está seguro?</h3>
-        <p>Escríbanos qué necesita y le decimos sin costo qué acto le corresponde y qué documentos reunir.</p>
-      </div>
-      <a class="btn" href="https://wa.me/528183968590?text=El%20tramite%20que%20busco%20realizar%20es%20el%20%3A__________" target="_blank" rel="noopener">Escribir por WhatsApp &rarr;</a>
-    </div>
+    <h1>Cuestionario de <em>testamento</em> público abierto.</h1>
+    <p class="lede">Conteste lo que sepa y adjunte los documentos que tenga a la mano. Con esto redactamos el proyecto de su testamento antes de la cita, para que el día de la cita solo lo revise y lo firme ante notario. Si algo no aplica en su caso, déjelo en blanco y lo vemos juntos.</p>
+    <div class="meta-row mono">
+      <span>Toma unos 10 minutos</span>
+      <span>Se envía cifrado al despacho</span>
+      <span>Nada se firma en línea</span>
     </div>
   </div>
-</main>
+</div>
+
+<form id="f" name="testamento" method="POST" action="/testamento/gracias.html"
+      enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="testamento">
+  <input type="hidden" name="subject" value="Cuestionario de testamento — %{submissionId}">
+  <input type="hidden" name="datos_json" id="datos_json">
+  <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
+  <div class="wrap">
+
+  <fieldset>
+    <legend class="leg"><span class="num">01</span> <h2>Estado civil</h2></legend>
+    <p class="hint">Importa porque define qué bienes son suyos y cuáles son de la sociedad conyugal. Si está casado por sociedad conyugal, solo puede testar sobre su mitad.</p>
+    <div class="grid">
+      <label><span class="lab">Estado civil <i class="req">*</i></span>
+        <select name="estado_civil" id="estado_civil" required>
+          <option value="">Seleccione…</option>
+          <option>Soltero(a)</option>
+          <option>Casado(a)</option>
+          <option>Divorciado(a)</option>
+          <option>Viudo(a)</option>
+          <option>Concubinato</option>
+        </select></label>
+      <label id="wrap_regimen" hidden><span class="lab">Régimen matrimonial</span>
+        <select name="regimen">
+          <option value="">Seleccione…</option>
+          <option>Sociedad conyugal</option>
+          <option>Separación de bienes</option>
+          <option>No lo recuerdo</option>
+        </select></label>
+      <label class="full" id="wrap_conyuge" hidden><span class="lab">Nombre completo del cónyuge o concubino(a)</span><input type="text" name="conyuge_nombre"></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">02</span> <h2>Hijos</h2></legend>
+    <p class="hint">Anote a todos sus hijos, incluso a los que no vaya a nombrar herederos. Es necesario saber si existen menores de edad o personas que dependan económicamente de usted.</p>
+    <div class="grid" style="margin-bottom:6px">
+      <label><span class="lab">¿Tiene hijos? <i class="req">*</i></span>
+        <select name="tiene_hijos" id="tiene_hijos" required>
+          <option value="">Seleccione…</option>
+          <option>No</option>
+          <option>Sí</option>
+        </select></label>
+    </div>
+    <div id="hijos_box" hidden>
+      <div class="repeat slot" data-group="hijo" data-i="1">
+        <div class="rep-head"><span class="mono">Hijo 01</span></div>
+        <div class="grid">
+          <label class="full"><span class="lab">Nombre completo</span><input type="text" name="hijo1_nombre"></label>
+          <label><span class="lab">Fecha de nacimiento</span><input type="date" name="hijo1_fecha_nacimiento"></label>
+          <label><span class="lab">¿Vive con usted?</span>
+            <select name="hijo1_dependiente"><option value="">—</option><option>Sí</option><option>No</option></select></label>
+        </div>
+      </div>
+      <div class="repeat slot" data-group="hijo" data-i="2" hidden>
+        <div class="rep-head"><span class="mono">Hijo 02</span><button type="button" class="linkbtn" data-remove="hijo">Quitar</button></div>
+        <div class="grid">
+          <label class="full"><span class="lab">Nombre completo</span><input type="text" name="hijo2_nombre"></label>
+          <label><span class="lab">Fecha de nacimiento</span><input type="date" name="hijo2_fecha_nacimiento"></label>
+          <label><span class="lab">¿Vive con usted?</span>
+            <select name="hijo2_dependiente"><option value="">—</option><option>Sí</option><option>No</option></select></label>
+        </div>
+      </div>
+      <div class="repeat slot" data-group="hijo" data-i="3" hidden>
+        <div class="rep-head"><span class="mono">Hijo 03</span><button type="button" class="linkbtn" data-remove="hijo">Quitar</button></div>
+        <div class="grid">
+          <label class="full"><span class="lab">Nombre completo</span><input type="text" name="hijo3_nombre"></label>
+          <label><span class="lab">Fecha de nacimiento</span><input type="date" name="hijo3_fecha_nacimiento"></label>
+          <label><span class="lab">¿Vive con usted?</span>
+            <select name="hijo3_dependiente"><option value="">—</option><option>Sí</option><option>No</option></select></label>
+        </div>
+      </div>
+      <div class="repeat slot" data-group="hijo" data-i="4" hidden>
+        <div class="rep-head"><span class="mono">Hijo 04</span><button type="button" class="linkbtn" data-remove="hijo">Quitar</button></div>
+        <div class="grid">
+          <label class="full"><span class="lab">Nombre completo</span><input type="text" name="hijo4_nombre"></label>
+          <label><span class="lab">Fecha de nacimiento</span><input type="date" name="hijo4_fecha_nacimiento"></label>
+          <label><span class="lab">¿Vive con usted?</span>
+            <select name="hijo4_dependiente"><option value="">—</option><option>Sí</option><option>No</option></select></label>
+        </div>
+      </div>
+      <div class="repeat slot" data-group="hijo" data-i="5" hidden>
+        <div class="rep-head"><span class="mono">Hijo 05</span><button type="button" class="linkbtn" data-remove="hijo">Quitar</button></div>
+        <div class="grid">
+          <label class="full"><span class="lab">Nombre completo</span><input type="text" name="hijo5_nombre"></label>
+          <label><span class="lab">Fecha de nacimiento</span><input type="date" name="hijo5_fecha_nacimiento"></label>
+          <label><span class="lab">¿Vive con usted?</span>
+            <select name="hijo5_dependiente"><option value="">—</option><option>Sí</option><option>No</option></select></label>
+        </div>
+      </div>
+      <div class="repeat slot" data-group="hijo" data-i="6" hidden>
+        <div class="rep-head"><span class="mono">Hijo 06</span><button type="button" class="linkbtn" data-remove="hijo">Quitar</button></div>
+        <div class="grid">
+          <label class="full"><span class="lab">Nombre completo</span><input type="text" name="hijo6_nombre"></label>
+          <label><span class="lab">Fecha de nacimiento</span><input type="date" name="hijo6_fecha_nacimiento"></label>
+          <label><span class="lab">¿Vive con usted?</span>
+            <select name="hijo6_dependiente"><option value="">—</option><option>Sí</option><option>No</option></select></label>
+        </div>
+      </div>
+      <button type="button" class="linkbtn addbtn" data-add="hijo">+ Agregar otro hijo</button>
+      <label class="check" style="margin-top:22px"><input type="checkbox" name="hay_menores" id="hay_menores" value="Sí">
+        <span>Alguno de mis hijos es menor de edad y quiero nombrar tutor.</span></label>
+      <div class="grid" id="tutor_box" hidden>
+        <label><span class="lab">Tutor que designo</span><input type="text" name="tutor_nombre"></label>
+        <label><span class="lab">Parentesco del tutor</span><input type="text" name="tutor_parentesco"></label>
+        <label><span class="lab">Tutor sustituto</span><input type="text" name="tutor_sustituto"></label>
+        <label><span class="lab">Parentesco del sustituto</span><input type="text" name="tutor_sustituto_parentesco"></label>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">03</span> <h2>Herederos</h2></legend>
+    <p class="hint">Los herederos reciben su patrimonio en la proporción que usted decida. Los porcentajes deben sumar exactamente 100. El heredero sustituto es quien recibe esa parte si el heredero principal fallece antes que usted.</p>
+    <div class="repeat slot" data-group="heredero" data-i="1">
+      <div class="rep-head"><span class="mono">Heredero 01</span></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero1_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero1_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero1_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero1_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Heredero 02</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero2_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero2_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero2_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero2_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Heredero 03</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero3_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero3_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero3_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero3_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="4" hidden>
+      <div class="rep-head"><span class="mono">Heredero 04</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero4_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero4_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero4_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero4_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="5" hidden>
+      <div class="rep-head"><span class="mono">Heredero 05</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero5_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero5_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero5_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero5_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="6" hidden>
+      <div class="rep-head"><span class="mono">Heredero 06</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero6_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero6_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero6_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero6_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="7" hidden>
+      <div class="rep-head"><span class="mono">Heredero 07</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero7_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero7_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero7_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero7_sustituto"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="heredero" data-i="8" hidden>
+      <div class="rep-head"><span class="mono">Heredero 08</span><button type="button" class="linkbtn" data-remove="heredero">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="heredero8_nombre"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="heredero8_parentesco" placeholder="Hijo, cónyuge, hermano…"></label>
+        <label><span class="lab">Porcentaje que le corresponde</span>
+          <input type="number" name="heredero8_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+        <label class="full"><span class="lab">Heredero sustituto (opcional)</span><input type="text" name="heredero8_sustituto"></label>
+      </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="heredero">+ Agregar otro heredero</button>
+    <div class="sumbar" id="sumbar"><span>Suma de porcentajes</span><b><span id="sumval">0</span> / 100</b></div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">04</span> <h2>Legados <em>(opcional)</em></h2></legend>
+    <p class="hint">Un legado es un bien concreto que quiere dejar a una persona determinada: una casa, un auto, una cuenta, una joya. Describa con claridad qué bien lega; si es un inmueble, pediremos también su dirección completa y, si los tiene a la mano, el predial y el expediente catastral. Si no desea dejar legados, deje esta sección en blanco.</p>
+    <div class="repeat slot" data-group="legado" data-i="1">
+      <div class="rep-head"><span class="mono">Legado 01</span></div>
+      <div class="grid">
+        <label class="full"><span class="lab">¿Qué bien lega?</span><input type="text" name="legado1_bien" placeholder="Ej. casa, auto, cuenta bancaria, joya…"></label>
+        <label><span class="lab">A favor de</span><input type="text" name="legado1_beneficiario"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="legado1_parentesco"></label>
+        <label><span class="lab">Tipo de bien</span>
+          <select name="legado1_tipo" class="legado-tipo">
+            <option value="">Seleccione…</option>
+            <option>Inmueble (casa, terreno, departamento)</option>
+            <option>Otro bien (mueble, vehículo, cuenta, joya…)</option>
+          </select></label>
+      </div>
+      <div class="legado-inmueble" id="legado_inmueble1" hidden>
+        <div class="grid" style="margin-top:14px">
+          <label class="full"><span class="lab">Dirección completa del inmueble</span><input type="text" name="legado1_direccion" placeholder="Calle, número, colonia, municipio, estado, CP"></label>
+        </div>
+        <div class="files" style="margin-top:16px">
+          <div class="file"><span class="lab">Predial del inmueble</span><small>Recibo o boleta más reciente</small>
+            <input type="file" name="legado1_predial" accept="image/*,application/pdf"></div>
+          <div class="file"><span class="lab">Expediente catastral</span><small>Si lo tiene a la mano</small>
+            <input type="file" name="legado1_catastral" accept="image/*,application/pdf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="legado" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Legado 02</span><button type="button" class="linkbtn" data-remove="legado">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">¿Qué bien lega?</span><input type="text" name="legado2_bien" placeholder="Ej. casa, auto, cuenta bancaria, joya…"></label>
+        <label><span class="lab">A favor de</span><input type="text" name="legado2_beneficiario"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="legado2_parentesco"></label>
+        <label><span class="lab">Tipo de bien</span>
+          <select name="legado2_tipo" class="legado-tipo">
+            <option value="">Seleccione…</option>
+            <option>Inmueble (casa, terreno, departamento)</option>
+            <option>Otro bien (mueble, vehículo, cuenta, joya…)</option>
+          </select></label>
+      </div>
+      <div class="legado-inmueble" id="legado_inmueble2" hidden>
+        <div class="grid" style="margin-top:14px">
+          <label class="full"><span class="lab">Dirección completa del inmueble</span><input type="text" name="legado2_direccion" placeholder="Calle, número, colonia, municipio, estado, CP"></label>
+        </div>
+        <div class="files" style="margin-top:16px">
+          <div class="file"><span class="lab">Predial del inmueble</span><small>Recibo o boleta más reciente</small>
+            <input type="file" name="legado2_predial" accept="image/*,application/pdf"></div>
+          <div class="file"><span class="lab">Expediente catastral</span><small>Si lo tiene a la mano</small>
+            <input type="file" name="legado2_catastral" accept="image/*,application/pdf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="legado" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Legado 03</span><button type="button" class="linkbtn" data-remove="legado">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">¿Qué bien lega?</span><input type="text" name="legado3_bien" placeholder="Ej. casa, auto, cuenta bancaria, joya…"></label>
+        <label><span class="lab">A favor de</span><input type="text" name="legado3_beneficiario"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="legado3_parentesco"></label>
+        <label><span class="lab">Tipo de bien</span>
+          <select name="legado3_tipo" class="legado-tipo">
+            <option value="">Seleccione…</option>
+            <option>Inmueble (casa, terreno, departamento)</option>
+            <option>Otro bien (mueble, vehículo, cuenta, joya…)</option>
+          </select></label>
+      </div>
+      <div class="legado-inmueble" id="legado_inmueble3" hidden>
+        <div class="grid" style="margin-top:14px">
+          <label class="full"><span class="lab">Dirección completa del inmueble</span><input type="text" name="legado3_direccion" placeholder="Calle, número, colonia, municipio, estado, CP"></label>
+        </div>
+        <div class="files" style="margin-top:16px">
+          <div class="file"><span class="lab">Predial del inmueble</span><small>Recibo o boleta más reciente</small>
+            <input type="file" name="legado3_predial" accept="image/*,application/pdf"></div>
+          <div class="file"><span class="lab">Expediente catastral</span><small>Si lo tiene a la mano</small>
+            <input type="file" name="legado3_catastral" accept="image/*,application/pdf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="legado" data-i="4" hidden>
+      <div class="rep-head"><span class="mono">Legado 04</span><button type="button" class="linkbtn" data-remove="legado">Quitar</button></div>
+      <div class="grid">
+        <label class="full"><span class="lab">¿Qué bien lega?</span><input type="text" name="legado4_bien" placeholder="Ej. casa, auto, cuenta bancaria, joya…"></label>
+        <label><span class="lab">A favor de</span><input type="text" name="legado4_beneficiario"></label>
+        <label><span class="lab">Parentesco</span><input type="text" name="legado4_parentesco"></label>
+        <label><span class="lab">Tipo de bien</span>
+          <select name="legado4_tipo" class="legado-tipo">
+            <option value="">Seleccione…</option>
+            <option>Inmueble (casa, terreno, departamento)</option>
+            <option>Otro bien (mueble, vehículo, cuenta, joya…)</option>
+          </select></label>
+      </div>
+      <div class="legado-inmueble" id="legado_inmueble4" hidden>
+        <div class="grid" style="margin-top:14px">
+          <label class="full"><span class="lab">Dirección completa del inmueble</span><input type="text" name="legado4_direccion" placeholder="Calle, número, colonia, municipio, estado, CP"></label>
+        </div>
+        <div class="files" style="margin-top:16px">
+          <div class="file"><span class="lab">Predial del inmueble</span><small>Recibo o boleta más reciente</small>
+            <input type="file" name="legado4_predial" accept="image/*,application/pdf"></div>
+          <div class="file"><span class="lab">Expediente catastral</span><small>Si lo tiene a la mano</small>
+            <input type="file" name="legado4_catastral" accept="image/*,application/pdf"></div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="legado">+ Agregar otro legado</button>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">05</span> <h2>Albacea</h2></legend>
+    <p class="hint">El albacea es quien se encarga de cumplir su testamento: reúne los bienes, paga lo que se deba y entrega a cada heredero lo suyo. Conviene que sea una persona de su confianza y que sepa que fue designada. El albacea sustituto toma su lugar si el titular no puede o no quiere actuar; por eso es obligatorio designarlo.</p>
+    <div class="grid">
+      <label><span class="lab">Albacea que designo <i class="req">*</i></span><input type="text" name="albacea_nombre" required></label>
+      <label><span class="lab">Parentesco</span><input type="text" name="albacea_parentesco"></label>
+      <label class="full"><span class="lab">Albacea sustituto <i class="req">*</i></span><input type="text" name="albacea_sustituto" required></label>
+    </div>
+    <label class="check"><input type="checkbox" name="albacea_relevar" value="Sí">
+      <span>Deseo relevar al albacea de otorgar garantía (caución) para el desempeño de su cargo.</span></label>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">06</span> <h2>Sus datos</h2></legend>
+    <p class="hint">Los datos del testador, es decir, de quien otorga el testamento. Solo necesitamos su nombre y un teléfono; lo demás lo podemos tomar de sus documentos.</p>
+
+    <div class="opts">
+      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked><span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="manual"><span><b>Prefiero capturar mis datos yo</b></span></label>
+    </div>
+
+    <div class="grid" style="margin-top:14px">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="nombre" autocomplete="name" required></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="telefono" autocomplete="tel" required></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="email" autocomplete="email" required></label>
+    </div>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto de su testamento para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+
+    <div id="datos_documentos_box" style="margin-top:16px">
+      <div class="files">
+        <div class="file"><span class="lab">Identificación oficial — frente <i class="req">*</i></span><small>INE, pasaporte o cédula</small>
+          <input type="file" name="ine_frente" accept="image/*,application/pdf"></div>
+        <div class="file"><span class="lab">Identificación oficial — reverso</span><small>Solo si es INE o cédula</small>
+          <input type="file" name="ine_reverso" accept="image/*,application/pdf"></div>
+        <div class="file"><span class="lab">Acta de nacimiento</span><small>Copia certificada reciente</small>
+          <input type="file" name="acta_nacimiento" accept="image/*,application/pdf"></div>
+        <div class="file"><span class="lab">CURP</span><small>Impresión del documento</small>
+          <input type="file" name="curp_archivo" accept="image/*,application/pdf"></div>
+        <div class="file"><span class="lab">Constancia de situación fiscal</span><small>Descargable del SAT</small>
+          <input type="file" name="constancia_fiscal" accept="image/*,application/pdf"></div>
+        <div class="file"><span class="lab">Comprobante de domicilio</span><small>No mayor a tres meses</small>
+          <input type="file" name="comprobante_domicilio" accept="image/*,application/pdf"></div>
+        <div class="file" id="wrap_acta_matrimonio" hidden><span class="lab">Acta de matrimonio <i class="req">*</i></span><small>Obligatoria porque indicó que está o estuvo casado(a)</small>
+          <input type="file" name="acta_matrimonio" accept="image/*,application/pdf"></div>
+      </div>
+      <div class="meter" id="meter">
+        <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
+        <div class="meter-bar"><div class="meter-fill" id="meter_fill"></div></div>
+        <p id="meter_note">Las imágenes se reducen antes de enviarse, así que el peso final suele ser mucho menor al que ve aquí.</p>
+      </div>
+    </div>
+
+    <div id="datos_manual_box" hidden style="margin-top:16px">
+      <div class="grid">
+        <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="fecha_nacimiento"></label>
+        <label><span class="lab">Lugar de nacimiento</span><input type="text" name="lugar_nacimiento" placeholder="Ciudad y estado"></label>
+        <label><span class="lab">Nacionalidad</span><input type="text" name="nacionalidad" value="Mexicana"></label>
+        <label><span class="lab">Ocupación</span><input type="text" name="ocupacion"></label>
+        <label><span class="lab">CURP</span><input type="text" name="curp" maxlength="18" style="text-transform:uppercase"></label>
+        <label><span class="lab">RFC</span><input type="text" name="rfc" maxlength="13" style="text-transform:uppercase"></label>
+        <label class="full"><span class="lab">Calle, número y colonia</span><input type="text" name="domicilio_calle" placeholder="Ej. Padre Mier 1703, Col. Obispado"></label>
+        <label><span class="lab">Código postal</span><input type="text" name="domicilio_cp" maxlength="5"></label>
+        <label><span class="lab">Municipio</span><input type="text" name="domicilio_municipio"></label>
+        <label><span class="lab">Estado</span><input type="text" name="domicilio_estado" value="Nuevo León"></label>
+      </div>
+    </div>
+    <p class="hint" data-curp-aviso hidden></p>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">07</span> <h2>Observaciones</h2></legend>
+    <p class="hint">Cualquier cosa que debamos saber antes de redactar: condiciones especiales, personas a las que expresamente no desea heredar, bienes en el extranjero, testamentos anteriores.</p>
+    <div class="grid"><label class="full"><span class="lab">Notas para el abogado</span><textarea name="observaciones"></textarea></label></div>
+  </fieldset>
+
+  <div class="submit-zone">
+    <h3>Antes de enviar</h3>
+    <p>Este cuestionario no es un testamento ni lo sustituye. Sirve para preparar el proyecto que usted revisará y firmará personalmente ante el notario. Nada de lo que escriba aquí surte efectos legales hasta ese momento.</p>
+    <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
+      <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
+    <div class="errbox" id="errbox"></div>
+    <button type="submit" class="btn" id="btn">Enviar cuestionario &rarr;</button>
+  </div>
+
+  </div>
+</form>
+
 <footer>
   <div class="wrap foot mono">
     <span>&copy; <span id="y">2026</span> Asesoría y Servicio Notarial &middot; Monterrey, N.L.</span>
     <span>Padre Mier 1703, Col. Obispado &middot; 81 8396 8590</span>
   </div>
 </footer>
-<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  "use strict";
+  var MAX_BYTES = 7 * 1024 * 1024;      // margen frente al limite de 8 MB de Netlify
+  var MAX_EDGE  = 1600;                 // lado mayor de las imagenes comprimidas
+  var JPEG_Q    = 0.72;
+
+  var f = document.getElementById('f');
+  var btn = document.getElementById('btn');
+  var errbox = document.getElementById('errbox');
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  /* ---------- mostrar / ocultar segun respuestas ---------- */
+  function bind(sel, fn){ var el = document.getElementById(sel); if(el){ el.addEventListener('change', fn); fn(); } }
+
+  bind('estado_civil', function(){
+    var v = document.getElementById('estado_civil').value;
+    var casado = (v === 'Casado(a)');
+    var pareja = casado || (v === 'Concubinato') || (v === 'Viudo(a)');
+    var necesitaActa = casado || (v === 'Viudo(a)');
+    document.getElementById('wrap_regimen').hidden = !casado;
+    document.getElementById('wrap_conyuge').hidden = !pareja;
+    var wrapActa = document.getElementById('wrap_acta_matrimonio');
+    if(wrapActa) wrapActa.hidden = !necesitaActa;
+  });
+
+  bind('tiene_hijos', function(){
+    document.getElementById('hijos_box').hidden = (document.getElementById('tiene_hijos').value !== 'Sí');
+  });
+
+  bind('hay_menores', function(){
+    document.getElementById('tutor_box').hidden = !document.getElementById('hay_menores').checked;
+  });
+
+  /* ---------- modo de captura: documentos o manual ---------- */
+  function toggleCaptura(){
+    var modo = f.elements['captura_modo'].value;
+    document.getElementById('datos_documentos_box').hidden = (modo !== 'documentos');
+    document.getElementById('datos_manual_box').hidden = (modo !== 'manual');
+  }
+  Array.prototype.forEach.call(f.elements['captura_modo'], function(r){ r.addEventListener('change', toggleCaptura); });
+  toggleCaptura();
+
+  /* ---------- repetidores ---------- */
+  function slots(group){
+    return Array.prototype.slice.call(document.querySelectorAll('.slot[data-group="' + group + '"]'));
+  }
+  document.addEventListener('click', function(e){
+    var add = e.target.getAttribute && e.target.getAttribute('data-add');
+    var rem = e.target.getAttribute && e.target.getAttribute('data-remove');
+    if(add){
+      var next = slots(add).filter(function(s){ return s.hidden; })[0];
+      if(next){ next.hidden = false; var i = next.querySelector('input,select'); if(i) i.focus(); }
+      else { e.target.textContent = 'Ya no caben mas en el formulario'; e.target.disabled = true; }
+      recalcPct();
+    }
+    if(rem){
+      var slot = e.target.closest('.slot');
+      if(slot){
+        slot.hidden = true;
+        Array.prototype.forEach.call(slot.querySelectorAll('input,select,textarea'), function(el){ el.value = ''; });
+        Array.prototype.forEach.call(slot.querySelectorAll('.legado-inmueble'), function(el){ el.hidden = true; });
+        var addBtn = document.querySelector('[data-add="' + rem + '"]');
+        if(addBtn){ addBtn.disabled = false; }
+        recalcPct();
+      }
+    }
+  });
+
+  /* ---------- legados: mostrar direccion y adjuntos solo si es inmueble ---------- */
+  document.addEventListener('change', function(e){
+    if(e.target.classList && e.target.classList.contains('legado-tipo')){
+      var slot = e.target.closest('.slot');
+      var i = slot ? slot.getAttribute('data-i') : null;
+      var box = i ? document.getElementById('legado_inmueble' + i) : null;
+      if(box){ box.hidden = (e.target.value.indexOf('Inmueble') !== 0); }
+    }
+  });
+
+  /* ---------- suma de porcentajes ---------- */
+  var sumbar = document.getElementById('sumbar');
+  var sumval = document.getElementById('sumval');
+  function pctTotal(){
+    var t = 0;
+    Array.prototype.forEach.call(document.querySelectorAll('.pct'), function(el){
+      if(el.closest('.slot').hidden) return;
+      var n = parseFloat(el.value);
+      if(!isNaN(n)) t += n;
+    });
+    return Math.round(t * 100) / 100;
+  }
+  function recalcPct(){
+    var t = pctTotal();
+    sumval.textContent = t;
+    sumbar.className = 'sumbar' + (t === 0 ? '' : (t === 100 ? ' ok' : ' bad'));
+  }
+  f.addEventListener('input', function(e){ if(e.target.classList.contains('pct')) recalcPct(); });
+  recalcPct();
+
+  /* ---------- medidor de peso ---------- */
+  var fills = document.getElementById('meter_fill');
+  var mtxt  = document.getElementById('meter_txt');
+  var meter = document.getElementById('meter');
+  function human(b){
+    if(b < 1024) return b + ' B';
+    if(b < 1024*1024) return Math.round(b/1024) + ' KB';
+    return (b/1048576).toFixed(1) + ' MB';
+  }
+  function rawTotal(){
+    var t = 0;
+    Array.prototype.forEach.call(f.querySelectorAll('input[type=file]'), function(i){
+      if(i.files && i.files[0]) t += i.files[0].size;
+    });
+    return t;
+  }
+  function refreshMeter(){
+    var t = rawTotal();
+    var pctW = Math.min(100, Math.round(t / MAX_BYTES * 100));
+    fills.style.width = pctW + '%';
+    mtxt.textContent = human(t) + ' de 7 MB';
+    meter.className = 'meter' + (t > MAX_BYTES ? ' warn' : '');
+  }
+  f.addEventListener('change', function(e){
+    if(e.target.type === 'file'){
+      var box = e.target.closest('.file');
+      var tag = box.querySelector('.fsize');
+      if(!tag){ tag = document.createElement('span'); tag.className = 'fsize'; box.appendChild(tag); }
+      tag.textContent = (e.target.files && e.target.files[0]) ? human(e.target.files[0].size) : '';
+      refreshMeter();
+    }
+  });
+
+  /* ---------- compresion de imagenes ---------- */
+  function compress(file){
+    return new Promise(function(resolve){
+      if(!file || file.type.indexOf('image/') !== 0 || file.type === 'image/gif'){ resolve(file); return; }
+      var url = URL.createObjectURL(file);
+      var img = new Image();
+      img.onload = function(){
+        var w = img.naturalWidth, h = img.naturalHeight;
+        var scale = Math.min(1, MAX_EDGE / Math.max(w, h));
+        var cw = Math.max(1, Math.round(w * scale)), ch = Math.max(1, Math.round(h * scale));
+        var c = document.createElement('canvas');
+        c.width = cw; c.height = ch;
+        var ctx = c.getContext('2d');
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cw, ch);
+        ctx.drawImage(img, 0, 0, cw, ch);
+        c.toBlob(function(blob){
+          URL.revokeObjectURL(url);
+          if(!blob || blob.size >= file.size){ resolve(file); return; }
+          var base = file.name.replace(/\.[^.]+$/, '');
+          resolve(new File([blob], base + '.jpg', { type: 'image/jpeg', lastModified: Date.now() }));
+        }, 'image/jpeg', JPEG_Q);
+      };
+      img.onerror = function(){ URL.revokeObjectURL(url); resolve(file); };
+      img.src = url;
+    });
+  }
+
+  /* ---------- datos estructurados ---------- */
+  function val(n){ var e = f.elements[n]; return e ? String(e.value || '').trim() : ''; }
+  function group(prefix, count, keys){
+    var arr = [];
+    for(var i = 1; i <= count; i++){
+      var slot = document.querySelector('.slot[data-group="' + prefix + '"][data-i="' + i + '"]');
+      if(!slot || slot.hidden) continue;
+      var o = {}, any = false;
+      keys.forEach(function(k){
+        var v = val(prefix + i + '_' + k);
+        o[k] = v;
+        if(v) any = true;
+      });
+      if(any) arr.push(o);
+    }
+    return arr;
+  }
+  function buildJSON(){
+    var pct = pctTotal();
+    return {
+      version: 1,
+      formulario: 'testamento',
+      enviado: new Date().toISOString(),
+      captura_modo: val('captura_modo'),
+      testador: {
+        nombre: val('nombre'), fecha_nacimiento: val('fecha_nacimiento'),
+        lugar_nacimiento: val('lugar_nacimiento'), nacionalidad: val('nacionalidad'),
+        ocupacion: val('ocupacion'), curp: val('curp').toUpperCase(), rfc: val('rfc').toUpperCase(),
+        telefono: val('telefono'), email: val('email'),
+        domicilio: {
+          calle: val('domicilio_calle'),
+          cp: val('domicilio_cp'), municipio: val('domicilio_municipio'), estado: val('domicilio_estado')
+        }
+      },
+      estado_civil: { estado: val('estado_civil'), regimen: val('regimen'), conyuge: val('conyuge_nombre') },
+      hijos: val('tiene_hijos') === 'Sí' ? group('hijo', 6, ['nombre', 'fecha_nacimiento', 'dependiente']) : [],
+      tutor: document.getElementById('hay_menores').checked ? {
+        nombre: val('tutor_nombre'), parentesco: val('tutor_parentesco'),
+        sustituto: val('tutor_sustituto'), sustituto_parentesco: val('tutor_sustituto_parentesco')
+      } : null,
+      herederos: group('heredero', 8, ['nombre', 'parentesco', 'porcentaje', 'sustituto']),
+      suma_porcentajes: pct,
+      legados: group('legado', 4, ['bien', 'beneficiario', 'parentesco', 'tipo', 'direccion']),
+      albacea: {
+        nombre: val('albacea_nombre'), parentesco: val('albacea_parentesco'),
+        sustituto: val('albacea_sustituto'),
+        relevado_de_caucion: f.elements['albacea_relevar'].checked
+      },
+      observaciones: val('observaciones')
+    };
+  }
+
+  /* ---------- validacion ---------- */
+  function showErrors(list){
+    if(!list.length){ errbox.className = 'errbox'; errbox.innerHTML = ''; return; }
+    errbox.className = 'errbox on';
+    errbox.innerHTML = '<b>Falta algo antes de enviar:</b><ul>' +
+      list.map(function(t){ return '<li>' + t + '</li>'; }).join('') + '</ul>';
+    errbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  function validate(){
+    var errs = [];
+    Array.prototype.forEach.call(f.querySelectorAll('[required]'), function(el){ el.classList.remove('bad'); });
+
+    var reqs = [
+      ['nombre', 'Su nombre completo'],
+      ['telefono', 'Un teléfono de contacto'],
+      ['email', 'Su correo electrónico'],
+      ['estado_civil', 'Su estado civil'],
+      ['tiene_hijos', 'Indicar si tiene hijos'],
+      ['albacea_nombre', 'El nombre del albacea'],
+      ['albacea_sustituto', 'El nombre del albacea sustituto']
+    ];
+    reqs.forEach(function(p){
+      var el = f.elements[p[0]];
+      if(el && !String(el.value || '').trim()){ errs.push(p[1]); el.classList.add('bad'); }
+    });
+
+    var mail = f.elements['email'];
+    if(mail.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail.value)){
+      errs.push('El correo electrónico no parece válido'); mail.classList.add('bad');
+    }
+
+    var tel = f.elements['telefono'];
+    if(tel.value && tel.value.replace(/\D/g, '').length < 10){
+      errs.push('El teléfono debe tener al menos 10 dígitos'); tel.classList.add('bad');
+    }
+
+    var her = group('heredero', 8, ['nombre', 'parentesco', 'porcentaje', 'sustituto']);
+    if(!her.length){ errs.push('Al menos un heredero con nombre'); }
+    var t = pctTotal();
+    if(her.length && t !== 100){
+      errs.push('Los porcentajes de los herederos deben sumar 100 (ahora suman ' + t + ')');
+    }
+
+    var estadoCivil = document.getElementById('estado_civil').value;
+    var necesitaActaMatrimonio = (estadoCivil === 'Casado(a)') || (estadoCivil === 'Viudo(a)');
+    var modoCaptura = f.elements['captura_modo'].value;
+    if(modoCaptura === 'manual'){
+      var fnac = f.elements['fecha_nacimiento'];
+      if(!String(fnac.value || '').trim()){ errs.push('Su fecha de nacimiento'); fnac.classList.add('bad'); }
+    } else {
+      if(!f.elements['ine_frente'].files.length){ errs.push('La identificación oficial (frente)'); }
+      if(necesitaActaMatrimonio && !f.elements['acta_matrimonio'].files.length){
+        errs.push('El acta de matrimonio, porque indicó que está o estuvo casado(a)');
+      }
+    }
+
+    if(!document.getElementById('acepta_aviso').checked){ errs.push('Autorizar el tratamiento de sus datos'); }
+
+    showErrors(errs);
+    return errs.length === 0;
+  }
+
+  /* ---------- envio ---------- */
+  var sending = false;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(sending) return;
+    if(!validate()) return;
+
+    sending = true;
+    btn.disabled = true;
+    btn.textContent = 'Preparando documentos…';
+
+    var inputs = Array.prototype.filter.call(f.querySelectorAll('input[type=file]'), function(i){
+      return i.files && i.files.length;
+    });
+
+    var chain = Promise.resolve(0);
+    inputs.forEach(function(input){
+      chain = chain.then(function(acc){
+        return compress(input.files[0]).then(function(out){
+          try {
+            var dt = new DataTransfer();
+            dt.items.add(out);
+            input.files = dt.files;
+          } catch(err){ out = input.files[0]; }
+          return acc + out.size;
+        });
+      });
+    });
+
+    chain.then(function(total){
+      if(total > MAX_BYTES){
+        sending = false;
+        btn.disabled = false;
+        btn.textContent = 'Enviar cuestionario →';
+        showErrors(['Los documentos pesan ' + human(total) + ' en total y el límite por envío es de 7 MB. ' +
+          'Quite alguno y mándelo después por WhatsApp, o vuelva a tomar la foto con menos resolución.']);
+        return;
+      }
+      var json = JSON.stringify(buildJSON());
+      document.getElementById('datos_json').value = json;
+      btn.textContent = 'Enviando…';
+      var copia = (window.Expediente && window.Expediente.activo())
+        ? window.Expediente.enviar(f, json)
+        : Promise.resolve(false);
+      copia.then(function(){
+        var cfgSitio = window.SITIO || {};
+        if(cfgSitio.usarNetlifyForms === false){
+          window.location.href = f.getAttribute('action') || cfgSitio.paginaGracias || '/gracias/';
+        } else {
+          HTMLFormElement.prototype.submit.call(f);
+        }
+      });
+    }).catch(function(){
+      sending = false;
+      btn.disabled = false;
+      btn.textContent = 'Enviar cuestionario →';
+      showErrors(['Hubo un problema al preparar los archivos. Intente de nuevo o mándenos los documentos por WhatsApp.']);
+    });
+  });
+})();
+</script>
+<script src="/assets/config.js" defer></script>
+<script src="/assets/expediente.js" defer></script>
+<script src="/assets/datos.js" defer></script>
 </body>
 </html>

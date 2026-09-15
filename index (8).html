@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cuestionario de compraventa de inmueble. — Asesoría y Servicio Notarial</title>
-<meta name="description" content="Lo puede llenar el comprador, el vendedor o cualquiera de los dos por acuerdo de ambos. Con la escritura anterior y estos datos hacemos el estudio de ">
+<title>Cuestionario de fe de hechos. — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Un acta de fe de hechos deja constancia notarial de algo que el notario percibe directamente: una entrega, el estado de un bien, una asamblea, una página de internet. Cuéntenos qué necesita hacer constar.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,450 +19,150 @@
     <nav class="nav-links">
       <a href="/tramites/" class="mono">Trámites</a>
       <a href="/#contacto" class="mono">Contacto</a>
-      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20compraventa" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20fe%20de%20hechos" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
     </nav>
   </div>
 </header>
-<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/" class="on"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a></div></nav>
+<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a></div></nav>
 <div class="head">
   <div class="wrap">
     <div class="rule-row mono">
-      <span>Trámite 03 · Inmuebles</span>
+      <span>Acta fuera de protocolo · Fe de hechos</span>
       <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
     </div>
-    <h1>Cuestionario de <em>compraventa</em> de inmueble.</h1>
-    <p class="lede">Lo puede llenar el comprador, el vendedor o cualquiera de los dos por acuerdo de ambos. Con la escritura anterior y estos datos hacemos el estudio de título, calculamos impuestos y derechos, y le mandamos la cotización desglosada antes de redactar.</p>
-    <div class="meta-row mono"><span>Toma unos 12 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+    <h1>Cuestionario de <em>fe de hechos</em>.</h1>
+    <p class="lede">Un acta de fe de hechos deja constancia de algo que el notario percibe directamente: una entrega, el estado de un inmueble, el contenido de una página o una conversación, una asamblea, una notificación. Cuéntenos qué necesita hacer constar y cuándo.</p>
+    <div class="meta-row mono"><span>Toma unos 5 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
   </div>
 </div>
-<form id="f" name="compraventa" method="POST" action="/gracias/?t=compraventa"
+<form id="f" name="fe-de-hechos" method="POST" action="/gracias/?t=fe-de-hechos"
       enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
-  <input type="hidden" name="form-name" value="compraventa">
-  <input type="hidden" name="subject" value="Cuestionario de compraventa — %{submissionId}">
+  <input type="hidden" name="form-name" value="fe-de-hechos">
+  <input type="hidden" name="subject" value="Cuestionario de fe de hechos — %{submissionId}">
   <input type="hidden" name="datos_json" id="datos_json">
   <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
   <div class="wrap">
-  <fieldset>
-    <legend class="leg"><span class="num">01</span> <h2>El inmueble</h2></legend>
-    <p class="hint">Los datos exactos los tomamos de la escritura anterior; aquí anote lo que sepa. Si el inmueble está en más de un municipio o son varios lotes, dígalo en observaciones.</p>
-    <div class="grid">
-      <label><span class="lab">Tipo de inmueble <i class="req">*</i></span><select name="inmueble_tipo" required><option value="">Seleccione…</option><option>Casa habitación</option><option>Departamento (condominio)</option><option>Terreno</option><option>Local comercial u oficina</option><option>Bodega o nave</option><option>Otro</option></select></label>
-      <label><span class="lab">Uso actual</span><select name="inmueble_uso"><option value="">Seleccione…</option><option>Habitado por el vendedor</option><option>Rentado</option><option>Desocupado</option><option>En construcción</option></select></label>
-      <label class="full"><span class="lab">Dirección completa <i class="req">*</i></span><input type="text" name="inmueble_direccion" required placeholder="Calle, número, colonia, municipio"></label>
-      <label><span class="lab">Código postal</span><input type="text" name="inmueble_cp" maxlength="5"></label>
-      <label><span class="lab">Municipio <i class="req">*</i></span><input type="text" name="inmueble_municipio" required></label>
-      <label><span class="lab">Expediente catastral</span><input type="text" name="inmueble_expediente" placeholder="Aparece en el recibo de predial"></label>
-      <label><span class="lab">Superficie del terreno (m²)</span><input type="number" name="inmueble_superficie" min="0" step="0.01"></label>
-      <label><span class="lab">Superficie construida (m²)</span><input type="number" name="inmueble_construccion" min="0" step="0.01"></label>
-    </div>
-    <p class="note">La escritura anterior (título de propiedad del vendedor) no se captura aquí: solo adjunte el documento escaneado completo en la sección de Documentos, más abajo.</p>
-    <div class="sub"><span class="lab">Situación del inmueble</span></div>
-    <div class="grid" style="margin-top:14px">
-      <label><span class="lab">¿Tiene hipoteca o gravamen vigente? <i class="req">*</i></span><select name="gravamen" required><option value="">Seleccione…</option><option>No</option><option>Sí, hipoteca bancaria</option><option>Sí, crédito INFONAVIT / FOVISSSTE</option><option>Sí, otro gravamen</option><option>No lo sé</option></select></label>
-      <label><span class="lab">Con quién y saldo aproximado</span><input type="text" name="gravamen_detalle" placeholder="Banco o institución"></label>
-      <label><span class="lab">Predial</span><select name="predial"><option value="">Seleccione…</option><option>Al corriente</option><option>Con adeudo</option><option>No lo sé</option></select></label>
-      <label><span class="lab">Agua y drenaje</span><select name="agua"><option value="">Seleccione…</option><option>Al corriente</option><option>Con adeudo</option><option>No lo sé</option><option>No aplica</option></select></label>
-    </div>
 
+  <fieldset>
+    <legend class="leg"><span class="num">01</span> <h2>Qué se quiere hacer constar</h2></legend>
+    <p class="hint">Por ejemplo: la entrega de un bien o un pago, el estado físico de un inmueble, el contenido de una página de internet o de una conversación, el desarrollo de una asamblea, o la notificación de un aviso a otra persona.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Descripción del hecho a certificar <i class="req">*</i></span><textarea name="hecho_descripcion" required placeholder="Describa con el mayor detalle posible qué quiere que el notario presencie y haga constar"></textarea></label>
+    </div>
+    <div class="note">El notario da fe de lo que percibe directamente por sus sentidos —lo que ve, oye o lee—; no califica ni juzga conductas, ni resuelve quién tiene la razón.</div>
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">02</span> <h2>Vendedor(es)</h2></legend>
-    <p class="hint">Quien aparece como propietario en la escritura anterior. Si está casado por sociedad conyugal, su cónyuge también debe firmar aunque no aparezca en la escritura. Si el vendedor es una empresa, marque "persona moral" y llene los datos de la empresa y de su representante.</p>
-    <div class="repeat slot" data-group="vendedor" data-i="1">
-      <div class="rep-head"><span class="mono">Vendedor 01</span></div>
+    <legend class="leg"><span class="num">02</span> <h2>Dónde y cuándo</h2></legend>
+    <p class="hint">Indique el lugar exacto donde debe presentarse el notario.</p>
     <div class="opts">
-      <label class="opt"><input type="radio" name="vendedor1_tipo_persona" value="Persona física" required checked><span><b>Persona física</b></span></label>
-      <label class="opt"><input type="radio" name="vendedor1_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+      <label class="opt"><input type="radio" name="lugar_tipo" value="Despacho" required checked><span><b>En el despacho</b></span></label>
+      <label class="opt"><input type="radio" name="lugar_tipo" value="Otro lugar"><span><b>En otro lugar</b><small>Domicilio, oficina, inmueble u otro sitio donde deba ocurrir el hecho.</small></span></label>
     </div>
-    <div data-show-if="vendedor1_tipo_persona:Persona física">
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="vendedor1_nombre" required autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="vendedor1_fecha_nacimiento" required></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="vendedor1_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="vendedor1_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="vendedor1_ocupacion"></label>
-      <label><span class="lab">Estado civil <i class="req">*</i></span><select name="vendedor1_estado_civil" required><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="vendedor1_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="vendedor1_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="vendedor1_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="vendedor1_telefono" required autocomplete="tel"></label>
-      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="vendedor1_email" required autocomplete="email"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="vendedor1_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-      <label class="full"><span class="lab">Nombre del cónyuge (si es casado)</span><input type="text" name="vendedor1_conyuge"></label>
-      <label><span class="lab">¿Cómo adquirió el inmueble?</span><select name="vendedor1_adquisicion"><option value="">Seleccione…</option><option>Compraventa</option><option>Herencia</option><option>Donación</option><option>Adjudicación</option><option>Otro / no lo sé</option></select></label>
+    <div class="grid" data-show-if="lugar_tipo:Otro lugar">
+      <label class="full"><span class="lab">Dirección exacta <i class="req">*</i></span><input type="text" name="lugar_direccion" placeholder="Calle, número, colonia, C.P., municipio"></label>
     </div>
+    <div class="grid" style="margin-top:18px">
+      <label><span class="lab">Fecha deseada <i class="req">*</i></span><input type="date" name="fecha_deseada" required></label>
+      <label><span class="lab">Hora deseada</span><input type="time" name="hora_deseada"></label>
     </div>
-    <div data-show-if="vendedor1_tipo_persona:Persona moral">
-    <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="vendedor1_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC</span><input type="text" name="vendedor1_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="vendedor1_moral_folio_mercantil"></label>
-      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="vendedor1_moral_representante_nombre"></label>
-      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="vendedor1_moral_representante_telefono"></label>
-      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="vendedor1_moral_representante_email"></label>
-      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="vendedor1_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
-    </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="vendedor1_moral_acta" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
-        <input type="file" name="vendedor1_moral_poder_rep" accept="image/*,application/pdf"></div>
-    </div>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="vendedor" data-i="2" hidden>
-      <div class="rep-head"><span class="mono">Vendedor 02</span><button type="button" class="linkbtn" data-remove="vendedor">Quitar</button></div>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="vendedor2_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
-      <label class="opt"><input type="radio" name="vendedor2_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
-    </div>
-    <div data-show-if="vendedor2_tipo_persona:Persona física">
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="vendedor2_nombre" autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="vendedor2_fecha_nacimiento"></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="vendedor2_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="vendedor2_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="vendedor2_ocupacion"></label>
-      <label><span class="lab">Estado civil</span><select name="vendedor2_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="vendedor2_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="vendedor2_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="vendedor2_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="vendedor2_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-      <label class="full"><span class="lab">Nombre del cónyuge (si es casado)</span><input type="text" name="vendedor2_conyuge"></label>
-      <label><span class="lab">¿Cómo adquirió el inmueble?</span><select name="vendedor2_adquisicion"><option value="">Seleccione…</option><option>Compraventa</option><option>Herencia</option><option>Donación</option><option>Adjudicación</option><option>Otro / no lo sé</option></select></label>
-    </div>
-    </div>
-    <div data-show-if="vendedor2_tipo_persona:Persona moral">
-    <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="vendedor2_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC</span><input type="text" name="vendedor2_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="vendedor2_moral_folio_mercantil"></label>
-      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="vendedor2_moral_representante_nombre"></label>
-      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="vendedor2_moral_representante_telefono"></label>
-      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="vendedor2_moral_representante_email"></label>
-      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="vendedor2_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
-    </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="vendedor2_moral_acta" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
-        <input type="file" name="vendedor2_moral_poder_rep" accept="image/*,application/pdf"></div>
-    </div>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="vendedor" data-i="3" hidden>
-      <div class="rep-head"><span class="mono">Vendedor 03</span><button type="button" class="linkbtn" data-remove="vendedor">Quitar</button></div>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="vendedor3_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
-      <label class="opt"><input type="radio" name="vendedor3_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
-    </div>
-    <div data-show-if="vendedor3_tipo_persona:Persona física">
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="vendedor3_nombre" autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="vendedor3_fecha_nacimiento"></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="vendedor3_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="vendedor3_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="vendedor3_ocupacion"></label>
-      <label><span class="lab">Estado civil</span><select name="vendedor3_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="vendedor3_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="vendedor3_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="vendedor3_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="vendedor3_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-      <label class="full"><span class="lab">Nombre del cónyuge (si es casado)</span><input type="text" name="vendedor3_conyuge"></label>
-      <label><span class="lab">¿Cómo adquirió el inmueble?</span><select name="vendedor3_adquisicion"><option value="">Seleccione…</option><option>Compraventa</option><option>Herencia</option><option>Donación</option><option>Adjudicación</option><option>Otro / no lo sé</option></select></label>
-    </div>
-    </div>
-    <div data-show-if="vendedor3_tipo_persona:Persona moral">
-    <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="vendedor3_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC</span><input type="text" name="vendedor3_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="vendedor3_moral_folio_mercantil"></label>
-      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="vendedor3_moral_representante_nombre"></label>
-      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="vendedor3_moral_representante_telefono"></label>
-      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="vendedor3_moral_representante_email"></label>
-      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="vendedor3_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
-    </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="vendedor3_moral_acta" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
-        <input type="file" name="vendedor3_moral_poder_rep" accept="image/*,application/pdf"></div>
-    </div>
-    </div>
-    </div>
-    <button type="button" class="linkbtn addbtn" data-add="vendedor">+ Agregar otro vendedor</button>
-    <p class="note">Para el cálculo del ISR de persona física, favor de incluir el CFDI de la última compraventa, en caso de tenerlo.</p>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">CFDI de la última compraventa (opcional)</span><small>Para el cálculo del ISR del vendedor</small>
-        <input type="file" name="vendedor_cfdi_anterior" accept="image/*,application/pdf"></div>
-    </div>
-
+    <label class="check" style="margin-top:12px"><input type="checkbox" name="urgente" value="Sí"><span>Es urgente: necesito la diligencia en las próximas 24–48 horas.</span></label>
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">03</span> <h2>Comprador(es)</h2></legend>
-    <p class="hint">Si compran dos o más personas, indique el porcentaje de cada una (copropiedad). Si el comprador es casado por sociedad conyugal, el inmueble entra a la sociedad aunque solo firme uno. Si el comprador es una empresa, marque "persona moral" y llene los datos de la empresa y de su representante.</p>
-    <div class="repeat slot" data-group="comprador" data-i="1">
-      <div class="rep-head"><span class="mono">Comprador 01</span></div>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="comprador1_tipo_persona" value="Persona física" required checked><span><b>Persona física</b></span></label>
-      <label class="opt"><input type="radio" name="comprador1_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    <legend class="leg"><span class="num">03</span> <h2>Personas presentes</h2></legend>
+    <p class="hint">Quiénes estarán en el lugar cuando acuda el notario. Puede agregar hasta cuatro.</p>
+    <div class="repeat slot" data-group="presente" data-i="1">
+      <div class="rep-head"><span class="mono">Persona 01</span></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente1_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente1_calidad" placeholder="Vecino, empleado, testigo, contraparte…"></label>
+      </div>
     </div>
-    <div data-show-if="comprador1_tipo_persona:Persona física">
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="comprador1_nombre" required autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="comprador1_fecha_nacimiento" required></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="comprador1_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="comprador1_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="comprador1_ocupacion"></label>
-      <label><span class="lab">Estado civil <i class="req">*</i></span><select name="comprador1_estado_civil" required><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="comprador1_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="comprador1_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="comprador1_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="comprador1_telefono" required autocomplete="tel"></label>
-      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="comprador1_email" required autocomplete="email"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="comprador1_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    <div class="repeat slot" data-group="presente" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Persona 02</span><button type="button" class="linkbtn" data-remove="presente">Quitar</button></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente2_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente2_calidad"></label>
+      </div>
     </div>
+    <div class="repeat slot" data-group="presente" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Persona 03</span><button type="button" class="linkbtn" data-remove="presente">Quitar</button></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente3_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente3_calidad"></label>
+      </div>
     </div>
-    <div data-show-if="comprador1_tipo_persona:Persona moral">
-    <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="comprador1_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC</span><input type="text" name="comprador1_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="comprador1_moral_folio_mercantil"></label>
-      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="comprador1_moral_representante_nombre"></label>
-      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="comprador1_moral_representante_telefono"></label>
-      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="comprador1_moral_representante_email"></label>
-      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="comprador1_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    <div class="repeat slot" data-group="presente" data-i="4" hidden>
+      <div class="rep-head"><span class="mono">Persona 04</span><button type="button" class="linkbtn" data-remove="presente">Quitar</button></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente4_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente4_calidad"></label>
+      </div>
     </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="comprador1_moral_acta" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
-        <input type="file" name="comprador1_moral_poder_rep" accept="image/*,application/pdf"></div>
-    </div>
-    </div>
-    <div class="grid" style="margin-top:14px">
-      <label><span class="lab">Porcentaje que adquiere</span><input type="number" name="comprador1_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal" placeholder="100 si compra solo"></label>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="comprador" data-i="2" hidden>
-      <div class="rep-head"><span class="mono">Comprador 02</span><button type="button" class="linkbtn" data-remove="comprador">Quitar</button></div>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="comprador2_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
-      <label class="opt"><input type="radio" name="comprador2_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
-    </div>
-    <div data-show-if="comprador2_tipo_persona:Persona física">
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="comprador2_nombre" autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="comprador2_fecha_nacimiento"></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="comprador2_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="comprador2_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="comprador2_ocupacion"></label>
-      <label><span class="lab">Estado civil</span><select name="comprador2_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="comprador2_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="comprador2_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="comprador2_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="comprador2_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-    </div>
-    </div>
-    <div data-show-if="comprador2_tipo_persona:Persona moral">
-    <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="comprador2_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC</span><input type="text" name="comprador2_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="comprador2_moral_folio_mercantil"></label>
-      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="comprador2_moral_representante_nombre"></label>
-      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="comprador2_moral_representante_telefono"></label>
-      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="comprador2_moral_representante_email"></label>
-      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="comprador2_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
-    </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="comprador2_moral_acta" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
-        <input type="file" name="comprador2_moral_poder_rep" accept="image/*,application/pdf"></div>
-    </div>
-    </div>
-    <div class="grid" style="margin-top:14px">
-      <label><span class="lab">Porcentaje que adquiere</span><input type="number" name="comprador2_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal" placeholder="100 si compra solo"></label>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="comprador" data-i="3" hidden>
-      <div class="rep-head"><span class="mono">Comprador 03</span><button type="button" class="linkbtn" data-remove="comprador">Quitar</button></div>
-    <div class="opts">
-      <label class="opt"><input type="radio" name="comprador3_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
-      <label class="opt"><input type="radio" name="comprador3_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
-    </div>
-    <div data-show-if="comprador3_tipo_persona:Persona física">
-    <div class="grid">
-      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="comprador3_nombre" autocomplete="name"></label>
-      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="comprador3_fecha_nacimiento"></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="comprador3_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Nacionalidad</span><input type="text" name="comprador3_nacionalidad" value="Mexicana"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="comprador3_ocupacion"></label>
-      <label><span class="lab">Estado civil</span><select name="comprador3_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
-      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="comprador3_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
-      <label><span class="lab">CURP</span><input type="text" name="comprador3_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="comprador3_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="comprador3_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
-    </div>
-    </div>
-    <div data-show-if="comprador3_tipo_persona:Persona moral">
-    <div class="grid">
-      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="comprador3_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
-      <label><span class="lab">RFC</span><input type="text" name="comprador3_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
-      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="comprador3_moral_folio_mercantil"></label>
-      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="comprador3_moral_representante_nombre"></label>
-      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="comprador3_moral_representante_telefono"></label>
-      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="comprador3_moral_representante_email"></label>
-      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="comprador3_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
-    </div>
-    <div class="files" style="margin-top:16px">
-      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
-        <input type="file" name="comprador3_moral_acta" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
-        <input type="file" name="comprador3_moral_poder_rep" accept="image/*,application/pdf"></div>
-    </div>
-    </div>
-    <div class="grid" style="margin-top:14px">
-      <label><span class="lab">Porcentaje que adquiere</span><input type="number" name="comprador3_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal" placeholder="100 si compra solo"></label>
-    </div>
-    </div>
-    <button type="button" class="linkbtn addbtn" data-add="comprador">+ Agregar otro comprador</button>
-    <div class="sumbar" id="sumbar"><span>Suma de porcentajes</span><b><span id="sumval">0</span> / 100</b></div>
-
+    <button type="button" class="linkbtn addbtn" data-add="presente">+ Agregar otra persona</button>
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">04</span> <h2>La operación</h2></legend>
-    <p class="hint">Con el precio y la forma de pago calculamos el ISAI (impuesto de adquisición), los derechos de registro y, en su caso, el ISR del vendedor. El precio en escritura no puede ser menor al valor catastral ni al avalúo.</p>
-    <div class="grid">
-      <label><span class="lab">Precio de la operación (MXN) <i class="req">*</i></span><input type="number" name="precio" required min="0" step="1" inputmode="decimal"></label>
-      <label><span class="lab">Fecha en que quisieran firmar</span><input type="date" name="fecha_firma"></label>
-      <label><span class="lab">¿Ya tienen avalúo?</span><select name="avaluo"><option value="">Seleccione…</option><option>No, tramítenlo ustedes</option><option>Sí, lo adjunto</option><option>Lo tramita el banco</option></select></label>
-      <label><span class="lab">¿Quién paga los gastos de escrituración?</span><select name="gastos"><option value="">Seleccione…</option><option>El comprador (lo usual)</option><option>El vendedor</option><option>Por mitad</option><option>Por acuerdo especial (explicar abajo)</option></select></label>
-      <label><span class="lab">¿El vendedor habita el inmueble y lo usará para exención de ISR?</span><select name="vendedor_exencion"><option value="">Seleccione…</option><option>No lo sé</option><option>Sí, es su casa habitación</option><option>No</option></select></label>
-    </div>
-    <div class="sub"><span class="lab">Forma(s) de pago</span></div>
-    <p class="hint">Si el pago se hace en más de una parte —por ejemplo, un enganche en efectivo y el resto con crédito hipotecario— agregue una línea por cada forma de pago, con su importe.</p>
-    <div class="repeat slot" data-group="pago" data-i="1">
-      <div class="rep-head"><span class="mono">Forma de pago 01</span></div>
-    <div class="grid">
-      <label><span class="lab">Forma de pago <i class="req">*</i></span><select name="pago1_forma" required><option value="">Seleccione…</option><option>Efectivo</option><option>Transferencia electrónica interbancaria</option><option>Crédito bancario</option><option>Crédito INFONAVIT</option><option>Crédito FOVISSSTE</option><option>Cofinanciamiento (banco + INFONAVIT)</option><option>Cheque</option><option>Ya se pagó (regularización)</option><option>Otro</option></select></label>
-      <label><span class="lab">Importe (MXN) <i class="req">*</i></span><input type="number" name="pago1_importe" required min="0" step="1" inputmode="decimal" class="montoimporte"></label>
-      <label><span class="lab">Banco o institución (si aplica)</span><input type="text" name="pago1_institucion"></label>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="pago" data-i="2" hidden>
-      <div class="rep-head"><span class="mono">Forma de pago 02</span><button type="button" class="linkbtn" data-remove="pago">Quitar</button></div>
-    <div class="grid">
-      <label><span class="lab">Forma de pago</span><select name="pago2_forma"><option value="">Seleccione…</option><option>Efectivo</option><option>Transferencia electrónica interbancaria</option><option>Crédito bancario</option><option>Crédito INFONAVIT</option><option>Crédito FOVISSSTE</option><option>Cofinanciamiento (banco + INFONAVIT)</option><option>Cheque</option><option>Ya se pagó (regularización)</option><option>Otro</option></select></label>
-      <label><span class="lab">Importe (MXN)</span><input type="number" name="pago2_importe" min="0" step="1" inputmode="decimal" class="montoimporte"></label>
-      <label><span class="lab">Banco o institución (si aplica)</span><input type="text" name="pago2_institucion"></label>
-    </div>
-    </div>
-    <div class="repeat slot" data-group="pago" data-i="3" hidden>
-      <div class="rep-head"><span class="mono">Forma de pago 03</span><button type="button" class="linkbtn" data-remove="pago">Quitar</button></div>
-    <div class="grid">
-      <label><span class="lab">Forma de pago</span><select name="pago3_forma"><option value="">Seleccione…</option><option>Efectivo</option><option>Transferencia electrónica interbancaria</option><option>Crédito bancario</option><option>Crédito INFONAVIT</option><option>Crédito FOVISSSTE</option><option>Cofinanciamiento (banco + INFONAVIT)</option><option>Cheque</option><option>Ya se pagó (regularización)</option><option>Otro</option></select></label>
-      <label><span class="lab">Importe (MXN)</span><input type="number" name="pago3_importe" min="0" step="1" inputmode="decimal" class="montoimporte"></label>
-      <label><span class="lab">Banco o institución (si aplica)</span><input type="text" name="pago3_institucion"></label>
-    </div>
-    </div>
-    <button type="button" class="linkbtn addbtn" data-add="pago">+ Agregar otra forma de pago</button>
-    <div class="sumbar" id="pagosumbar"><span>Suma de importes</span><b>$<span id="pagosumval">0</span> de $<span id="preciosumval">0</span> (precio)</b></div>
-    <p class="note">Si ya existe un contrato privado de compraventa o de promesa, adjúntelo: la escritura debe respetar lo pactado.</p>
-
-  </fieldset>
-
-  <fieldset>
-    <legend class="leg"><span class="num">05</span> <h2>Documentos</h2></legend>
-    <p class="hint">La escritura anterior escaneada es indispensable para cotizar. El resto lo puede mandar después por WhatsApp. Si el vendedor o el comprador es una empresa, el acta constitutiva y el poder del representante se adjuntan en la sección correspondiente, más arriba.</p>
+    <legend class="leg"><span class="num">04</span> <h2>Adjuntos (opcional)</h2></legend>
+    <p class="hint">Fotografías, documentos o capturas de pantalla que ayuden a entender el hecho. Puede enviarlos ahora o llevarlos el día de la diligencia.</p>
     <div class="files">
-      <div class="file"><span class="lab">Escritura anterior escaneada (completa) <i class="req">*</i></span><small>Título de propiedad del vendedor</small>
-        <input type="file" name="escritura_anterior" accept="image/*,application/pdf" required></div>
-      <div class="file"><span class="lab">Último recibo de predial</span><small>Del año en curso</small>
-        <input type="file" name="predial_recibo" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Último recibo de agua</span><small>Servicios de Agua y Drenaje</small>
-        <input type="file" name="agua_recibo" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Identificación del vendedor</span><small>INE o pasaporte, frente</small>
-        <input type="file" name="ine_vendedor" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Identificación del comprador</span><small>INE o pasaporte, frente</small>
-        <input type="file" name="ine_comprador" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Acta de matrimonio</span><small>Del vendedor y/o comprador casados</small>
-        <input type="file" name="acta_matrimonio" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Constancias de situación fiscal</span><small>Vendedor y comprador</small>
-        <input type="file" name="constancias_fiscales" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Contrato privado o avalúo</span><small>Si ya existen</small>
-        <input type="file" name="contrato_o_avaluo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Fotografías</span><input type="file" name="adj_fotos" accept="image/*"></div>
+      <div class="file"><span class="lab">Documentos</span><input type="file" name="adj_documentos" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Capturas de pantalla</span><input type="file" name="adj_capturas" accept="image/*,application/pdf"></div>
     </div>
     <div class="meter" id="meter">
       <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
       <div class="meter-bar"><div class="meter-fill" id="meter_fill"></div></div>
       <p id="meter_note">Las imágenes se reducen antes de enviarse, así que el peso final suele ser mucho menor al que ve aquí.</p>
     </div>
-
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">06</span> <h2>Quién nos contacta</h2></legend>
-    <p class="hint">La persona con la que nos comunicaremos. Los datos completos de vendedor y comprador van más arriba. Solo necesitamos su nombre y un teléfono; lo demás lo tomamos de sus documentos.</p>
-
+    <legend class="leg"><span class="num">05</span> <h2>Sus datos</h2></legend>
+    <p class="hint">Solo necesitamos su nombre y un teléfono. Lo demás lo podemos tomar de sus documentos.</p>
     <div class="opts">
-      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked><span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
-      <label class="opt"><input type="radio" name="captura_modo" value="manual"><span><b>Prefiero capturar mis datos yo</b></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked>
+        <span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="manual">
+        <span><b>Prefiero capturar mis datos yo</b></span></label>
     </div>
-
-    <div class="grid" style="margin-top:14px">
-      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="contacto_nombre" required></label>
-      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="contacto_telefono" required></label>
-      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="contacto_email" required></label>
-    </div>
-    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto de la escritura para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
-    <div class="opts" style="margin-top:14px">
-      <label class="opt"><input type="radio" name="contacto_rol" value="Comprador" required><span><b>Soy quien compra</b></span></label>
-      <label class="opt"><input type="radio" name="contacto_rol" value="Vendedor"><span><b>Soy quien vende</b></span></label>
-      <label class="opt"><input type="radio" name="contacto_rol" value="Ambos"><span><b>Lleno por acuerdo de ambas partes</b></span></label>
-      <label class="opt"><input type="radio" name="contacto_rol" value="Intermediario"><span><b>Soy asesor inmobiliario o representante</b></span></label>
-    </div>
-
     <div class="files" data-show-if="captura_modo:documentos" style="margin-top:16px">
-      <div class="file"><span class="lab">INE — frente</span><small>O pasaporte / cédula</small>
-        <input type="file" name="contacto_ine_frente" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">INE — reverso</span><small>Solo si es INE o cédula</small>
-        <input type="file" name="contacto_ine_reverso" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Acta de nacimiento</span><small>Copia certificada</small>
-        <input type="file" name="contacto_acta_nacimiento" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">CURP</span><small>Impresión del documento</small>
-        <input type="file" name="contacto_curp_archivo" accept="image/*,application/pdf"></div>
-      <div class="file"><span class="lab">Constancia de situación fiscal</span><small>Descargable del SAT</small>
-        <input type="file" name="contacto_constancia_fiscal" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">INE — frente <i class="req">*</i></span><input type="file" name="ine_frente" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">INE — reverso</span><input type="file" name="ine_reverso" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta de nacimiento</span><input type="file" name="acta_nacimiento" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">CURP</span><input type="file" name="curp_archivo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal</span><input type="file" name="constancia_fiscal" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Comprobante de domicilio</span><input type="file" name="comprobante_domicilio" accept="image/*,application/pdf"></div>
     </div>
-
-    <div class="grid" data-show-if="captura_modo:manual" style="margin-top:14px">
-      <label><span class="lab">CURP</span><input type="text" name="contacto_curp" maxlength="18" style="text-transform:uppercase"></label>
-      <label><span class="lab">RFC</span><input type="text" name="contacto_rfc" maxlength="13" style="text-transform:uppercase"></label>
-      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="contacto_fecha_nacimiento" required></label>
-      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="contacto_lugar_nacimiento" placeholder="Ciudad y estado"></label>
-      <label><span class="lab">Ocupación</span><input type="text" name="contacto_ocupacion"></label>
-      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="contacto_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="cliente_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="cliente_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="cliente_email" autocomplete="email" required></label>
+    </div>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto del documento para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+    <div class="grid" data-show-if="captura_modo:manual" style="margin-top:16px">
+      <label><span class="lab">CURP</span><input type="text" name="cliente_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="cliente_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="cliente_fecha_nacimiento"></label>
+      <label><span class="lab">Entidad de nacimiento</span><input type="text" name="cliente_entidad_nacimiento"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="cliente_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="cliente_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="cliente_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
     </div>
     <p class="hint" data-curp-aviso hidden></p>
-
   </fieldset>
 
   <fieldset>
-    <legend class="leg"><span class="num">07</span> <h2>Observaciones</h2></legend>
-    <p class="hint">Cualquier detalle relevante: si hay más de dos partes, si hay un usufructo o una servidumbre, si el vendedor falleció y hay sucesión pendiente, si el inmueble está en un fideicomiso, o cuándo necesitan firmar.</p>
+    <legend class="leg"><span class="num">06</span> <h2>Observaciones</h2></legend>
     <div class="grid">
-      <label class="full"><span class="lab">Notas para el abogado</span><textarea name="observaciones"></textarea></label>
+      <label class="full"><span class="lab">Notas para el notario</span><textarea name="observaciones"></textarea></label>
     </div>
-
   </fieldset>
 
   <div class="submit-zone">
     <h3>Antes de enviar</h3>
-    <p>Este cuestionario no transmite la propiedad ni obliga a las partes. Sirve para estudiar el título, cotizar y preparar el proyecto de escritura que ambas partes revisarán y firmarán ante el notario. Le enviamos la cotización desglosada antes de cualquier cargo.</p>
+    <p>Esta acta certifica hechos, no acuerdos ni obligaciones entre las partes. El notario acude, observa y describe lo que percibe; no interviene ni opina sobre lo ocurrido.</p>
     <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
       <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
     <div class="errbox" id="errbox"></div>
@@ -479,69 +179,17 @@
 </footer>
 <script>
 window.CFG = {
-  formulario: 'compraventa',
+  formulario: 'fe-de-hechos',
   validate: function(errs, api){
-    var c = api.group('comprador').filter(function(x){ return x.nombre || x.moral_denominacion; });
-    if(c.length > 1 && api.pct() !== 100) errs.push('Los porcentajes de los compradores deben sumar 100 (ahora suman ' + api.pct() + ')');
-
-    var precio = parseFloat(api.val('precio')) || 0;
-    var pagos = api.group('pago').filter(function(p){ return p.forma || p.importe; });
-    var sumaPagos = 0;
-    pagos.forEach(function(p){ var n = parseFloat(p.importe); if(!isNaN(n)) sumaPagos += n; });
-    sumaPagos = Math.round(sumaPagos * 100) / 100;
-    if(pagos.length > 1 && precio > 0 && sumaPagos !== precio){
-      errs.push('La suma de las formas de pago (' + sumaPagos + ') debe ser igual al precio de la operación (' + precio + ')');
-    }
-
-    if(api.val('captura_modo') === 'documentos'){
-      var tieneAdjunto = ['contacto_ine_frente','contacto_ine_reverso','contacto_acta_nacimiento','contacto_curp_archivo','contacto_constancia_fiscal'].some(function(n){
-        var el = document.querySelector('[name="' + n + '"]');
-        return el && el.files && el.files.length;
-      });
-      if(!tieneAdjunto) errs.push('Adjunte al menos un documento de identificación suyo (INE, acta o CURP)');
-    }
-
-    var tel = document.querySelector('[name="contacto_telefono"]');
-    if(tel && tel.value && tel.value.replace(/\D/g, '').length < 10){
-      errs.push('El teléfono de contacto debe tener al menos 10 dígitos'); tel.classList.add('bad');
-    }
+    var tel = api.val('cliente_telefono');
+    if(tel && tel.replace(/\D/g,'').length < 10) errs.push('El teléfono debe tener al menos 10 dígitos');
+    if(api.val('lugar_tipo') === 'Otro lugar' && !api.val('lugar_direccion')) errs.push('La dirección donde debe presentarse el notario');
   }
 };
 </script>
 <script src="/assets/config.js" defer></script>
 <script src="/assets/expediente.js" defer></script>
-<script src="/assets/form.js"></script>
+<script src="/assets/form.js" defer></script>
 <script src="/assets/datos.js" defer></script>
-<script>
-/* Suma en vivo de las formas de pago frente al precio (solo visual; no forma parte del motor común). */
-(function(){
-  var precioEl = document.querySelector('[name="precio"]');
-  var bar = document.getElementById('pagosumbar');
-  if(!precioEl || !bar) return;
-  var pagoval = document.getElementById('pagosumval');
-  var precioval = document.getElementById('preciosumval');
-  function isHidden(el){ return !!(el.closest && el.closest('[hidden]')); }
-  function recalc(){
-    var suma = 0;
-    Array.prototype.forEach.call(document.querySelectorAll('.montoimporte'), function(el){
-      if(isHidden(el)) return;
-      var n = parseFloat(el.value);
-      if(!isNaN(n)) suma += n;
-    });
-    suma = Math.round(suma * 100) / 100;
-    var precio = parseFloat(precioEl.value) || 0;
-    pagoval.textContent = suma;
-    precioval.textContent = precio;
-    bar.className = 'sumbar' + (suma === 0 ? '' : (suma === precio ? ' ok' : ' bad'));
-  }
-  document.getElementById('f').addEventListener('input', function(e){
-    if(e.target.classList.contains('montoimporte') || e.target === precioEl) recalc();
-  });
-  document.addEventListener('click', function(e){
-    if(e.target.closest('[data-add="pago"],[data-remove="pago"]')) setTimeout(recalc, 0);
-  });
-  recalc();
-})();
-</script>
 </body>
 </html>
