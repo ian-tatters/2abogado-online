@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario de donación de inmueble. — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Lo puede llenar el donante, el donatario o cualquiera de los dos por acuerdo de ambos. Con la escritura anterior y estos datos preparamos el proyecto de escritura de donación.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/form.css">
+
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/">Asesoría <span>&amp; Servicio Notarial</span></a>
+    <nav class="nav-links">
+      <a href="/tramites/" class="mono">Trámites</a>
+      <a href="/#contacto" class="mono">Contacto</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20donaci%C3%B3n" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a></div></nav>
+<div class="head">
+  <div class="wrap">
+    <div class="rule-row mono">
+      <span>Donación · Inmuebles</span>
+      <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
+    </div>
+    <h1>Cuestionario de <em>donación</em> de inmueble.</h1>
+    <p class="lede">Lo puede llenar el donante, el donatario o cualquiera de los dos por acuerdo de ambos. Con la escritura anterior y estos datos hacemos el estudio de título, calculamos impuestos y derechos, y le mandamos la cotización desglosada antes de redactar.</p>
+    <div class="meta-row mono"><span>Toma unos 12 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+  </div>
+</div>
+<form id="f" name="donacion" method="POST" action="/gracias/?t=donacion"
+      enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="donacion">
+  <input type="hidden" name="subject" value="Cuestionario de donación — %{submissionId}">
+  <input type="hidden" name="datos_json" id="datos_json">
+  <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
+  <div class="wrap">
+  <fieldset>
+    <legend class="leg"><span class="num">01</span> <h2>El inmueble</h2></legend>
+    <p class="hint">Los datos exactos los tomamos de la escritura anterior; aquí anote lo que sepa. Si el inmueble está en más de un municipio o son varios lotes, dígalo en observaciones.</p>
+    <div class="grid">
+      <label><span class="lab">Tipo de inmueble <i class="req">*</i></span><select name="inmueble_tipo" required><option value="">Seleccione…</option><option>Casa habitación</option><option>Departamento (condominio)</option><option>Terreno</option><option>Local comercial u oficina</option><option>Bodega o nave</option><option>Otro</option></select></label>
+      <label><span class="lab">Uso actual</span><select name="inmueble_uso"><option value="">Seleccione…</option><option>Habitado por el donante</option><option>Rentado</option><option>Desocupado</option><option>En construcción</option></select></label>
+      <label class="full"><span class="lab">Dirección completa <i class="req">*</i></span><input type="text" name="inmueble_direccion" required placeholder="Calle, número, colonia, municipio"></label>
+      <label><span class="lab">Código postal</span><input type="text" name="inmueble_cp" maxlength="5"></label>
+      <label><span class="lab">Municipio <i class="req">*</i></span><input type="text" name="inmueble_municipio" required></label>
+      <label><span class="lab">Expediente catastral</span><input type="text" name="inmueble_expediente" placeholder="Aparece en el recibo de predial"></label>
+      <label><span class="lab">Superficie del terreno (m²)</span><input type="number" name="inmueble_superficie" min="0" step="0.01"></label>
+      <label><span class="lab">Superficie construida (m²)</span><input type="number" name="inmueble_construccion" min="0" step="0.01"></label>
+    </div>
+    <p class="note">La escritura anterior (título de propiedad del donante) no se captura aquí: solo adjunte el documento escaneado completo en la sección de Documentos, más abajo.</p>
+    <div class="sub"><span class="lab">Situación del inmueble</span></div>
+    <div class="grid" style="margin-top:14px">
+      <label><span class="lab">¿Tiene hipoteca o gravamen vigente? <i class="req">*</i></span><select name="gravamen" required><option value="">Seleccione…</option><option>No</option><option>Sí, hipoteca bancaria</option><option>Sí, crédito INFONAVIT / FOVISSSTE</option><option>Sí, otro gravamen</option><option>No lo sé</option></select></label>
+      <label><span class="lab">Con quién y saldo aproximado</span><input type="text" name="gravamen_detalle" placeholder="Banco o institución"></label>
+      <label><span class="lab">Predial</span><select name="predial"><option value="">Seleccione…</option><option>Al corriente</option><option>Con adeudo</option><option>No lo sé</option></select></label>
+      <label><span class="lab">Agua y drenaje</span><select name="agua"><option value="">Seleccione…</option><option>Al corriente</option><option>Con adeudo</option><option>No lo sé</option><option>No aplica</option></select></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">02</span> <h2>Donante(s)</h2></legend>
+    <p class="hint">Quien aparece como propietario en la escritura anterior y otorga la donación. Si está casado por sociedad conyugal, su cónyuge también debe firmar aunque no aparezca en la escritura. Si el donante es una empresa, marque "persona moral" y llene los datos de la empresa y de su representante.</p>
+    <div class="repeat slot" data-group="donante" data-i="1">
+      <div class="rep-head"><span class="mono">Donante 01</span></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="donante1_tipo_persona" value="Persona física" required checked><span><b>Persona física</b></span></label>
+      <label class="opt"><input type="radio" name="donante1_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    </div>
+    <div data-show-if="donante1_tipo_persona:Persona física">
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="donante1_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="donante1_fecha_nacimiento" required></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="donante1_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="donante1_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="donante1_ocupacion"></label>
+      <label><span class="lab">Estado civil <i class="req">*</i></span><select name="donante1_estado_civil" required><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="donante1_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="donante1_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="donante1_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="donante1_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="donante1_email" required autocomplete="email"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="donante1_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label class="full"><span class="lab">Nombre del cónyuge (si es casado)</span><input type="text" name="donante1_conyuge"></label>
+      <label><span class="lab">¿Cómo adquirió el inmueble?</span><select name="donante1_adquisicion"><option value="">Seleccione…</option><option>Compraventa</option><option>Herencia</option><option>Donación</option><option>Adjudicación</option><option>Otro / no lo sé</option></select></label>
+    </div>
+    </div>
+    <div data-show-if="donante1_tipo_persona:Persona moral">
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="donante1_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="donante1_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="donante1_moral_folio_mercantil"></label>
+      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="donante1_moral_representante_nombre"></label>
+      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="donante1_moral_representante_telefono"></label>
+      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="donante1_moral_representante_email"></label>
+      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="donante1_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    </div>
+    <div class="files" style="margin-top:16px">
+      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
+        <input type="file" name="donante1_moral_acta" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
+        <input type="file" name="donante1_moral_poder_rep" accept="image/*,application/pdf"></div>
+    </div>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="donante" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Donante 02</span><button type="button" class="linkbtn" data-remove="donante">Quitar</button></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="donante2_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
+      <label class="opt"><input type="radio" name="donante2_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    </div>
+    <div data-show-if="donante2_tipo_persona:Persona física">
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="donante2_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="donante2_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="donante2_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="donante2_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="donante2_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="donante2_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="donante2_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="donante2_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="donante2_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="donante2_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label class="full"><span class="lab">Nombre del cónyuge (si es casado)</span><input type="text" name="donante2_conyuge"></label>
+      <label><span class="lab">¿Cómo adquirió el inmueble?</span><select name="donante2_adquisicion"><option value="">Seleccione…</option><option>Compraventa</option><option>Herencia</option><option>Donación</option><option>Adjudicación</option><option>Otro / no lo sé</option></select></label>
+    </div>
+    </div>
+    <div data-show-if="donante2_tipo_persona:Persona moral">
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="donante2_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="donante2_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="donante2_moral_folio_mercantil"></label>
+      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="donante2_moral_representante_nombre"></label>
+      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="donante2_moral_representante_telefono"></label>
+      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="donante2_moral_representante_email"></label>
+      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="donante2_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    </div>
+    <div class="files" style="margin-top:16px">
+      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
+        <input type="file" name="donante2_moral_acta" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
+        <input type="file" name="donante2_moral_poder_rep" accept="image/*,application/pdf"></div>
+    </div>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="donante" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Donante 03</span><button type="button" class="linkbtn" data-remove="donante">Quitar</button></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="donante3_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
+      <label class="opt"><input type="radio" name="donante3_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    </div>
+    <div data-show-if="donante3_tipo_persona:Persona física">
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="donante3_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="donante3_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="donante3_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="donante3_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="donante3_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="donante3_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="donante3_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="donante3_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="donante3_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="donante3_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label class="full"><span class="lab">Nombre del cónyuge (si es casado)</span><input type="text" name="donante3_conyuge"></label>
+      <label><span class="lab">¿Cómo adquirió el inmueble?</span><select name="donante3_adquisicion"><option value="">Seleccione…</option><option>Compraventa</option><option>Herencia</option><option>Donación</option><option>Adjudicación</option><option>Otro / no lo sé</option></select></label>
+    </div>
+    </div>
+    <div data-show-if="donante3_tipo_persona:Persona moral">
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="donante3_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="donante3_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="donante3_moral_folio_mercantil"></label>
+      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="donante3_moral_representante_nombre"></label>
+      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="donante3_moral_representante_telefono"></label>
+      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="donante3_moral_representante_email"></label>
+      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="donante3_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    </div>
+    <div class="files" style="margin-top:16px">
+      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
+        <input type="file" name="donante3_moral_acta" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
+        <input type="file" name="donante3_moral_poder_rep" accept="image/*,application/pdf"></div>
+    </div>
+    </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="donante">+ Agregar otro donante</button>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">03</span> <h2>Donatario(s)</h2></legend>
+    <p class="hint">Si reciben dos o más personas, indique el porcentaje de cada una (copropiedad). Si el donatario es casado por sociedad conyugal, el inmueble entra a la sociedad aunque solo firme uno. Si el donatario es una empresa, marque "persona moral" y llene los datos de la empresa y de su representante.</p>
+    <div class="repeat slot" data-group="donatario" data-i="1">
+      <div class="rep-head"><span class="mono">Donatario 01</span></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="donatario1_tipo_persona" value="Persona física" required checked><span><b>Persona física</b></span></label>
+      <label class="opt"><input type="radio" name="donatario1_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    </div>
+    <div data-show-if="donatario1_tipo_persona:Persona física">
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="donatario1_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="donatario1_fecha_nacimiento" required></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="donatario1_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="donatario1_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="donatario1_ocupacion"></label>
+      <label><span class="lab">Estado civil <i class="req">*</i></span><select name="donatario1_estado_civil" required><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="donatario1_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="donatario1_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="donatario1_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="donatario1_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="donatario1_email" required autocomplete="email"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="donatario1_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    </div>
+    <div data-show-if="donatario1_tipo_persona:Persona moral">
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="donatario1_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="donatario1_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="donatario1_moral_folio_mercantil"></label>
+      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="donatario1_moral_representante_nombre"></label>
+      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="donatario1_moral_representante_telefono"></label>
+      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="donatario1_moral_representante_email"></label>
+      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="donatario1_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    </div>
+    <div class="files" style="margin-top:16px">
+      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
+        <input type="file" name="donatario1_moral_acta" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
+        <input type="file" name="donatario1_moral_poder_rep" accept="image/*,application/pdf"></div>
+    </div>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <label><span class="lab">Porcentaje que recibe</span><input type="number" name="donatario1_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal" placeholder="100 si recibe solo"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="donatario" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Donatario 02</span><button type="button" class="linkbtn" data-remove="donatario">Quitar</button></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="donatario2_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
+      <label class="opt"><input type="radio" name="donatario2_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    </div>
+    <div data-show-if="donatario2_tipo_persona:Persona física">
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="donatario2_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="donatario2_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="donatario2_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="donatario2_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="donatario2_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="donatario2_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="donatario2_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="donatario2_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="donatario2_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="donatario2_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    </div>
+    <div data-show-if="donatario2_tipo_persona:Persona moral">
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="donatario2_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="donatario2_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="donatario2_moral_folio_mercantil"></label>
+      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="donatario2_moral_representante_nombre"></label>
+      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="donatario2_moral_representante_telefono"></label>
+      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="donatario2_moral_representante_email"></label>
+      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="donatario2_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    </div>
+    <div class="files" style="margin-top:16px">
+      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
+        <input type="file" name="donatario2_moral_acta" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
+        <input type="file" name="donatario2_moral_poder_rep" accept="image/*,application/pdf"></div>
+    </div>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <label><span class="lab">Porcentaje que recibe</span><input type="number" name="donatario2_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal" placeholder="100 si recibe solo"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="donatario" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Donatario 03</span><button type="button" class="linkbtn" data-remove="donatario">Quitar</button></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="donatario3_tipo_persona" value="Persona física"><span><b>Persona física</b></span></label>
+      <label class="opt"><input type="radio" name="donatario3_tipo_persona" value="Persona moral"><span><b>Persona moral</b><small>Empresa u otra sociedad.</small></span></label>
+    </div>
+    <div data-show-if="donatario3_tipo_persona:Persona física">
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="donatario3_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="donatario3_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="donatario3_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="donatario3_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="donatario3_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="donatario3_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="donatario3_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="donatario3_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="donatario3_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="donatario3_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    </div>
+    <div data-show-if="donatario3_tipo_persona:Persona moral">
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación o razón social</span><input type="text" name="donatario3_moral_denominacion" placeholder="Ej. Inmobiliaria del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="donatario3_moral_rfc" maxlength="12" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="donatario3_moral_folio_mercantil"></label>
+      <label class="full"><span class="lab">Nombre del representante legal</span><input type="text" name="donatario3_moral_representante_nombre"></label>
+      <label><span class="lab">Teléfono / WhatsApp del representante</span><input type="tel" name="donatario3_moral_representante_telefono"></label>
+      <label><span class="lab">Correo electrónico del representante</span><input type="email" name="donatario3_moral_representante_email"></label>
+      <label class="full"><span class="lab">Datos del poder con el que comparece el representante</span><input type="text" name="donatario3_moral_representante_poder" placeholder="Notaría, número de escritura y fecha"></label>
+    </div>
+    <div class="files" style="margin-top:16px">
+      <div class="file"><span class="lab">Acta constitutiva y reformas</span><small>Acta constitutiva y ulteriores reformas, si las hay</small>
+        <input type="file" name="donatario3_moral_acta" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poder del representante legal</span><small>Instrumento donde constan sus facultades</small>
+        <input type="file" name="donatario3_moral_poder_rep" accept="image/*,application/pdf"></div>
+    </div>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <label><span class="lab">Porcentaje que recibe</span><input type="number" name="donatario3_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal" placeholder="100 si recibe solo"></label>
+    </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="donatario">+ Agregar otro donatario</button>
+    <div class="sumbar" id="sumbar"><span>Suma de porcentajes</span><b><span id="sumval">0</span> / 100</b></div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">04</span> <h2>Valor del inmueble y parentesco</h2></legend>
+    <p class="hint">Con el valor catastral, el avalúo (si lo tienen) y el parentesco entre donante y donatario calculamos el ISAI (impuesto de adquisición), los derechos de registro y, en su caso, el ISR a cargo del donatario.</p>
+    <div class="grid">
+      <label><span class="lab">Valor catastral del inmueble (MXN) <i class="req">*</i></span><input type="number" name="valor_catastral" required min="0" step="1" inputmode="decimal"></label>
+      <label><span class="lab">Valor de avalúo (si lo tiene, MXN)</span><input type="number" name="valor_avaluo" min="0" step="1" inputmode="decimal"></label>
+      <label class="full"><span class="lab">Parentesco entre donante y donatario <i class="req">*</i></span><select name="parentesco" required><option value="">Seleccione…</option><option>De padre o madre a hijo(a)</option><option>De hijo(a) a padre o madre</option><option>Entre cónyuges</option><option>Entre hermanos</option><option>De abuelo(a) a nieto(a)</option><option>Otro parentesco por consanguinidad o afinidad</option><option>Sin parentesco (entre terceros)</option></select></label>
+      <label><span class="lab">Fecha en que quisieran firmar</span><input type="date" name="fecha_firma"></label>
+      <label><span class="lab">¿Quién paga los gastos de escrituración?</span><select name="gastos"><option value="">Seleccione…</option><option>El donante</option><option>El donatario</option><option>Por mitad</option><option>Por acuerdo especial (explicar abajo)</option></select></label>
+    </div>
+    <p class="note">El parentesco entre donante y donatario determina el tratamiento fiscal de la donación: en línea recta (padres e hijos) y entre cónyuges suele haber exención de ISR; en otros parentescos o entre terceros puede haber impuesto a cargo del donatario. Confírmelo con nosotros antes de firmar.</p>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">05</span> <h2>Documentos</h2></legend>
+    <p class="hint">La escritura anterior escaneada es indispensable para cotizar. El resto lo puede mandar después por WhatsApp. Si el donante o el donatario es una empresa, el acta constitutiva y el poder del representante se adjuntan en la sección correspondiente, más arriba.</p>
+    <div class="files">
+      <div class="file"><span class="lab">Escritura anterior escaneada (completa) <i class="req">*</i></span><small>Título de propiedad del donante</small>
+        <input type="file" name="escritura_anterior" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">Último recibo de predial</span><small>Del año en curso</small>
+        <input type="file" name="predial_recibo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Último recibo de agua</span><small>Servicios de Agua y Drenaje</small>
+        <input type="file" name="agua_recibo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Identificación del donante</span><small>INE o pasaporte, frente</small>
+        <input type="file" name="ine_donante" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Identificación del donatario</span><small>INE o pasaporte, frente</small>
+        <input type="file" name="ine_donatario" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta de matrimonio</span><small>Del donante y/o donatario casados</small>
+        <input type="file" name="acta_matrimonio" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancias de situación fiscal</span><small>Donante y donatario</small>
+        <input type="file" name="constancias_fiscales" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Avalúo (documento)</span><small>Si ya lo tienen</small>
+        <input type="file" name="avaluo_documento" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Documento que acredite el parentesco</span><small>Acta de nacimiento, matrimonio, etc.</small>
+        <input type="file" name="parentesco_documento" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="meter" id="meter">
+      <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
+      <div class="meter-bar"><div class="meter-fill" id="meter_fill"></div></div>
+      <p id="meter_note">Las imágenes se reducen antes de enviarse, así que el peso final suele ser mucho menor al que ve aquí.</p>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">06</span> <h2>Quién nos contacta</h2></legend>
+    <p class="hint">La persona con la que nos comunicaremos. Los datos completos de donante y donatario van más arriba. Solo necesitamos su nombre y un teléfono; lo demás lo tomamos de sus documentos.</p>
+
+    <div class="opts">
+      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked><span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="manual"><span><b>Prefiero capturar mis datos yo</b></span></label>
+    </div>
+
+    <div class="grid" style="margin-top:14px">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="contacto_nombre" required></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="contacto_telefono" required></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="contacto_email" required></label>
+    </div>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto de la escritura para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+    <div class="opts" style="margin-top:14px">
+      <label class="opt"><input type="radio" name="contacto_rol" value="Donante" required><span><b>Soy quien dona</b></span></label>
+      <label class="opt"><input type="radio" name="contacto_rol" value="Donatario"><span><b>Soy quien recibe la donación</b></span></label>
+      <label class="opt"><input type="radio" name="contacto_rol" value="Ambos"><span><b>Lleno por acuerdo de ambas partes</b></span></label>
+      <label class="opt"><input type="radio" name="contacto_rol" value="Intermediario"><span><b>Soy asesor o representante</b></span></label>
+    </div>
+
+    <div class="files" data-show-if="captura_modo:documentos" style="margin-top:16px">
+      <div class="file"><span class="lab">INE — frente</span><small>O pasaporte / cédula</small>
+        <input type="file" name="contacto_ine_frente" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">INE — reverso</span><small>Solo si es INE o cédula</small>
+        <input type="file" name="contacto_ine_reverso" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta de nacimiento</span><small>Copia certificada</small>
+        <input type="file" name="contacto_acta_nacimiento" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">CURP</span><small>Impresión del documento</small>
+        <input type="file" name="contacto_curp_archivo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal</span><small>Descargable del SAT</small>
+        <input type="file" name="contacto_constancia_fiscal" accept="image/*,application/pdf"></div>
+    </div>
+
+    <div class="grid" data-show-if="captura_modo:manual" style="margin-top:14px">
+      <label><span class="lab">CURP</span><input type="text" name="contacto_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="contacto_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="contacto_fecha_nacimiento" required></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="contacto_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="contacto_ocupacion"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="contacto_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    <p class="hint" data-curp-aviso hidden></p>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">07</span> <h2>Observaciones</h2></legend>
+    <p class="hint">Cualquier detalle relevante: si hay más de dos partes, si hay un usufructo o una servidumbre reservada, si el donante falleció y hay sucesión pendiente, si el inmueble está en un fideicomiso, o cuándo necesitan firmar.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Notas para el abogado</span><textarea name="observaciones"></textarea></label>
+    </div>
+
+  </fieldset>
+
+  <div class="submit-zone">
+    <h3>Antes de enviar</h3>
+    <p>Este cuestionario no transmite la propiedad ni obliga a las partes. Sirve para estudiar el título, cotizar y preparar el proyecto de escritura de donación que ambas partes revisarán y firmarán ante el notario. Le enviamos la cotización desglosada antes de cualquier cargo.</p>
+    <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
+      <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
+    <div class="errbox" id="errbox"></div>
+    <button type="submit" class="btn" id="btn">Enviar cuestionario &rarr;</button>
+  </div>
+
+  </div>
+</form>
+<footer>
+  <div class="wrap foot mono">
+    <span>&copy; <span id="y">2026</span> Asesoría y Servicio Notarial &middot; Monterrey, N.L.</span>
+    <span>Padre Mier 1703, Col. Obispado &middot; 81 8396 8590</span>
+  </div>
+</footer>
+<script>
+window.CFG = {
+  formulario: 'donacion',
+  validate: function(errs, api){
+    var d = api.group('donatario').filter(function(x){ return x.nombre || x.moral_denominacion; });
+    if(d.length > 1 && api.pct() !== 100) errs.push('Los porcentajes de los donatarios deben sumar 100 (ahora suman ' + api.pct() + ')');
+
+    if(api.val('captura_modo') === 'documentos'){
+      var tieneAdjunto = ['contacto_ine_frente','contacto_ine_reverso','contacto_acta_nacimiento','contacto_curp_archivo','contacto_constancia_fiscal'].some(function(n){
+        var el = document.querySelector('[name="' + n + '"]');
+        return el && el.files && el.files.length;
+      });
+      if(!tieneAdjunto) errs.push('Adjunte al menos un documento de identificación suyo (INE, acta o CURP)');
+    }
+
+    var tel = document.querySelector('[name="contacto_telefono"]');
+    if(tel && tel.value && tel.value.replace(/\D/g, '').length < 10){
+      errs.push('El teléfono de contacto debe tener al menos 10 dígitos'); tel.classList.add('bad');
+    }
+  }
+};
+</script>
+<script src="/assets/config.js" defer></script>
+<script src="/assets/expediente.js" defer></script>
+<script src="/assets/form.js"></script>
+<script src="/assets/datos.js" defer></script>
+</body>
+</html>

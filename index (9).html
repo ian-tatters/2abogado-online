@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario para constituir mi empresa. — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Con estas respuestas preparamos el proyecto de acta constitutiva y, si aún no la tiene, tramitamos la autorización de la denominación ante la Secretar">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/form.css">
+
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/">Asesoría <span>&amp; Servicio Notarial</span></a>
+    <nav class="nav-links">
+      <a href="/tramites/" class="mono">Trámites</a>
+      <a href="/#contacto" class="mono">Contacto</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20para%20constituir%20mi%20empresa" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/" class="on"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a></div></nav>
+<div class="head">
+  <div class="wrap">
+    <div class="rule-row mono">
+      <span>Trámite 02 · Corporativo</span>
+      <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
+    </div>
+    <h1>Cuestionario para <em>constituir</em> mi empresa.</h1>
+    <p class="lede">Con estas respuestas preparamos el proyecto de acta constitutiva y, si aún no la tiene, tramitamos la autorización de la denominación ante la Secretaría de Economía. Si hay algo que todavía no deciden entre los socios, déjelo en blanco: lo resolvemos en la asesoría previa.</p>
+    <div class="meta-row mono"><span>Toma unos 15 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+  </div>
+</div>
+<form id="f" name="constitutiva" method="POST" action="/gracias/?t=constitutiva"
+      enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="constitutiva">
+  <input type="hidden" name="subject" value="Cuestionario de constitutiva — %{submissionId}">
+  <input type="hidden" name="datos_json" id="datos_json">
+  <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
+  <div class="wrap">
+  <fieldset>
+    <legend class="leg"><span class="num">01</span> <h2>Tipo de sociedad</h2></legend>
+    <p class="hint">Si no está seguro, marque "No lo sé" y lo definimos en la asesoría según la actividad, el número de socios y el régimen fiscal que le convenga.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="tipo_sociedad" value="S.A. de C.V." required><span><b>S.A. de C.V.</b><small>Sociedad anónima de capital variable. La más común para negocios con vocación de crecer o recibir inversión; acciones libremente transmisibles.</small></span></label>
+      <label class="opt"><input type="radio" name="tipo_sociedad" value="S. de R.L. de C.V."><span><b>S. de R.L. de C.V.</b><small>Responsabilidad limitada. Ideal para empresas familiares o de pocos socios; la entrada de nuevos socios requiere el consentimiento de los demás.</small></span></label>
+      <label class="opt"><input type="radio" name="tipo_sociedad" value="S.C."><span><b>S.C. (Sociedad civil)</b><small>Para despachos y prestación de servicios profesionales: consultorios, bufetes, agencias.</small></span></label>
+      <label class="opt"><input type="radio" name="tipo_sociedad" value="S.A.P.I. de C.V."><span><b>S.A.P.I. de C.V.</b><small>Anónima promotora de inversión. Para proyectos que recibirán inversionistas con derechos especiales.</small></span></label>
+      <label class="opt"><input type="radio" name="tipo_sociedad" value="S.A.S."><span><b>S.A.S.</b><small>Por acciones simplificada. Se constituye en línea sin notario; le decimos si le conviene o no.</small></span></label>
+      <label class="opt"><input type="radio" name="tipo_sociedad" value="No lo sé"><span><b>No lo sé todavía</b><small>Lo definimos juntos en la asesoría previa, sin costo.</small></span></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">02</span> <h2>Denominación</h2></legend>
+    <p class="hint">La denominación o razón social se autoriza previamente ante la Secretaría de Economía (SE). No incluya el tipo de sociedad (S.A. de C.V., etc.).</p>
+    <p class="hint" style="margin-top:22px"><b>¿Ya cuenta con la autorización de uso de denominación (SE)? <i class="req">*</i></b></p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="autorizacion_denominacion" value="Sí" required><span><b>Sí</b><small>Ya tengo la autorización de la Secretaría de Economía.</small></span></label>
+      <label class="opt"><input type="radio" name="autorizacion_denominacion" value="No"><span><b>No</b><small>Aún no la tengo; propongo nombres para que la tramiten.</small></span></label>
+    </div>
+    <p class="note" data-show-if="autorizacion_denominacion:Sí">Adjúntela más abajo, en la sección de Documentos.</p>
+    <div data-show-if="autorizacion_denominacion:No">
+    <div class="grid">
+      <label class="full"><span class="lab">Primera opción <i class="req">*</i></span><input type="text" name="denominacion1" required placeholder="Ej. Comercializadora del Norte"></label>
+      <label class="full"><span class="lab">Segunda opción <i class="req">*</i></span><input type="text" name="denominacion2" required></label>
+      <label class="full"><span class="lab">Tercera opción (opcional)</span><input type="text" name="denominacion3"></label>
+    </div>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">03</span> <h2>Objeto social y domicilio</h2></legend>
+    <p class="hint">Nosotros redactamos el objeto social amplio, con las actividades accesorias que hacen falta para operar, facturar y contratar.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">¿A qué se va a dedicar la empresa? ¿Cuál será su giro?</span><textarea name="giro_empresa" placeholder="Ej. Venta e instalación de equipos de aire acondicionado, con servicio de mantenimiento"></textarea></label>
+    </div>
+    <p class="note">Si ya tiene redactado el objeto social, péguelo en este apartado.</p>
+    <div class="grid" style="margin-top:26px">
+      <label><span class="lab">Municipio del domicilio social <i class="req">*</i></span><input type="text" name="domicilio_municipio" required value="Monterrey"></label>
+      <label><span class="lab">Estado</span><input type="text" name="domicilio_estado" value="Nuevo León"></label>
+      <label><span class="lab">Duración de la sociedad</span><select name="duracion"><option selected>Indefinida</option><option value="Otra">Otra (especifique)</option></select></label>
+      <label data-show-if="duracion:Otra"><span class="lab">Especifique la duración</span><input type="text" name="duracion_otra" placeholder="Ej. 50 años"></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">04</span> <h2>Capital social</h2></legend>
+    <p class="hint">Dejamos capturadas 50 acciones de $1.00 cada una (capital de $50.00), que es lo usual para empezar; cámbielo si ya tienen otra cifra decidida. Con estos valores calculamos, en la sección de socios, cuántas acciones e importe corresponden a cada quien según su porcentaje.</p>
+    <div class="grid">
+      <label><span class="lab">Número de acciones</span><input type="number" name="num_acciones" id="num_acciones" min="1" step="1" value="50"></label>
+      <label><span class="lab">Valor de cada acción (MXN)</span><input type="number" name="valor_accion" id="valor_accion" min="0" step="0.01" value="1.00"></label>
+      <label><span class="lab">Capital social (MXN)</span><input type="number" name="capital_fijo" min="0" step="0.01" value="50.00"></label>
+      <label><span class="lab">¿Se exhibe (paga) al constituirse?</span><select name="capital_pagado"><option value="">Seleccione…</option><option>Sí, 100 % en efectivo</option><option>Se exhibe el 20 % y el resto después</option><option>Aportación en especie (bienes o equipo)</option><option>Combinado</option></select></label>
+      <label><span class="lab">¿Capital variable?</span><select name="capital_variable"><option value="">Sí (de C.V.) — lo usual</option><option>Sí (de C.V.)</option><option>No</option></select></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">05</span> <h2>Socios o accionistas</h2></legend>
+    <p class="hint">Se requieren al menos dos socios (salvo S.A.S.). Escriba los datos como aparecen en la identificación oficial; la nacionalidad importa porque, si hay socios extranjeros, la escritura debe llevar cláusula de admisión de extranjeros. Al capturar el porcentaje de participación calculamos automáticamente las acciones y el importe que le corresponden, según el total de acciones y el valor por acción de la sección de Capital social.</p>
+    <div class="repeat slot" data-group="socio" data-i="1">
+      <div class="rep-head"><span class="mono">Socio 01</span></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="socio1_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="socio1_fecha_nacimiento" required></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="socio1_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="socio1_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="socio1_ocupacion"></label>
+      <label><span class="lab">Estado civil <i class="req">*</i></span><select name="socio1_estado_civil" required><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="socio1_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="socio1_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="socio1_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="socio1_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Porcentaje de participación</span><input type="number" name="socio1_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+      <label><span class="lab">Acciones que le corresponden</span><input type="number" name="socio1_acciones" class="calc-acciones" min="0" step="1" inputmode="numeric"></label>
+      <label><span class="lab">Importe (MXN)</span><input type="number" name="socio1_importe" class="calc-importe" min="0" step="0.01" inputmode="decimal" readonly style="background:var(--paper-warm)"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="socio" data-i="2">
+      <div class="rep-head"><span class="mono">Socio 02</span><button type="button" class="linkbtn" data-remove="socio">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="socio2_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="socio2_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="socio2_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="socio2_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="socio2_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="socio2_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="socio2_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="socio2_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="socio2_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="socio2_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Porcentaje de participación</span><input type="number" name="socio2_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+      <label><span class="lab">Acciones que le corresponden</span><input type="number" name="socio2_acciones" class="calc-acciones" min="0" step="1" inputmode="numeric"></label>
+      <label><span class="lab">Importe (MXN)</span><input type="number" name="socio2_importe" class="calc-importe" min="0" step="0.01" inputmode="decimal" readonly style="background:var(--paper-warm)"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="socio" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Socio 03</span><button type="button" class="linkbtn" data-remove="socio">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="socio3_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="socio3_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="socio3_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="socio3_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="socio3_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="socio3_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="socio3_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="socio3_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="socio3_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="socio3_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Porcentaje de participación</span><input type="number" name="socio3_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+      <label><span class="lab">Acciones que le corresponden</span><input type="number" name="socio3_acciones" class="calc-acciones" min="0" step="1" inputmode="numeric"></label>
+      <label><span class="lab">Importe (MXN)</span><input type="number" name="socio3_importe" class="calc-importe" min="0" step="0.01" inputmode="decimal" readonly style="background:var(--paper-warm)"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="socio" data-i="4" hidden>
+      <div class="rep-head"><span class="mono">Socio 04</span><button type="button" class="linkbtn" data-remove="socio">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="socio4_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="socio4_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="socio4_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="socio4_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="socio4_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="socio4_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="socio4_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="socio4_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="socio4_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="socio4_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Porcentaje de participación</span><input type="number" name="socio4_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+      <label><span class="lab">Acciones que le corresponden</span><input type="number" name="socio4_acciones" class="calc-acciones" min="0" step="1" inputmode="numeric"></label>
+      <label><span class="lab">Importe (MXN)</span><input type="number" name="socio4_importe" class="calc-importe" min="0" step="0.01" inputmode="decimal" readonly style="background:var(--paper-warm)"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="socio" data-i="5" hidden>
+      <div class="rep-head"><span class="mono">Socio 05</span><button type="button" class="linkbtn" data-remove="socio">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="socio5_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="socio5_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="socio5_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="socio5_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="socio5_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="socio5_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="socio5_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="socio5_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="socio5_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="socio5_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Porcentaje de participación</span><input type="number" name="socio5_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+      <label><span class="lab">Acciones que le corresponden</span><input type="number" name="socio5_acciones" class="calc-acciones" min="0" step="1" inputmode="numeric"></label>
+      <label><span class="lab">Importe (MXN)</span><input type="number" name="socio5_importe" class="calc-importe" min="0" step="0.01" inputmode="decimal" readonly style="background:var(--paper-warm)"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="socio" data-i="6" hidden>
+      <div class="rep-head"><span class="mono">Socio 06</span><button type="button" class="linkbtn" data-remove="socio">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="socio6_nombre" autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="socio6_fecha_nacimiento"></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="socio6_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="socio6_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="socio6_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="socio6_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label><span class="lab">Régimen matrimonial (si es casado)</span><select name="socio6_regimen"><option value="">Seleccione…</option><option>Sociedad conyugal</option><option>Separación de bienes</option><option>No lo recuerdo</option></select></label>
+      <label><span class="lab">CURP</span><input type="text" name="socio6_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="socio6_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="socio6_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Porcentaje de participación</span><input type="number" name="socio6_porcentaje" class="pct" min="0" max="100" step="0.01" inputmode="decimal"></label>
+      <label><span class="lab">Acciones que le corresponden</span><input type="number" name="socio6_acciones" class="calc-acciones" min="0" step="1" inputmode="numeric"></label>
+      <label><span class="lab">Importe (MXN)</span><input type="number" name="socio6_importe" class="calc-importe" min="0" step="0.01" inputmode="decimal" readonly style="background:var(--paper-warm)"></label>
+    </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="socio">+ Agregar otro socio</button>
+    <div class="sumbar" id="sumbar"><span>Suma de porcentajes</span><b><span id="sumval">0</span> / 100</b></div>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="extranjeros" value="Sin socios extranjeros"><span><b>Todos los socios son mexicanos</b><small>Se incluye cláusula de exclusión de extranjeros.</small></span></label>
+      <label class="opt"><input type="radio" name="extranjeros" value="Con socios extranjeros"><span><b>Hay o habrá socios extranjeros</b><small>Se incluye cláusula de admisión de extranjeros y aviso a la Secretaría de Economía.</small></span></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">06</span> <h2>Administración y vigilancia</h2></legend>
+    <p class="hint">Quien administra representa legalmente a la empresa y firma por ella. En la S.A. es obligatorio nombrar un comisario, que no puede ser socio ni administrador.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="organo_admin" value="Gerente único" required><span><b>Gerente único</b><small>Un gerente con la representación legal. Usual en la S. de R.L.</small></span></label>
+      <label class="opt"><input type="radio" name="organo_admin" value="Administrador único"><span><b>Administrador único</b><small>Una sola persona con la representación legal. Lo más práctico para empresas pequeñas.</small></span></label>
+      <label class="opt"><input type="radio" name="organo_admin" value="Presidente del consejo de administración"><span><b>Consejo de administración</b><small>Presidente, secretario y, si quiere, tesorero y vocales. Decisiones por mayoría.</small></span></label>
+    </div>
+    <div data-show-if="organo_admin:Presidente del consejo de administración">
+    <div class="grid">
+      <label><span class="lab">Secretario</span><input type="text" name="consejo_secretario"></label>
+      <label><span class="lab">Tesorero (opcional)</span><input type="text" name="consejo_tesorero"></label>
+      <label class="full"><span class="lab">Vocales (opcional)</span><input type="text" name="consejo_vocales" placeholder="Nombres separados por coma"></label>
+    </div>
+    </div>
+    <div class="sub">
+      <span class="lab">Representante legal</span>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="representante_nombre"></label>
+        <label><span class="lab">¿Es socio?</span><select name="representante_es_socio"><option value="">Seleccione…</option><option>Sí</option><option>No</option></select></label>
+      </div>
+    </div>
+    <div class="sub">
+      <span class="lab">Comisario (órgano de vigilancia)</span>
+      <div class="grid">
+        <label class="full"><span class="lab">Nombre completo</span><input type="text" name="comisario_nombre" placeholder="Normalmente el contador de la empresa"></label>
+        <label><span class="lab">¿Es persona física o moral?</span><select name="comisario_tipo"><option value="">Seleccione…</option><option>Persona física</option><option>Persona moral</option></select></label>
+      </div>
+    </div>
+    <div class="sub"><span class="lab">Facultades del administrador o del consejo</span></div>
+    <label class="check" style="margin-top:12px"><input type="checkbox" name="fac_pleitos" value="Sí"><span>Poder general para pleitos y cobranzas.</span></label>
+    <label class="check"><input type="checkbox" name="fac_admin" value="Sí"><span>Poder general para actos de administración.</span></label>
+    <label class="check"><input type="checkbox" name="fac_dominio" value="Sí"><span>Poder general para actos de dominio (vender, hipotecar, donar bienes de la sociedad).</span></label>
+    <label class="check"><input type="checkbox" name="fac_titulos" value="Sí"><span>Suscribir, avalar y endosar títulos de crédito (cheques, pagarés) y abrir cuentas bancarias.</span></label>
+    <label class="check"><input type="checkbox" name="fac_laboral" value="Sí"><span>Facultades en materia laboral (representar a la empresa ante trabajadores y autoridades del trabajo).</span></label>
+    <label class="check"><input type="checkbox" name="fac_sustituir" value="Sí"><span>Facultad de otorgar y revocar poderes a terceros.</span></label>
+    <div class="grid">
+      <label class="full"><span class="lab">Límites o candados que quieran (opcional)</span><textarea name="fac_limites" placeholder="Ej. para vender inmuebles se requiere firma conjunta de dos consejeros o autorización de la asamblea"></textarea></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">07</span> <h2>Otros apoderados <em>(opcional)</em></h2></legend>
+    <p class="hint">Si además del administrador habrá gerentes, contadores o abogados con poderes desde la constitución, anótelos aquí y se incluyen en la misma escritura sin costo adicional de otro instrumento.</p>
+    <div class="repeat slot" data-group="apoderado" data-i="1">
+      <div class="rep-head"><span class="mono">Apoderado 01</span></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="apoderado1_nombre"></label>
+      <label><span class="lab">Cargo o relación</span><input type="text" name="apoderado1_cargo" placeholder="Gerente, contador, socio…"></label>
+      <label class="full"><span class="lab">Facultades que tendrá</span><input type="text" name="apoderado1_facultades" placeholder="Ej. pleitos y cobranzas y actos de administración, sin actos de dominio"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="apoderado" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Apoderado 02</span><button type="button" class="linkbtn" data-remove="apoderado">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="apoderado2_nombre"></label>
+      <label><span class="lab">Cargo o relación</span><input type="text" name="apoderado2_cargo" placeholder="Gerente, contador, socio…"></label>
+      <label class="full"><span class="lab">Facultades que tendrá</span><input type="text" name="apoderado2_facultades" placeholder="Ej. pleitos y cobranzas y actos de administración, sin actos de dominio"></label>
+    </div>
+    </div>
+    <div class="repeat slot" data-group="apoderado" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Apoderado 03</span><button type="button" class="linkbtn" data-remove="apoderado">Quitar</button></div>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo</span><input type="text" name="apoderado3_nombre"></label>
+      <label><span class="lab">Cargo o relación</span><input type="text" name="apoderado3_cargo" placeholder="Gerente, contador, socio…"></label>
+      <label class="full"><span class="lab">Facultades que tendrá</span><input type="text" name="apoderado3_facultades" placeholder="Ej. pleitos y cobranzas y actos de administración, sin actos de dominio"></label>
+    </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="apoderado">+ Agregar otro apoderado</button>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">08</span> <h2>Documentos</h2></legend>
+    <p class="hint">Fotografía legible o PDF. Si son más de cuatro socios, mande las identificaciones restantes por WhatsApp. Si algún socio es extranjero, adjunte su pasaporte y su documento migratorio.</p>
+    <div class="files">
+      <div class="file"><span class="lab">Identificación socio 01 <i class="req">*</i></span><small>INE o pasaporte, frente</small>
+        <input type="file" name="ine_socio1" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">Identificación socio 02</span><small>INE o pasaporte, frente</small>
+        <input type="file" name="ine_socio2" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Identificación socio 03</span><small>Si aplica</small>
+        <input type="file" name="ine_socio3" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Identificación socio 04</span><small>Si aplica</small>
+        <input type="file" name="ine_socio4" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancias de situación fiscal</span><small>De los socios, en un solo PDF si es posible</small>
+        <input type="file" name="constancias_fiscales" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Comprobante de domicilio de la empresa</span><small>Luz, agua o contrato de arrendamiento</small>
+        <input type="file" name="comprobante_domicilio" accept="image/*,application/pdf"></div>
+      <div class="file" data-show-if="autorizacion_denominacion:Sí"><span class="lab">Autorización de denominación <i class="req">*</i></span><small>PDF de la Secretaría de Economía</small>
+        <input type="file" name="autorizacion_se" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">Documento adicional</span><small>Actas de nacimiento, pasaportes de extranjeros, etc.</small>
+        <input type="file" name="documento_extra" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="meter" id="meter">
+      <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
+      <div class="meter-bar"><div class="meter-fill" id="meter_fill"></div></div>
+      <p id="meter_note">Las imágenes se reducen antes de enviarse, así que el peso final suele ser mucho menor al que ve aquí.</p>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">09</span> <h2>Sus datos</h2></legend>
+    <p class="hint">La persona con la que nos comunicaremos durante el trámite. Solo necesitamos su nombre y un teléfono; lo demás lo podemos tomar de sus documentos.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked>
+        <span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="manual">
+        <span><b>Prefiero capturar mis datos yo</b></span></label>
+    </div>
+    <div class="files" data-show-if="captura_modo:documentos" style="margin-top:16px">
+      <div class="file"><span class="lab">INE — frente <i class="req">*</i></span><input type="file" name="ine_frente" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">INE — reverso</span><input type="file" name="ine_reverso" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta de nacimiento</span><input type="file" name="acta_nacimiento" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">CURP</span><input type="file" name="curp_archivo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal</span><input type="file" name="constancia_fiscal" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="contacto_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="contacto_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="contacto_email" required autocomplete="email"></label>
+      <label><span class="lab">Su papel en la empresa</span><select name="contacto_rol"><option value="">Seleccione…</option><option>Socio(a)</option><option>Accionista</option><option>Administrador(a)</option><option>Contador(a) / asesor</option><option>Otro</option></select></label>
+    </div>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto de la escritura para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+    <div class="grid" data-show-if="captura_modo:manual" style="margin-top:16px">
+      <label><span class="lab">CURP</span><input type="text" name="contacto_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="contacto_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="contacto_fecha_nacimiento"></label>
+      <label><span class="lab">Entidad de nacimiento</span><input type="text" name="contacto_entidad_nacimiento"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="contacto_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    <p class="hint" data-curp-aviso hidden></p>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">10</span> <h2>Observaciones</h2></legend>
+    <p class="hint">Acuerdos particulares entre socios, derechos de preferencia, reglas para la venta de acciones, fecha en que necesitan la empresa constituida, o cualquier duda.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Notas para el abogado</span><textarea name="observaciones"></textarea></label>
+    </div>
+
+  </fieldset>
+
+  <div class="submit-zone">
+    <h3>Antes de enviar</h3>
+    <p>Este cuestionario no constituye la sociedad ni la obliga. Sirve para preparar el proyecto de acta constitutiva que los socios revisarán y firmarán ante el notario. Antes de redactar le enviamos la cotización completa: honorarios, derechos de la Secretaría de Economía e inscripción en el Registro Público de Comercio.</p>
+    <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
+      <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
+    <div class="errbox" id="errbox"></div>
+    <button type="submit" class="btn" id="btn">Enviar cuestionario &rarr;</button>
+  </div>
+
+  </div>
+</form>
+<footer>
+  <div class="wrap foot mono">
+    <span>&copy; <span id="y">2026</span> Asesoría y Servicio Notarial &middot; Monterrey, N.L.</span>
+    <span>Padre Mier 1703, Col. Obispado &middot; 81 8396 8590</span>
+  </div>
+</footer>
+<script>
+window.CFG = {
+  formulario: 'constitutiva',
+  validate: function(errs, api){
+    var s = api.group('socio').filter(function(x){ return x.nombre; });
+    if(api.val('tipo_sociedad') !== 'S.A.S.' && s.length < 2) errs.push('Los datos de al menos dos socios');
+    var t = api.pct();
+    if(s.length && t && t !== 100) errs.push('Los porcentajes de participación deben sumar 100 (ahora suman ' + t + ')');
+    if(api.val('organo_admin') && !api.val('representante_nombre')) errs.push('El nombre del representante legal');
+
+    var tel = document.querySelector('[name="contacto_telefono"]');
+    if(tel && tel.value && tel.value.replace(/\D/g, '').length < 10){
+      errs.push('El teléfono de contacto debe tener al menos 10 dígitos'); tel.classList.add('bad');
+    }
+  }
+};
+</script>
+<script src="/assets/config.js" defer></script>
+<script src="/assets/expediente.js" defer></script>
+<script src="/assets/form.js"></script>
+<script src="/assets/datos.js" defer></script>
+<script>
+/* ---------- cálculo de acciones e importe por socio (propio de esta página) ----------
+   No toca /assets/form.js: escucha los mismos campos y escribe en los de solo lectura.
+   Si el usuario captura las acciones a mano, se respeta ese valor y solo se recalcula el importe. */
+(function(){
+  "use strict";
+  var f = document.getElementById('f');
+  if(!f) return;
+
+  function num(v){ var n = parseFloat(v); return isNaN(n) ? 0 : n; }
+  function totalAcciones(){ var e = f.elements['num_acciones']; return e ? num(e.value) : 0; }
+  function valorAccion(){ var e = f.elements['valor_accion']; return e ? num(e.value) : 0; }
+  function socioSlots(){
+    return Array.prototype.slice.call(f.querySelectorAll('.repeat.slot[data-group="socio"]'));
+  }
+  function recalcSocio(slot){
+    if(!slot) return;
+    var pctEl = slot.querySelector('.pct');
+    var accEl = slot.querySelector('.calc-acciones');
+    var impEl = slot.querySelector('.calc-importe');
+    if(!pctEl || !accEl || !impEl) return;
+    var pct = num(pctEl.value);
+    var tot = totalAcciones();
+    if(accEl.dataset.manual !== '1'){
+      accEl.value = (pct > 0 && tot > 0) ? Math.round(tot * pct / 100) : '';
+    }
+    var accNow = num(accEl.value);
+    var val = valorAccion();
+    impEl.value = (accNow > 0 && val > 0) ? (Math.round(accNow * val * 100) / 100).toFixed(2) : '';
+  }
+  function recalcAll(){ socioSlots().forEach(recalcSocio); }
+
+  f.addEventListener('input', function(e){
+    var t = e.target;
+    if(!t) return;
+    if(t.classList.contains('calc-acciones')){
+      t.dataset.manual = t.value === '' ? '0' : '1';
+      recalcSocio(t.closest('.repeat.slot'));
+      return;
+    }
+    if(t.classList.contains('pct') || t === f.elements['num_acciones'] || t === f.elements['valor_accion']){
+      recalcAll();
+    }
+  });
+  document.addEventListener('click', function(e){
+    var rem = e.target.closest('[data-remove="socio"]');
+    if(rem){
+      var slot = rem.closest('.repeat.slot');
+      var acc = slot && slot.querySelector('.calc-acciones');
+      if(acc) delete acc.dataset.manual;
+    }
+    if(e.target.closest('[data-add="socio"],[data-remove="socio"]')) setTimeout(recalcAll, 0);
+  });
+  recalcAll();
+})();
+</script>
+</body>
+</html>

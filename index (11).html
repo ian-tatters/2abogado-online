@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario de fe de hechos. — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Un acta de fe de hechos deja constancia notarial de algo que el notario percibe directamente: una entrega, el estado de un bien, una asamblea, una página de internet. Cuéntenos qué necesita hacer constar.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/form.css">
+
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/">Asesoría <span>&amp; Servicio Notarial</span></a>
+    <nav class="nav-links">
+      <a href="/tramites/" class="mono">Trámites</a>
+      <a href="/#contacto" class="mono">Contacto</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20fe%20de%20hechos" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/"><span class="n">05</span>Protocolización</a></div></nav>
+<div class="head">
+  <div class="wrap">
+    <div class="rule-row mono">
+      <span>Acta fuera de protocolo · Fe de hechos</span>
+      <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
+    </div>
+    <h1>Cuestionario de <em>fe de hechos</em>.</h1>
+    <p class="lede">Un acta de fe de hechos deja constancia de algo que el notario percibe directamente: una entrega, el estado de un inmueble, el contenido de una página o una conversación, una asamblea, una notificación. Cuéntenos qué necesita hacer constar y cuándo.</p>
+    <div class="meta-row mono"><span>Toma unos 5 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+  </div>
+</div>
+<form id="f" name="fe-de-hechos" method="POST" action="/gracias/?t=fe-de-hechos"
+      enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="fe-de-hechos">
+  <input type="hidden" name="subject" value="Cuestionario de fe de hechos — %{submissionId}">
+  <input type="hidden" name="datos_json" id="datos_json">
+  <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
+  <div class="wrap">
+
+  <fieldset>
+    <legend class="leg"><span class="num">01</span> <h2>Qué se quiere hacer constar</h2></legend>
+    <p class="hint">Por ejemplo: la entrega de un bien o un pago, el estado físico de un inmueble, el contenido de una página de internet o de una conversación, el desarrollo de una asamblea, o la notificación de un aviso a otra persona.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Descripción del hecho a certificar <i class="req">*</i></span><textarea name="hecho_descripcion" required placeholder="Describa con el mayor detalle posible qué quiere que el notario presencie y haga constar"></textarea></label>
+    </div>
+    <div class="note">El notario da fe de lo que percibe directamente por sus sentidos —lo que ve, oye o lee—; no califica ni juzga conductas, ni resuelve quién tiene la razón.</div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">02</span> <h2>Dónde y cuándo</h2></legend>
+    <p class="hint">Indique el lugar exacto donde debe presentarse el notario.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="lugar_tipo" value="Despacho" required checked><span><b>En el despacho</b></span></label>
+      <label class="opt"><input type="radio" name="lugar_tipo" value="Otro lugar"><span><b>En otro lugar</b><small>Domicilio, oficina, inmueble u otro sitio donde deba ocurrir el hecho.</small></span></label>
+    </div>
+    <div class="grid" data-show-if="lugar_tipo:Otro lugar">
+      <label class="full"><span class="lab">Dirección exacta <i class="req">*</i></span><input type="text" name="lugar_direccion" placeholder="Calle, número, colonia, C.P., municipio"></label>
+    </div>
+    <div class="grid" style="margin-top:18px">
+      <label><span class="lab">Fecha deseada <i class="req">*</i></span><input type="date" name="fecha_deseada" required></label>
+      <label><span class="lab">Hora deseada</span><input type="time" name="hora_deseada"></label>
+    </div>
+    <label class="check" style="margin-top:12px"><input type="checkbox" name="urgente" value="Sí"><span>Es urgente: necesito la diligencia en las próximas 24–48 horas.</span></label>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">03</span> <h2>Personas presentes</h2></legend>
+    <p class="hint">Quiénes estarán en el lugar cuando acuda el notario. Puede agregar hasta cuatro.</p>
+    <div class="repeat slot" data-group="presente" data-i="1">
+      <div class="rep-head"><span class="mono">Persona 01</span></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente1_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente1_calidad" placeholder="Vecino, empleado, testigo, contraparte…"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="presente" data-i="2" hidden>
+      <div class="rep-head"><span class="mono">Persona 02</span><button type="button" class="linkbtn" data-remove="presente">Quitar</button></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente2_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente2_calidad"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="presente" data-i="3" hidden>
+      <div class="rep-head"><span class="mono">Persona 03</span><button type="button" class="linkbtn" data-remove="presente">Quitar</button></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente3_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente3_calidad"></label>
+      </div>
+    </div>
+    <div class="repeat slot" data-group="presente" data-i="4" hidden>
+      <div class="rep-head"><span class="mono">Persona 04</span><button type="button" class="linkbtn" data-remove="presente">Quitar</button></div>
+      <div class="grid">
+        <label><span class="lab">Nombre</span><input type="text" name="presente4_nombre" autocomplete="name"></label>
+        <label><span class="lab">Calidad con la que participa</span><input type="text" name="presente4_calidad"></label>
+      </div>
+    </div>
+    <button type="button" class="linkbtn addbtn" data-add="presente">+ Agregar otra persona</button>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">04</span> <h2>Adjuntos (opcional)</h2></legend>
+    <p class="hint">Fotografías, documentos o capturas de pantalla que ayuden a entender el hecho. Puede enviarlos ahora o llevarlos el día de la diligencia.</p>
+    <div class="files">
+      <div class="file"><span class="lab">Fotografías</span><input type="file" name="adj_fotos" accept="image/*"></div>
+      <div class="file"><span class="lab">Documentos</span><input type="file" name="adj_documentos" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Capturas de pantalla</span><input type="file" name="adj_capturas" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="meter" id="meter">
+      <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
+      <div class="meter-bar"><div class="meter-fill" id="meter_fill"></div></div>
+      <p id="meter_note">Las imágenes se reducen antes de enviarse, así que el peso final suele ser mucho menor al que ve aquí.</p>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">05</span> <h2>Sus datos</h2></legend>
+    <p class="hint">Solo necesitamos su nombre y un teléfono. Lo demás lo podemos tomar de sus documentos.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked>
+        <span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="manual">
+        <span><b>Prefiero capturar mis datos yo</b></span></label>
+    </div>
+    <div class="files" data-show-if="captura_modo:documentos" style="margin-top:16px">
+      <div class="file"><span class="lab">INE — frente <i class="req">*</i></span><input type="file" name="ine_frente" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">INE — reverso</span><input type="file" name="ine_reverso" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta de nacimiento</span><input type="file" name="acta_nacimiento" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">CURP</span><input type="file" name="curp_archivo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal</span><input type="file" name="constancia_fiscal" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Comprobante de domicilio</span><input type="file" name="comprobante_domicilio" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="cliente_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="cliente_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="cliente_email" autocomplete="email" required></label>
+    </div>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto del documento para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+    <div class="grid" data-show-if="captura_modo:manual" style="margin-top:16px">
+      <label><span class="lab">CURP</span><input type="text" name="cliente_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="cliente_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="cliente_fecha_nacimiento"></label>
+      <label><span class="lab">Entidad de nacimiento</span><input type="text" name="cliente_entidad_nacimiento"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="cliente_ocupacion"></label>
+      <label><span class="lab">Estado civil</span><select name="cliente_estado_civil"><option value="">Seleccione…</option><option>Soltero(a)</option><option>Casado(a)</option><option>Divorciado(a)</option><option>Viudo(a)</option><option>Concubinato</option></select></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="cliente_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    <p class="hint" data-curp-aviso hidden></p>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">06</span> <h2>Observaciones</h2></legend>
+    <div class="grid">
+      <label class="full"><span class="lab">Notas para el notario</span><textarea name="observaciones"></textarea></label>
+    </div>
+  </fieldset>
+
+  <div class="submit-zone">
+    <h3>Antes de enviar</h3>
+    <p>Esta acta certifica hechos, no acuerdos ni obligaciones entre las partes. El notario acude, observa y describe lo que percibe; no interviene ni opina sobre lo ocurrido.</p>
+    <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
+      <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
+    <div class="errbox" id="errbox"></div>
+    <button type="submit" class="btn" id="btn">Enviar cuestionario &rarr;</button>
+  </div>
+
+  </div>
+</form>
+<footer>
+  <div class="wrap foot mono">
+    <span>&copy; <span id="y">2026</span> Asesoría y Servicio Notarial &middot; Monterrey, N.L.</span>
+    <span>Padre Mier 1703, Col. Obispado &middot; 81 8396 8590</span>
+  </div>
+</footer>
+<script>
+window.CFG = {
+  formulario: 'fe-de-hechos',
+  validate: function(errs, api){
+    var tel = api.val('cliente_telefono');
+    if(tel && tel.replace(/\D/g,'').length < 10) errs.push('El teléfono debe tener al menos 10 dígitos');
+    if(api.val('lugar_tipo') === 'Otro lugar' && !api.val('lugar_direccion')) errs.push('La dirección donde debe presentarse el notario');
+  }
+};
+</script>
+<script src="/assets/config.js" defer></script>
+<script src="/assets/expediente.js" defer></script>
+<script src="/assets/form.js" defer></script>
+<script src="/assets/datos.js" defer></script>
+</body>
+</html>

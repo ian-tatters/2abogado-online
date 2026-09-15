@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario recibido — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Recibimos su cuestionario. Asesoría y Servicio Notarial, Monterrey.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/form.css">
+<style>
+  body{display:flex;flex-direction:column;min-height:100vh;background:var(--paper-warm)}
+  main{flex:1;display:flex;align-items:center;padding:70px 0}
+  .seal{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#4a4f66,#222534);position:relative;margin-bottom:34px}
+  .seal::after{content:"IT";position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.85);font-family:var(--mono);font-size:.72rem}
+  h1{max-width:18ch}
+  .lede{margin-top:24px;max-width:56ch;color:var(--ink-soft);font-size:1.04rem}
+  .next{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .next .num{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--ink-faint);display:block;margin-bottom:10px}
+  .next h3{font-size:1rem;font-weight:500;margin:0 0 7px}
+  .next p{margin:0;color:var(--ink-soft);font-size:.94rem}
+  @media(max-width:700px){.next{grid-template-columns:1fr;gap:22px}}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:42px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;text-decoration:none;font-size:.95rem;border:1px solid var(--ink);transition:.2s;margin:0;font-family:var(--serif)}
+  .btn-solid{background:var(--ink);color:#fff}.btn-solid:hover{background:#1e2130}
+  .btn-ghost{background:transparent;color:var(--ink)}.btn-ghost:hover{background:var(--paper)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-in"><a class="brand" href="/">Asesoría <span>&amp; Servicio Notarial</span></a></div></header>
+<main>
+  <div class="wrap">
+    <div class="seal" aria-hidden="true"></div>
+    <h1>Recibimos su <em>cuestionario</em>.</h1>
+    <p class="lede">Sus datos y sus documentos ya están en el despacho. A partir de aquí el trabajo es nuestro: revisamos lo que envió y le escribimos si hace falta algún dato o algún documento adicional.</p>
+    <div class="next">
+      <div><span class="num">01</span><h3>Revisión</h3><p>Revisamos personalmente su información el mismo día hábil.</p></div>
+      <div><span class="num">02</span><h3>Proyecto</h3><p id="p2">Redactamos el proyecto de escritura y se lo enviamos para que lo lea con calma.</p></div>
+      <div><span class="num">03</span><h3>Firma</h3><p>Agendamos su cita y firma ante el notario. Es el único paso presencial.</p></div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-solid" id="wa" href="https://wa.me/528183968590?text=Acabo%20de%20enviar%20un%20cuestionario%20en%20l%C3%ADnea" target="_blank" rel="noopener">Avisar por WhatsApp &rarr;</a>
+      <a class="btn btn-ghost" href="/tramites/">Otro trámite</a>
+      <a class="btn btn-ghost" href="/">Volver al inicio</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap foot mono">
+    <span>&copy; <span id="y">2026</span> Asesoría y Servicio Notarial &middot; Monterrey, N.L.</span>
+    <span>Padre Mier 1703, Col. Obispado &middot; 81 8396 8590</span>
+  </div>
+</footer>
+<script>
+(function(){
+  document.getElementById('y').textContent = new Date().getFullYear();
+  var M = {"testamento":{"n":"Testamento","wa":"cuestionario de testamento","p":"Redactamos el proyecto de testamento"},"constitutiva":{"n":"Constituir mi empresa","wa":"cuestionario para constituir mi empresa","p":"Tramitamos la denominación y redactamos el proyecto de acta constitutiva"},"compraventa":{"n":"Compraventa","wa":"cuestionario de compraventa","p":"Hacemos el estudio de título, le enviamos la cotización y redactamos el proyecto"},"poder":{"n":"Poderes","wa":"cuestionario de poder notarial","p":"Redactamos el proyecto de poder con las cláusulas correctas"},"protocolizacion":{"n":"Protocolización","wa":"cuestionario de protocolización","p":"Revisamos el acta y redactamos el proyecto de protocolización"}};
+  var t = new URLSearchParams(location.search).get('t');
+  if(M[t]){
+    document.getElementById('p2').textContent = M[t].p + ' y se lo enviamos para que lo lea con calma.';
+    document.getElementById('wa').href = 'https://wa.me/528183968590?text=' + encodeURIComponent('Acabo de enviar el ' + M[t].wa);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario de protocolización de acta de asamblea. — Asesoría y Servicio Notarial</title>
+<meta name="description" content="Para dar forma notarial a los acuerdos que ya tomó su sociedad: cambios de administración, poderes, aumentos de capital, reformas de estatutos. Adjunt">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/form.css">
+
+</head>
+<body>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="/">Asesoría <span>&amp; Servicio Notarial</span></a>
+    <nav class="nav-links">
+      <a href="/tramites/" class="mono">Trámites</a>
+      <a href="/#contacto" class="mono">Contacto</a>
+      <a href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20protocolizaci%C3%B3n" target="_blank" rel="noopener" class="mono">Ayuda por WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<nav class="tabs" aria-label="Trámites"><div class="tabs-in"><a href="/tramites/"><span class="n">&larr;</span>Todos los trámites</a><a href="/testamento/"><span class="n">01</span>Testamento</a><a href="/constitutiva/"><span class="n">02</span>Constituir mi empresa</a><a href="/compraventa/"><span class="n">03</span>Compraventa</a><a href="/poder/"><span class="n">04</span>Poderes</a><a href="/protocolizacion/" class="on"><span class="n">05</span>Protocolización</a></div></nav>
+<div class="head">
+  <div class="wrap">
+    <div class="rule-row mono">
+      <span>Trámite 05 · Corporativo</span>
+      <span>Asesoría y Servicio Notarial · Monterrey, N.L.</span>
+    </div>
+    <h1>Cuestionario de <em>protocolización</em> de acta de asamblea.</h1>
+    <p class="lede">Para dar forma notarial a los acuerdos que ya tomó su sociedad: cambios de administración, poderes, aumentos de capital, reformas de estatutos. Adjunte el acta firmada y los datos de la sociedad; nosotros armamos la escritura y gestionamos su inscripción en el Registro Público de Comercio.</p>
+    <div class="meta-row mono"><span>Toma unos 10 minutos</span><span>Se envía cifrado al despacho</span><span>Nada se firma en línea</span></div>
+    <div class="note" style="margin-top:22px">
+      <p style="margin:0 0 12px"><b>Antes de empezar:</b> este trámite casi siempre requiere revisión directa con el despacho. La papelería varía mucho según lo que se acordó en la asamblea y según la sociedad (información de beneficiario controlador, libros corporativos, poderes vigentes, entre otros), así que ningún cuestionario en línea la cubre por completo. Le recomendamos enviar este cuestionario y, además, escribirnos por WhatsApp para revisar su caso.</p>
+      <a class="btn" href="https://wa.me/528183968590?text=Tengo%20una%20duda%20sobre%20el%20cuestionario%20de%20protocolizaci%C3%B3n" target="_blank" rel="noopener">Escribir por WhatsApp &rarr;</a>
+    </div>
+  </div>
+</div>
+<form id="f" name="protocolizacion" method="POST" action="/gracias/?t=protocolizacion"
+      enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="protocolizacion">
+  <input type="hidden" name="subject" value="Cuestionario de protocolización — %{submissionId}">
+  <input type="hidden" name="datos_json" id="datos_json">
+  <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
+  <div class="wrap">
+  <fieldset>
+    <legend class="leg"><span class="num">01</span> <h2>La sociedad</h2></legend>
+    <p class="hint">Los datos exactos los tomamos del acta constitutiva; anote lo que tenga a la mano. El folio mercantil electrónico aparece en la boleta de inscripción del Registro Público de Comercio.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Denominación completa <i class="req">*</i></span><input type="text" name="sociedad_denominacion" required placeholder="Ej. Comercializadora del Norte, S.A. de C.V."></label>
+      <label><span class="lab">RFC</span><input type="text" name="sociedad_rfc" style="text-transform:uppercase"></label>
+      <label><span class="lab">Folio mercantil electrónico</span><input type="text" name="sociedad_folio" placeholder="N-2024… o número de folio"></label>
+      <label class="full"><span class="lab">Domicilio social</span><input type="text" name="sociedad_domicilio"></label>
+      <label class="full"><span class="lab">Acta constitutiva</span><input type="text" name="sociedad_constitutiva" placeholder="Escritura número, notaría y fecha"></label>
+      <label><span class="lab">Capital social actual (MXN)</span><input type="number" name="sociedad_capital" min="0" step="1"></label>
+      <label><span class="lab">¿Llevan libro de actas y de registro de accionistas / socios?</span><select name="sociedad_libros"><option value="">Seleccione…</option><option>Sí, al día</option><option>Sí, pero no al día</option><option>No</option><option>No lo sé</option></select></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">02</span> <h2>Qué se protocoliza</h2></legend>
+    <p class="hint">Protocolizar es incorporar al protocolo del notario un documento ya existente para darle fecha cierta y, en su caso, inscribirlo en el Registro Público de Comercio.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="documento_tipo" value="Asamblea ordinaria" required><span><b>Acta de asamblea ordinaria</b><small>Aprobación de cuentas, nombramiento de administradores, poderes, reparto de utilidades.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Asamblea extraordinaria"><span><b>Acta de asamblea extraordinaria</b><small>Aumento o disminución de capital, reforma de estatutos, cambio de denominación, fusión, disolución.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Sesión de consejo"><span><b>Acta de sesión de consejo de administración</b><small>Acuerdos del consejo: poderes, nombramientos de gerentes.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Resoluciones unánimes"><span><b>Resoluciones unánimes fuera de asamblea</b><small>Adoptadas por escrito por la totalidad de socios o accionistas.</small></span></label>
+      <label class="opt"><input type="radio" name="documento_tipo" value="Otro documento"><span><b>Otro documento</b><small>Contrato privado, documento extranjero apostillado, etc. Descríbalo en observaciones.</small></span></label>
+    </div>
+    <div class="sub"><span class="lab">Datos de la asamblea o sesión</span></div>
+    <div class="grid" style="margin-top:14px">
+      <label><span class="lab">Fecha de la asamblea <i class="req">*</i></span><input type="date" name="asamblea_fecha" required></label>
+      <label><span class="lab">Lugar donde se celebró</span><input type="text" name="asamblea_lugar" placeholder="Ciudad"></label>
+      <label><span class="lab">¿Cómo se reunieron?</span><select name="asamblea_convocatoria"><option value="">Seleccione…</option><option>Totalitaria (100 % del capital presente, sin convocatoria)</option><option>Con convocatoria publicada</option><option>No lo sé</option></select></label>
+      <label><span class="lab">Porcentaje del capital representado</span><input type="number" name="asamblea_capital_presente" placeholder="100" min="0" max="100" step="0.01"></label>
+      <label><span class="lab">Presidente de la asamblea</span><input type="text" name="asamblea_presidente"></label>
+      <label><span class="lab">Secretario de la asamblea</span><input type="text" name="asamblea_secretario"></label>
+      <label class="full"><span class="lab">Escrutador(es)</span><input type="text" name="asamblea_escrutador"></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">03</span> <h2>Acuerdos tomados</h2></legend>
+    <p class="hint">Marque todo lo que se aprobó. Con esto sabemos qué debe inscribirse en el Registro Público de Comercio y qué avisos hay que presentar.</p>
+    <label class="check" style="margin-top:12px"><input type="checkbox" name="ac_admin" value="Sí"><span>Nombramiento, ratificación o revocación de administrador único o consejo de administración.</span></label>
+    <label class="check"><input type="checkbox" name="ac_poderes" value="Sí"><span>Otorgamiento o revocación de poderes.</span></label>
+    <label class="check"><input type="checkbox" name="ac_capital_aumento" value="Sí"><span>Aumento de capital social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_capital_disminucion" value="Sí"><span>Disminución de capital social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_estatutos" value="Sí"><span>Reforma de estatutos sociales.</span></label>
+    <label class="check"><input type="checkbox" name="ac_denominacion" value="Sí"><span>Cambio de denominación o razón social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_domicilio" value="Sí"><span>Cambio de domicilio social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_objeto" value="Sí"><span>Modificación del objeto social.</span></label>
+    <label class="check"><input type="checkbox" name="ac_acciones" value="Sí"><span>Venta o cesión de acciones o partes sociales entre socios o a terceros.</span></label>
+    <label class="check"><input type="checkbox" name="ac_comisario" value="Sí"><span>Nombramiento o revocación de comisario.</span></label>
+    <label class="check"><input type="checkbox" name="ac_fusion" value="Sí"><span>Transformación, fusión o escisión.</span></label>
+    <label class="check"><input type="checkbox" name="ac_disolucion" value="Sí"><span>Disolución y liquidación.</span></label>
+    <label class="check"><input type="checkbox" name="ac_otro" value="Sí"><span>Otro acuerdo (descríbalo abajo).</span></label>
+    <div data-show-if="ac_poderes:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Poderes otorgados o revocados</span><textarea name="poderes_detalle" placeholder="A quién, con qué facultades (pleitos y cobranzas, administración, dominio, títulos de crédito), y si se revoca alguno anterior"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_admin:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nuevo administrador o consejo</span><textarea name="admin_detalle" placeholder="Nombres y cargos; quién sale y quién entra"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_capital_aumento:checked">
+    <div class="grid" style="margin-top:16px">
+      <label><span class="lab">Monto del aumento (MXN)</span><input type="number" name="aumento_monto" min="0" step="1"></label>
+      <label><span class="lab">Parte del capital</span><select name="aumento_parte"><option value="">Seleccione…</option><option>Variable</option><option>Fija (requiere reforma de estatutos)</option></select></label>
+      <label class="full"><span class="lab">Quién suscribe y cómo paga</span><textarea name="aumento_detalle" placeholder="Socio, monto y forma de pago (efectivo, capitalización de pasivos, especie)"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_capital_disminucion:checked">
+    <div class="grid" style="margin-top:16px">
+      <label><span class="lab">Monto de la disminución (MXN)</span><input type="number" name="disminucion_monto" min="0" step="1"></label>
+      <label class="full"><span class="lab">Motivo y a quién se reembolsa</span><textarea name="disminucion_detalle"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_estatutos:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Cláusulas que se reforman</span><textarea name="estatutos_detalle" placeholder="Ej. cláusula de administración, cláusula de duración, artículo 12…"></textarea></label>
+    </div>
+    </div>
+    <div data-show-if="ac_denominacion:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nueva denominación</span><input type="text" name="nueva_denominacion"></label>
+      <label class="full"><span class="lab">¿Ya tiene autorización de la Secretaría de Economía?</span><select name="nueva_denominacion_autorizacion"><option value="">Seleccione…</option><option>No, tramítenla ustedes</option><option>Sí, la adjunto</option></select></label>
+    </div>
+    </div>
+    <div data-show-if="ac_otro:checked">
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Descripción del acuerdo</span><textarea name="otro_detalle"></textarea></label>
+    </div>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">04</span> <h2>Delegado especial</h2></legend>
+    <p class="hint">La persona designada en el acta para comparecer ante el notario y firmar la protocolización. Normalmente es el administrador, el secretario de la asamblea o el abogado de la empresa.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="delegado_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Fecha de nacimiento <i class="req">*</i></span><input type="date" name="delegado_fecha_nacimiento" required></label>
+      <label><span class="lab">Lugar de nacimiento</span><input type="text" name="delegado_lugar_nacimiento" placeholder="Ciudad y estado"></label>
+      <label><span class="lab">Nacionalidad</span><input type="text" name="delegado_nacionalidad" value="Mexicana"></label>
+      <label><span class="lab">Ocupación</span><input type="text" name="delegado_ocupacion"></label>
+      <label><span class="lab">CURP</span><input type="text" name="delegado_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="delegado_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="delegado_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="delegado_email" required autocomplete="email"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="delegado_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+      <label><span class="lab">Cargo en la sociedad</span><input type="text" name="delegado_cargo" placeholder="Delegado especial, administrador, secretario…"></label>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">05</span> <h2>Documentos</h2></legend>
+    <p class="hint">El acta firmada es indispensable. Si no tiene lista de asistencia o libro de registro, dígalo en observaciones: podemos preparar esos documentos con la protocolización. Los archivos grandes puede mandarlos por WhatsApp o correo.</p>
+    <div class="note">
+      <p style="margin:0 0 10px"><b>Documentos que normalmente se piden para protocolizar un acta de asamblea en Nuevo León</b> (no todos aplican a cada caso; los confirmamos con usted):</p>
+      <ul style="margin:0;padding-left:20px;line-height:1.7">
+        <li>Acta de asamblea firmada por el presidente y el secretario</li>
+        <li>Lista de asistencia</li>
+        <li>Acta constitutiva y reformas anteriores</li>
+        <li>Poder o nombramiento de quien firma</li>
+        <li>Identificación oficial del delegado especial</li>
+        <li>Constancia de situación fiscal de la sociedad</li>
+        <li>Libro de registro de accionistas o de socios</li>
+        <li>Publicación en el sistema de la Secretaría de Economía, cuando aplique</li>
+        <li>Información de beneficiario controlador</li>
+      </ul>
+    </div>
+    <div class="files">
+      <div class="file"><span class="lab">Acta de asamblea firmada <i class="req">*</i></span><small>Firmada por presidente y secretario</small>
+        <input type="file" name="acta_firmada" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">Lista de asistencia firmada</span><small>Con el porcentaje de cada socio</small>
+        <input type="file" name="lista_asistencia" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Convocatoria y publicación</span><small>Solo si no fue totalitaria</small>
+        <input type="file" name="convocatoria" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta constitutiva de la sociedad</span><small>Y últimas reformas de estatutos</small>
+        <input type="file" name="acta_constitutiva" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Poderes o nombramientos vigentes</span><small>Del administrador o delegado</small>
+        <input type="file" name="poderes_vigentes" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Identificación del delegado especial</span><small>INE o pasaporte</small>
+        <input type="file" name="ine_delegado" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal de la sociedad</span><small>Descargable del SAT</small>
+        <input type="file" name="constancia_fiscal" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Libro de registro de accionistas / socios</span><small>Página relevante, si aplica</small>
+        <input type="file" name="libro_registro" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="meter" id="meter">
+      <div class="meter-top mono"><span>Peso total del envío</span><span id="meter_txt">0 KB de 7 MB</span></div>
+      <div class="meter-bar"><div class="meter-fill" id="meter_fill"></div></div>
+      <p id="meter_note">Las imágenes se reducen antes de enviarse, así que el peso final suele ser mucho menor al que ve aquí.</p>
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">06</span> <h2>Sus datos</h2></legend>
+    <p class="hint">La persona con la que nos comunicaremos durante el trámite. Solo necesitamos su nombre y un teléfono; lo demás lo podemos tomar de sus documentos.</p>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="captura_modo" value="documentos" checked>
+        <span><b>Adjunto mis documentos y ustedes capturan mis datos</b><small>Suba su INE (frente y reverso), acta de nacimiento, CURP o constancia fiscal. En el despacho leemos los documentos con apoyo de inteligencia artificial y llenamos los datos por usted.</small></span></label>
+      <label class="opt"><input type="radio" name="captura_modo" value="manual">
+        <span><b>Prefiero capturar mis datos yo</b></span></label>
+    </div>
+    <div class="files" data-show-if="captura_modo:documentos" style="margin-top:16px">
+      <div class="file"><span class="lab">INE — frente <i class="req">*</i></span><input type="file" name="ine_frente" accept="image/*,application/pdf" required></div>
+      <div class="file"><span class="lab">INE — reverso</span><input type="file" name="ine_reverso" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Acta de nacimiento</span><input type="file" name="acta_nacimiento" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">CURP</span><input type="file" name="curp_archivo" accept="image/*,application/pdf"></div>
+      <div class="file"><span class="lab">Constancia de situación fiscal</span><input type="file" name="constancia_fiscal_contacto" accept="image/*,application/pdf"></div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <label class="full"><span class="lab">Nombre completo <i class="req">*</i></span><input type="text" name="contacto_nombre" required autocomplete="name"></label>
+      <label><span class="lab">Teléfono / WhatsApp <i class="req">*</i></span><input type="tel" name="contacto_telefono" required autocomplete="tel"></label>
+      <label><span class="lab">Correo electrónico <i class="req">*</i></span><input type="email" name="contacto_email" required autocomplete="email"></label>
+      <label><span class="lab">Su papel</span><select name="contacto_rol"><option value="">Seleccione…</option><option>Administrador(a) / representante</option><option>Socio(a) o accionista</option><option>Contador(a) / asesor</option><option>Abogado(a) de la empresa</option><option>Otro</option></select></label>
+    </div>
+    <p class="hint">Le escribimos a este teléfono y a este correo para avisarle qué documentos faltan, enviarle el proyecto de la escritura para su revisión y confirmar la fecha y hora de la firma. No los compartimos con nadie más.</p>
+    <div class="grid" data-show-if="captura_modo:manual" style="margin-top:16px">
+      <label><span class="lab">CURP</span><input type="text" name="contacto_curp" maxlength="18" style="text-transform:uppercase"></label>
+      <label><span class="lab">RFC</span><input type="text" name="contacto_rfc" maxlength="13" style="text-transform:uppercase"></label>
+      <label><span class="lab">Fecha de nacimiento</span><input type="date" name="contacto_fecha_nacimiento"></label>
+      <label><span class="lab">Entidad de nacimiento</span><input type="text" name="contacto_entidad_nacimiento"></label>
+      <label class="full"><span class="lab">Domicilio completo</span><input type="text" name="contacto_domicilio" placeholder="Calle, número, colonia, C.P., municipio y estado"></label>
+    </div>
+    <p class="hint" data-curp-aviso hidden></p>
+  </fieldset>
+
+  <fieldset>
+    <legend class="leg"><span class="num">07</span> <h2>Observaciones</h2></legend>
+    <p class="hint">Fecha en que necesitan la escritura, si hay urgencia para inscribir en el Registro Público de Comercio, si el acta aún no está redactada (podemos redactarla), o cualquier duda.</p>
+    <div class="grid">
+      <label class="full"><span class="lab">Notas para el abogado</span><textarea name="observaciones"></textarea></label>
+    </div>
+
+  </fieldset>
+
+  <div class="submit-zone">
+    <h3>Antes de enviar</h3>
+    <p>Este cuestionario no protocoliza nada por sí mismo. Sirve para revisar el acta, preparar el proyecto de escritura y cotizar la inscripción en el Registro Público de Comercio. Le enviamos la cotización desglosada antes de cualquier cargo.</p>
+    <label class="check" style="margin-top:20px"><input type="checkbox" name="acepta_aviso" id="acepta_aviso" value="Sí">
+      <span>Autorizo al Lic. Ian A. Tattersfield Doering, de Asesoría y Servicio Notarial, a tratar mis datos personales y los documentos adjuntos con la única finalidad de preparar y gestionar el instrumento notarial que solicito.</span></label>
+    <div class="errbox" id="errbox"></div>
+    <button type="submit" class="btn" id="btn">Enviar cuestionario &rarr;</button>
+  </div>
+
+  </div>
+</form>
+<footer>
+  <div class="wrap foot mono">
+    <span>&copy; <span id="y">2026</span> Asesoría y Servicio Notarial &middot; Monterrey, N.L.</span>
+    <span>Padre Mier 1703, Col. Obispado &middot; 81 8396 8590</span>
+  </div>
+</footer>
+<script>
+window.CFG = {
+  formulario: 'protocolizacion',
+  validate: function(errs, api){
+    var alguno = ['ac_admin','ac_poderes','ac_capital_aumento','ac_capital_disminucion','ac_estatutos','ac_denominacion','ac_domicilio','ac_objeto','ac_acciones','ac_comisario','ac_fusion','ac_disolucion','ac_otro'].some(function(k){ return api.val(k); });
+    if(!alguno) errs.push('Marcar al menos un acuerdo tomado en la asamblea');
+
+    var tel = document.querySelector('[name="contacto_telefono"]');
+    if(tel && tel.value && tel.value.replace(/\D/g, '').length < 10){
+      errs.push('El teléfono de contacto debe tener al menos 10 dígitos'); tel.classList.add('bad');
+    }
+  }
+};
+</script>
+<script src="/assets/config.js" defer></script>
+<script src="/assets/expediente.js" defer></script>
+<script src="/assets/form.js"></script>
+<script src="/assets/datos.js" defer></script>
+</body>
+</html>
