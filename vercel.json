@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "trailingSlash": true,
   "redirects": [
     { "source": "/testamento/gracias.html", "destination": "/gracias/?t=testamento", "permanent": false }
