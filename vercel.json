@@ -1,20 +1,6 @@
 {
-  "routes": [
-    { "src": "^/assets/(.*)$", "dest": "/$1" },
-    { "src": "^/$", "dest": "/index%20(4).html" },
-    { "src": "^/tramites/?$", "dest": "/index%20(6).html" },
-    { "src": "^/gracias/?$", "dest": "/index%20(3).html" },
-    { "src": "^/testamento/gracias\\.html$", "dest": "/index%20(3).html" },
-    { "src": "^/testamento/?$", "dest": "/index.html" },
-    { "src": "^/compraventa/?$", "dest": "/index%20(7).html" },
-    { "src": "^/donacion/?$", "dest": "/index%20(9).html" },
-    { "src": "^/constitutiva/?$", "dest": "/index%20(11).html" },
-    { "src": "^/poder/?$", "dest": "/index%20(2).html" },
-    { "src": "^/protocolizacion/?$", "dest": "/index%20(13).html" },
-    { "src": "^/sucesion/?$", "dest": "/index%20(12).html" },
-    { "src": "^/cancelacion-hipoteca/?$", "dest": "/index%20(10).html" },
-    { "src": "^/fe-de-hechos/?$", "dest": "/index%20(8).html" },
-    { "src": "^/ratificacion/?$", "dest": "/index%20(5).html" },
-    { "src": "^/capitulaciones/?$", "dest": "/index%20(1).html" }
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/testamento/gracias.html", "destination": "/gracias/?t=testamento", "permanent": false }
   ]
 }
