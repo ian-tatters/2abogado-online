@@ -3,6 +3,6 @@
    usarNetlifyForms: true mientras el sitio viva en Netlify; false cuando viva en Vercel. */
 window.SITIO = {
   expedientesUrl: 'https://script.google.com/macros/s/AKfycbxmQc7zM_nDzTJdjno5We28WeLaicnmfu3S1ZDWwntjQR6O2Ew7U9sV14Q4r6QibcGZ7A/exec',
-  usarNetlifyForms: true,
+  usarNetlifyForms: false,
   paginaGracias: '/gracias/'
 };

@@ -204,14 +204,18 @@
       list.map(function(t){ return '<li>' + t + '</li>'; }).join('') + '</ul>';
     errbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
-  var api = { val: fieldValue, hidden: isHidden, pct: pctTotal, group: function(g){ return buildJSON().grupos[g] || []; }, human: human };
+  var api = { val: fieldValue, hidden: isHidden, pct: pctTotal, group: function(g){ return buildJSON().grupos[g] || []; }, human: human, pdfUnico: function(){ return pdfUnico(); } };
+  function pdfUnico(){
+    var u = f.querySelector('[name="documentos_pdf_unico"]');
+    return !!(u && u.files && u.files.length);
+  }
   function validate(){
-    var errs = [], doneRadio = {};
+    var errs = [], doneRadio = {}, conPdf = pdfUnico();
     Array.prototype.forEach.call(f.querySelectorAll('.bad'), function(el){ el.classList.remove('bad'); });
     Array.prototype.forEach.call(f.querySelectorAll('[required]'), function(el){
       if(isHidden(el)) return;
       if(el.type === 'file'){
-        if(!el.files.length) errs.push(labelOf(el));
+        if(!el.files.length && !conPdf) errs.push(labelOf(el));
         return;
       }
       if(el.type === 'radio'){
@@ -228,6 +232,7 @@
       }
     });
     if(typeof CFG.validate === 'function') CFG.validate(errs, api);
+    if(conPdf) errs = errs.filter(function(t){ return !/^(Adjunte al menos|Al menos un documento de identificaci)/.test(t); });
     var av = document.getElementById('acepta_aviso');
     if(av && !av.checked) errs.push('Autorizar el tratamiento de sus datos');
     showErrors(errs);

@@ -29,6 +29,7 @@
   .nav-links{display:flex;gap:22px;margin-left:auto;align-items:center}
   .nav-links a{text-decoration:none;color:rgba(255,255,255,.78);transition:color .2s}
   .nav-links a:hover{color:#fff}
+  @media(max-width:640px){.nav-links{gap:14px}.nav-links a[href*="#contacto"]{display:none}.nav-links a[href*="wa.me"]{font-size:0}.nav-links a[href*="wa.me"]::after{content:"WhatsApp";font-size:.66rem}.brand span{display:none}}
 
   .head{background:var(--paper);border-bottom:1px solid var(--line);padding:60px 0 46px}
   .rule-row{display:flex;justify-content:space-between;gap:20px;color:var(--ink-faint);border-bottom:1px solid var(--line);padding-bottom:12px}

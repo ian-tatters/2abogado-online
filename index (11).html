@@ -42,6 +42,14 @@
   <input type="hidden" name="datos_json" id="datos_json">
   <p class="hp"><label>No llenar este campo: <input name="bot-field"></label></p>
   <div class="wrap">
+
+  <div class="pdf-unico" style="border:2px solid #8a6a3b;background:#fbf7ef;padding:22px 24px;margin:0 0 22px">
+    <span class="lab" style="color:#8a6a3b;font-size:.72rem">Atajo · un solo archivo</span>
+    <h2 style="margin:4px 0 8px;font-size:1.25rem;line-height:1.3">Si los documentos forman parte de un mismo PDF, favor de anexarlo aquí</h2>
+    <p class="hint" style="margin:0 0 14px">Si ya tiene todos sus documentos escaneados juntos (INE, actas, escrituras, constancias…), súbalos aquí en un solo PDF. Con eso <b>ya no necesita subir cada documento por separado</b> en las secciones de abajo: puede dejarlas sin adjuntos y enviar el cuestionario. Tamaño máximo: 7 MB.</p>
+    <input type="file" name="documentos_pdf_unico" id="documentos_pdf_unico" accept="application/pdf,image/*">
+    <p class="pdf-unico-ok" hidden style="margin:10px 0 0;color:#2f6b3a;font-weight:600">✓ Recibimos su PDF. Los demás adjuntos del cuestionario ya son opcionales.</p>
+  </div>
   <fieldset>
     <legend class="leg"><span class="num">01</span> <h2>Tipo de sociedad</h2></legend>
     <p class="hint">Si no está seguro, marque "No lo sé" y lo definimos en la asesoría según la actividad, el número de socios y el régimen fiscal que le convenga.</p>
@@ -461,6 +469,10 @@ window.CFG = {
   });
   recalcAll();
 })();
+</script>
+<script>
+(function(){var i=document.getElementById('documentos_pdf_unico');if(!i)return;var ok=document.querySelector('.pdf-unico-ok');
+i.addEventListener('change',function(){if(ok)ok.hidden=!(i.files&&i.files.length);});})();
 </script>
 </body>
 </html>
