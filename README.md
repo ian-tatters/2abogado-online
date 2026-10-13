@@ -1,11 +1,14 @@
 # Asesoría y Servicio Notarial — sitio web
 
-Sitio estático de **2abogado.online**: página principal y once cuestionarios en línea.
+Sitio estático de **2abogado.online**: página informativa del despacho (inicio, servicios, abogados) y once cuestionarios en línea.
 
 ## Estructura
 | Ruta | Qué es |
 |---|---|
-| `index.html` | Página principal (promoción del mes del testamento y catálogo de trámites) |
+| `index.html` | Inicio: la firma, áreas de servicio, equipo, guías, preguntas y contacto |
+| `servicios/` | Detalle de cada servicio con liga a su cuestionario |
+| `abogados/` | Perfil de los abogados |
+| `assets/sitio.css`, `assets/sitio.js`, `assets/img/` | Estilos, menú y fotos de las páginas informativas |
 | `tramites/` | Menú de los cuestionarios |
 | `testamento/`, `compraventa/`, `donacion/`, `sucesion/`, `constitutiva/`, `poder/`, `protocolizacion/`, `cancelacion-hipoteca/`, `ratificacion/`, `fe-de-hechos/`, `capitulaciones/` | Los once cuestionarios |
 | `gracias/` | Página de confirmación |
@@ -16,10 +19,7 @@ Sitio estático de **2abogado.online**: página principal y once cuestionarios e
 | `vercel.json` | Configuración para publicar en Vercel |
 
 ## Cómo se publica
-- Hoy: Netlify (proyecto `2abogadoenlinea`), arrastrando la carpeta a Deploys.
-- Con Vercel conectado a este repositorio: cada cambio que se guarde aquí se publica solo.
-
-Al mudar el sitio a Vercel hay que poner `usarNetlifyForms: false` en `assets/config.js`.
+Vercel (equipo `bodas-civiles-mty`, proyecto `2abogado-online`) está conectado a este repositorio: cada cambio que llega a `main` se publica solo, y cada rama tiene su liga de vista previa.
 
 ## Qué NO va aquí
 Machotes, escrituras y material notarial interno. El sitio sólo captura información.
