@@ -8,7 +8,6 @@
 <meta property="og:title" content="Asesoría y Servicio Notarial — Monterrey">
 <meta property="og:description" content="Testamentos, inmuebles, sociedades y poderes. Un abogado que lo acompaña de principio a fin.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="/assets/img/ian-tattersfield.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap" rel="stylesheet">
@@ -45,10 +44,16 @@
         <a class="btn btn-line" href="https://wa.me/528183968590?text=Hola%2C%20quisiera%20una%20asesor%C3%ADa%20sobre%3A%20" target="_blank" rel="noopener">Platicar con un abogado</a>
       </div>
     </div>
-    <figure class="hero-foto" style="margin:0">
-      <img src="/assets/img/ian-tattersfield.jpg" alt="Lic. Ian A. Tattersfield Doering" width="720" height="960">
-      <figcaption><b>Lic. Ian A. Tattersfield Doering</b><span>Abogado · le atiende personalmente</span></figcaption>
-    </figure>
+    <aside class="hero-card" aria-label="Accesos rápidos">
+      <p class="eyebrow">Empiece aquí</p>
+      <ul>
+        <li><a href="/testamento/"><b>Testamento</b><span>Una sola cita, con aviso al registro nacional.</span></a></li>
+        <li><a href="/compraventa/"><b>Compraventa</b><span>Título revisado e impuestos bien calculados.</span></a></li>
+        <li><a href="/constitutiva/"><b>Constitución de sociedad</b><span>Del nombre de la empresa a su inscripción.</span></a></li>
+        <li><a href="/poder/"><b>Poder notarial</b><span>El alcance y la vigencia que su caso necesita.</span></a></li>
+      </ul>
+      <a class="link" href="/tramites/">Ver los once trámites en línea</a>
+    </aside>
   </div>
 </section>
 
@@ -135,23 +140,29 @@
 
 <section id="equipo">
   <div class="wrap">
-    <div class="persona">
-      <img src="/assets/img/ian-tattersfield.jpg" alt="Retrato del Lic. Ian A. Tattersfield Doering" width="720" height="960" loading="lazy">
-      <div>
-        <p class="eyebrow">Nuestro equipo</p>
-        <h3>Lic. Ian A. Tattersfield Doering</h3>
-        <p class="cargo">Abogado · Derecho notarial y corporativo</p>
-        <div class="bio">
-          <p>Ian atiende personalmente a cada cliente del despacho. Su práctica se centra en el derecho notarial y corporativo en Nuevo León: testamentos y sucesiones, operaciones inmobiliarias, constitución de sociedades y poderes.</p>
-          <p>Egresado de la Universidad de Monterrey, atiende en español y en inglés. Cree que un buen abogado es el que explica las cosas de manera que cualquiera las entienda, y que el cliente nunca debería salir de una firma con dudas.</p>
-          <p>Lo acompaña como socio el <b>Lic. Hugo García González</b>, especialista en prevención de lavado de dinero y derecho corporativo.</p>
-        </div>
-        <div class="btns">
-          <a class="btn btn-dark" href="/abogados/">Conocer al equipo</a>
-          <a class="link" href="mailto:itattersfield@notaria54mty.com">itattersfield@notaria54mty.com</a>
-        </div>
-      </div>
+    <div class="sec-head">
+      <div><p class="eyebrow">Nuestro equipo</p><h2>Abogados que dan la cara.</h2></div>
+      <p class="lead">Su asunto lo lleva un socio del despacho, de principio a fin.</p>
     </div>
+    <div class="socios">
+      <article class="socio">
+        <div class="monograma" aria-hidden="true">IT</div>
+        <div>
+          <h3>Lic. Ian A. Tattersfield Doering</h3>
+          <p class="cargo">Derecho notarial y corporativo</p>
+          <p>Testamentos y sucesiones, operaciones inmobiliarias, sociedades y poderes. Universidad de Monterrey. Atiende en español e inglés.</p>
+        </div>
+      </article>
+      <article class="socio">
+        <div class="monograma" aria-hidden="true">HG</div>
+        <div>
+          <h3>Lic. Hugo García González</h3>
+          <p class="cargo">Prevención de lavado de dinero y corporativo</p>
+          <p>Cumplimiento de la ley contra el lavado de dinero, constitución de sociedades, asambleas y reestructuras. Universidad de Monterrey.</p>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top:34px"><a class="btn btn-dark" href="/abogados/">Conocer al equipo</a></p>
   </div>
 </section>
 
@@ -234,7 +245,7 @@
 
 <section class="llamado">
   <div class="wrap">
-    <p class="eyebrow" style="color:var(--gold-soft)">¿Platicamos?</p>
+    <p class="eyebrow">¿Platicamos?</p>
     <h2>Cuéntenos qué necesita y le decimos cómo resolverlo.</h2>
     <p>Sin compromiso. Le respondemos qué documentos necesita y cuánto cuesta.</p>
     <div class="btns">
