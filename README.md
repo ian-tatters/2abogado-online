@@ -8,7 +8,7 @@ Sitio estático de **2abogado.online**: página informativa del despacho (inicio
 | `index.html` | Inicio: la firma, áreas de servicio, equipo, guías, preguntas y contacto |
 | `servicios/` | Detalle de cada servicio con liga a su cuestionario |
 | `abogados/` | Perfil de los abogados |
-| `assets/sitio.css`, `assets/sitio.js`, `assets/img/` | Estilos, menú y fotos de las páginas informativas |
+| `assets/sitio.css`, `assets/sitio.js` | Estilos y menú de las páginas informativas |
 | `tramites/` | Menú de los cuestionarios |
 | `testamento/`, `compraventa/`, `donacion/`, `sucesion/`, `constitutiva/`, `poder/`, `protocolizacion/`, `cancelacion-hipoteca/`, `ratificacion/`, `fe-de-hechos/`, `capitulaciones/` | Los once cuestionarios |
 | `gracias/` | Página de confirmación |
