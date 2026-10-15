@@ -1,6 +1,11 @@
 {
-  "trailingSlash": true,
   "redirects": [
-    { "source": "/testamento/gracias.html", "destination": "/gracias/?t=testamento", "permanent": false }
+    { "source": "/testamento/gracias.html", "destination": "/gracias/?t=testamento", "permanent": false },
+    { "source": "/:ruta((?!usuario(?:/|$)|api/)(?:[^/]+/)*[^/.]+)", "destination": "/:ruta/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/usuario", "destination": "https://app-notarias.vercel.app/usuario" },
+    { "source": "/usuario/:path*", "destination": "https://app-notarias.vercel.app/usuario/:path*" },
+    { "source": "/api/generar", "destination": "https://app-notarias.vercel.app/api/generar" }
   ]
 }
