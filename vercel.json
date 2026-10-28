@@ -1,12 +1,17 @@
 {
   "redirects": [
-    { "source": "/usuario/", "destination": "/usuario", "permanent": true },
+    { "source": "/usuario", "destination": "/notaria", "permanent": false },
+    { "source": "/usuario/", "destination": "/notaria", "permanent": false },
+    { "source": "/usuario/:path*", "destination": "/notaria/:path*", "permanent": false },
+    { "source": "/notaria/", "destination": "/notaria", "permanent": true },
+    { "source": "/notaria:n(\\d{1,4})", "destination": "/notaria/entrar?n=:n", "permanent": false },
+    { "source": "/notaria:n(\\d{1,4})/", "destination": "/notaria/entrar?n=:n", "permanent": false },
     { "source": "/testamento/gracias.html", "destination": "/gracias/?t=testamento", "permanent": false },
-    { "source": "/:ruta((?!usuario(?:/|$)|api/)(?:[^/]+/)*[^/.]+)", "destination": "/:ruta/", "permanent": true }
+    { "source": "/:ruta((?!usuario(?:/|$)|notaria\\d*(?:/|$)|api/)(?:[^/]+/)*[^/.]+)", "destination": "/:ruta/", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/usuario", "destination": "https://app-notarias.vercel.app/usuario" },
-    { "source": "/usuario/:path*", "destination": "https://app-notarias.vercel.app/usuario/:path*" },
+    { "source": "/notaria", "destination": "https://app-notarias.vercel.app/notaria" },
+    { "source": "/notaria/:path*", "destination": "https://app-notarias.vercel.app/notaria/:path*" },
     { "source": "/api/generar", "destination": "https://app-notarias.vercel.app/api/generar" }
   ]
 }
